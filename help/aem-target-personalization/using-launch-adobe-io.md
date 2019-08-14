@@ -97,7 +97,7 @@ The Target extension consists of two main parts:
 4. In the second step of the Target Extension installation, you can notice the configuration window, where your Target account credentials are automatically imported, and you can also check the at.js version for this extension.
      ![Target - Extension Config](assets/using-launch-adobe-io/launch-target-extension-2.png)
 
-We will learn more about the pre-hiding snipper later, but when Target is deployed via asynchronous Launch embed codes, you should hardcode a pre-hiding snippet on your pages before the Launch embed codes in order to manage content flicker. You can download the pre-hiding snippet [here](assets/using-launch-adobe-io/prehiding.js)
+    We will learn more about the pre-hiding snipper later, but when Target is deployed via asynchronous Launch embed codes, you should hardcode a pre-hiding snippet on your pages before the Launch embed codes in order to manage content flicker. You can download the pre-hiding snippet [here](assets/using-launch-adobe-io/prehiding.js)
 
 5. Click **Save** to complete adding the Target extension to your Launch property, and you should now be able to see the Target extension listed under the **Installed** extensions list.
 
@@ -159,7 +159,7 @@ We will learn more about the pre-hiding snipper later, but when Target is deploy
 
 1. Click on the **Publishing** tab for your site property, and let's create a library to build, and deploy our changes (data elements, rules) to a development Environment.
 
- >[!VIDEO](https://video.tv.adobe.com/v/28412t1?quality=9)
+    >[!VIDEO](https://video.tv.adobe.com/v/28412t1?quality=9)
 
 2. Publish your changes from Development to Staging environment.
 
