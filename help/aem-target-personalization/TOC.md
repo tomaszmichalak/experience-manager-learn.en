@@ -12,7 +12,7 @@ activity:
 index: y
 ---
  
-# Getting Started with AEM Headless{#getting-started-with-aem-headless}
+# Getting Started with AEM and Target
 
 + [Overview](./overview.md)
 + [Implementation]{#aem-target-implementation}
