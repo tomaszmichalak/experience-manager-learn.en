@@ -14,7 +14,7 @@ In this section, we will discuss how to set up Adobe Experience Manager with Ado
 * **Option 2 - Using AEM legacy Cloud Services**
     For AEM customers, who would like to use Experience Fragment offers to create an activity within Adobe Target, you might need to integrate Adobe Target with AEM using the Legacy Cloud Services. This integration is required to push Experience Fragments from AEM to Target as HTML/JSON offers and to keep the target offers in sync with AEM. *This integration is required for implementing Use Case 1.*
 
-### Prerequisites
+## Prerequisites
 
 * **[AEM](#aem)**
   * AEM 6.5 (*recommend installing the Latest Service Pack*)
@@ -50,7 +50,7 @@ If you are new to AEM, there are two basic run modes can be installed: Author an
 
 It is also critical test code against a local Publish instance. The Publish instance is the AEM environment that visitors to your website will interact with. While the Publish instance is the same technology stack as the Author instance, there are some major distinctions with configurations and permissions. Code should always be tested against a local Publish instance before being promoted to higher level environments.
 
-**Set up author and publish instance**
+#### Set up author and publish instance
 
 For more information see: [Set up a Local AEM Development Environment](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/local-aem-dev-environment-article-setup.html).
 
@@ -74,8 +74,7 @@ For more information see: [Set up a Local AEM Development Environment](https://h
     * [core.wcm.components.all-2.5.0.zip](https://github.com/adobe/aem-core-wcm-components/releases/download/core.wcm.components.reactor-2.5.0/core.wcm.components.all-2.5.0.zip)
     * [digital-data-layer.zip](assets/implementation/digital-data-layer.zip)
 
->[!VIDEO](https://video.tv.adobe.com/v/28377t1)
-
+    >[!VIDEO](https://video.tv.adobe.com/v/28377t1)
 10. At this point, you have successfully installed your WKND reference site and all additional packages required for this tutorial.
 
-[NEXT CHAPTER](./using-launch-adobe-io.md)  : In the next chapter, you will be integrating Launch with AEM. 
+[NEXT CHAPTER](./using-launch-adobe-io.md): In the next chapter, you will be integrating Launch with AEM.

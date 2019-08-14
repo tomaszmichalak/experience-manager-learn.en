@@ -61,11 +61,11 @@ A property is basically a container that you fill with extensions, rules, data e
 
     ![Experience Cloud - Launch](assets/using-launch-adobe-io/exc-cloud-launch.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/28379t1?quality=9)
+    >[!VIDEO](https://video.tv.adobe.com/v/28379t1?quality=9)
 
-You should now see the Properties screen (if no properties have ever been created in the account, this screen might be empty). Let's create a new property for our tutorial.
+    You should now see the Properties screen (if no properties have ever been created in the account, this screen might be empty). Let's create a new property for our tutorial.
 
-A property is basically a container that you fill with extensions, rules, data elements, and libraries as you deploy tags to your site. A property can be any grouping of one or more domains and subdomains. You can manage and track these assets similarly. For example, suppose that you have multiple websites based on one template, and you want to track the same assets on all of them. You can apply one property to multiple domains. For more information on creating properties, see ["Create a Property"](https://docs.adobelaunch.com/administration/companies-and-properties#create-a-property) in the product documentation.
+    A property is basically a container that you fill with extensions, rules, data elements, and libraries as you deploy tags to your site. A property can be any grouping of one or more domains and subdomains. You can manage and track these assets similarly. For example, suppose that you have multiple websites based on one template, and you want to track the same assets on all of them. You can apply one property to multiple domains. For more information on creating properties, see ["Create a Property"](https://docs.adobelaunch.com/administration/companies-and-properties#create-a-property) in the product documentation.
 
 4. Click on the **New Property** button
 5. Provide a name for your property (e.g. *AEM Target Tutorial*)
@@ -81,12 +81,13 @@ A property is basically a container that you fill with extensions, rules, data e
 The Adobe Target extension supports client-side implementations using Target's JavaScript SDK for the modern web, at.js. Customers still using Target's older library, mbox.js, [should upgrade to at.js](https://marketing.adobe.com/resources/help/en_US/target/ov2/t_target-migrate-atjs.html) in order to use Launch.
 
 The Target extension consists of two main parts:
+
 * The extension configuration, which manages the core library settings
 * Rule actions to do the following:
-   * Load Target (at.js)
-   * Add Params to All Mboxes
-   * Add Params to Global Mbox
-   * Fire Global Mbox
+  * Load Target (at.js)
+  * Add Params to All Mboxes
+  * Add Params to Global Mbox
+  * Fire Global Mbox
 
 1. Under **Extensions**, you can see the list of Extensions that you are  installed for your Launch property. ([Adobe Launch Core Extension](https://exchange.adobe.com/experiencecloud.details.100223.adobe-launch-core-extension.html) is installed by default) 
 2. Click on the **Extension Catalog** option, and search for Target in the filter.
@@ -135,7 +136,7 @@ We will learn more about the pre-hiding snipper later, but when Target is deploy
         * Action Type - Custom Code
         * Language - Javascript
         * In the JS Editor, provide the script as :
-        ``` console.log('Your Page name is'+_satellite.getVar('PageName'));```
+        ```console.log('Your Page name is'+_satellite.getVar('PageName'));```
       * Action 2: Add Target Libraries to your site pages
         * Extension - Adobe Target v2
         * Action Type - Load Target
@@ -184,4 +185,4 @@ At this point, you have successfully integrated [AEM with Adobe Target using Lau
 
 If you would like to use Experience Fragment offers from AEM to power you personalization activities, lets proceed to the next chapter, and integrate AEM with Adobe Target using the legacy cloud services.
 
-[NEXT CHAPTER](./using-aem-cloud-services.md)  : In the next chapter, you will be integrating Launch with AEM. 
+[NEXT CHAPTER](./using-aem-cloud-services.md): In the next chapter, you will be integrating Launch with AEM. 
