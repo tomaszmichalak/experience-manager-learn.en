@@ -185,4 +185,4 @@ At this point, you have successfully integrated [AEM with Adobe Target using Lau
 
 If you would like to use Experience Fragment offers from AEM to power you personalization activities, lets proceed to the next chapter, and integrate AEM with Adobe Target using the legacy cloud services.
 
-[NEXT CHAPTER](./using-aem-cloud-services.md): In the next chapter, you will be integrating Launch with AEM. 
+[NEXT CHAPTER](./using-aem-cloud-services.md): In the next chapter, you will be integrating Launch with AEM.
