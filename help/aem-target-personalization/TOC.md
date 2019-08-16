@@ -12,10 +12,10 @@ activity:
 index: y
 ---
  
-# Getting Started with AEM and Target {#getting-started-aem-target}
+# Getting Started with AEM and Target {#aem-target-tutorial}
 
 + [Overview](./overview.md)
-+ [Implementation]{#aem-target-implementation}
++ Implementation {#aem-target-implementation}
   + [Introduction](./implementation.md)
   + [Using Launch and Adobe I/O](./using-launch-adobe-io.md)
   + [Using AEM Legacy Cloud Services](./using-aem-cloud-services.md)
