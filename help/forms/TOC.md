@@ -58,9 +58,11 @@ index: y
   + [Using Form Data Model's invoke service in Rule Editor](adaptive-forms/service-data-model-technical-video-use.md)
   + [Post Binary Data to AEM DAM Using Form Data Model](adaptive-forms/form-data-model-to-post-binary-data-tutorial-use.md)
   + [Creating Re-Usable Workflow Models](adaptive-forms/re-usable-aem-forms-workflow-models-article.md)
+  + [Custom Process Step AEM Workflow](adaptive-forms/custom-process-step-aem-workflow.md)
   + [Modify Data Source Configuration](adaptive-forms/modify-data-source-configuration-settings-article.md)
   + [Pre-Populating HTML5 Forms](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
   + [Form Data Model with Salesforce](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
+  + [Adding Items Dynamically to Choice Component](adaptive-forms/choice-group-items-adding-dynamically-article.md)
 + Variables in AEM Workflow{#variables-aem-workflow}
   + [Introduction - Variables in Workflow](variables-aem-workflow/introduction.md)
   + [XML Variables](variables-aem-workflow/part1.md)
@@ -117,6 +119,7 @@ index: y
   + [MultiSeries Charts](interactive-communications/multiseriescharts.md)
   + [Generate Print Channel Documents From Submitted Data](interactive-communications/merge-data-with-ic-template.md)
   + [Using Reducer Functions](interactive-communications/reducer-functions-in-charts-aem-forms-video-use.md)
+  + [Two Column Layout in Print Channel Documents](interactive-communications/two-column-layout-aem-forms-article-use.md)
 
 + Interactive Communications For Web Channel {#ic-web-channel-tutorial}
   + [Introduction](ic-web-channel-tutorial/introduction.md)
