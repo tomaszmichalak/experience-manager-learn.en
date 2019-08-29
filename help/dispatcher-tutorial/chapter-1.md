@@ -17,7 +17,7 @@ The Dispatcher is an essential part of most – if not all AEM installations. Yo
 
 These bits and pieces of information however always start on a very technical level – assuming you already know what you want to do and thus providing only details on how to achieve what you want. I have never found any conceptual papers describing the _what's and why's_ when it comes to what you can cannot do with the dispatcher.
 
-#### Antipattern: Dispatcher as an Afterthought
+### Antipattern: Dispatcher as an Afterthought
 
 This lack of basic information leads to a number of anti-patterns I have seen in a number of AEM projects:
 
@@ -25,13 +25,13 @@ This lack of basic information leads to a number of anti-patterns I have seen in
 
 2. The Java developer needs to ensure that his code works… the dispatcher later will magically make it fast. The dispatcher always is an afterthought. This is not happening. A developer must design his code with the dispatcher in mind. And he needs to know its basic concepts to do that.
 
-#### "First make it work – then make it fast" Is Not Always Right
+### "First make it work – then make it fast" Is Not Always Right
 
 You might have heard the programming advice _"First make it work – then make it fast."_. It is not entirely wrong. However, without the right context it is often misinterpreted and not applied correctly.
 
 The advice should keep the developer from prematurely optimizing code, that may never be run – or is run so rarely, that an optimization would not have a sufficient impact to justify the effort being put into the optimization. Moreover, optimization could lead to more complex code and thus introduce bugs. So, if you are developer, do not spent too much time on micro-optimizing each single line of code. Just make sure you chose the right data structures, algorithms and libraries and wait for a profiler's hotspot analysis to see where a more thorough optimization could increase the overall performance.
 
-#### Architectural Decisions and Artifacts
+### Architectural Decisions and Artifacts
 
 The advice "First make it work – then make it fast" is entirely wrong when it comes to "architectural" decisions. What are architectural decisions? Simply put, they are the decisions that are expensive, hard and/or impossible to change afterwards. Keep in mind, that "expensive" sometimes is the same as "impossible".  For instance, when your project is running out of budget, expensive changes are impossible to implement. Complex infrastructural changes are the very first kind of changes in that category which come to most people's minds. There is also another kind of "architectural" artifacts which can become very nasty to change:
 
