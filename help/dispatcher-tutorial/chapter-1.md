@@ -239,7 +239,7 @@ Let's review a quick summary of the last chapter plus some more exceptions. The 
 * Request that returns a status code other than 200
 * POST request
 
-##Invalidating and Flushing the Cache
+## Invalidating and Flushing the Cache
 
 ### Overview
 
