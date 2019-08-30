@@ -136,7 +136,7 @@ The mapping between a URL, the resource and the filename is pretty straightforwa
 
 You might have noticed a few traps however,
 
-1. URLs can become very long. Adding the "path" portion of a /docroot on the local filesystem could easily exceed limits of some filesystems. Running the Dispatcher in NTFS on Windows can be a challenge. You are safe with Linux, however.
+1. URLs can become very long. Adding the "path" portion of a `/docroot` on the local filesystem could easily exceed limits of some filesystems. Running the Dispatcher in NTFS on Windows can be a challenge. You are safe with Linux, however.
 
 2. URLs can contain special characters and umlauts. This is a problem for the dispatcher. Bear in mind though, that the URL is interpreted in many places of your application. More often than not, we have seen strange behaviors of an application – just to find out that one piece of rarely used (custom) code was not tested thoroughly for special characters. You should avoid them if you can. And if you can't, plan for thorough testing.
 
@@ -288,7 +288,7 @@ The dispatcher can safely delete the resource with all renditions that it has ca
 
 `$ rm /content/dam/path/to/image.*`
 
-removing image.png and image.thumb.png and all other renditions matching that pattern.
+removing `image.png` and `image.thumb.png` and all other renditions matching that pattern.
 
 Super simple indeed… as long as you use one resource only to respond to a request.
 
@@ -690,7 +690,7 @@ So… instead of just using the fingerprint as a simple cache-killer, you would 
 
 #### Caveats of URL Fingerprints in High Frequency Releases
 
-There is another caveat having URL fingerprints; it ties the URL to the content. You cannot change the content without also changing the URL (aka., update the modification date). That is what the fingerprints are designed for. But consider, you are rolling out a new release, with new CSS and JS files and thus new URLs with new fingerprints. All of your HTML pages still have references to the old fingerprinted URLs. So, to make the new release consistently work, you need to invalidate all HTML pages at once to force a re-rendering with the new fingerprint. If you have multiple sites relying on the same libraries, that can be a considerable amount of re-rendering – and here you cannot leverage the `statfiles`. So be prepared see load peaks on your Publish systems after a rollout. You might consider a blue-green deployment with cache warming or maybe a TTL-based cache in front of your dispatcher… The possibilities are endless.
+There is another caveat having URL fingerprints; it ties the URL to the content. You cannot change the content without also changing the URL (aka., update the modification date). That is what the fingerprints are designed for. But consider, you are rolling out a new release, with new CSS and JS files and thus new URLs with new fingerprints. All of your HTML pages still have references to the old fingerprinted URLs. So, to make the new release consistently work, you need to invalidate all HTML pages at once to force a re-rendering with the new fingerprint. If you have multiple sites relying on the same libraries, that can be a considerable amount of re-rendering – and here you cannot leverage the `statfiles`. So be prepared see load peaks on your Publish systems after a rollout. You might consider a blue-green deployment with cache warming or maybe a TTL-based cache in front of your dispatcher ... the possibilities are endless.
 
 Wow - That's quite a lot of details to be considered, right? And it refuses to be understood, tested and debugged easily. And all for a seemingly elegant solution. Admittedly, it is elegant – but only from an AEM-only perspective. But together with the Dispatcher it becomes nasty.
 
@@ -741,7 +741,7 @@ Our example is easily solved:
 
 We use the assets original resource paths to render the data. If we need to render the original image as is, we can just use AEMs default renderer for assets.
 
-If we need to do some special processing for a specific component, we would register a dedicated servlet on that path and selector to do the transformation on behalf of the component. We did that here exemplary with the ".respi." selector. It is wise to keep track of the selector names that are used on the global URL space (such as /content/dam) and have a good naming convention to avoid naming conflicts.
+If we need to do some special processing for a specific component, we would register a dedicated servlet on that path and selector to do the transformation on behalf of the component. We did that here exemplary with the ".respi." selector. It is wise to keep track of the selector names that are used on the global URL space (such as `/content/dam`) and have a good naming convention to avoid naming conflicts.
 
 By the way - we don't see any issues with code coherence. The servlet can be defined in the same Java package as the components sling model.
 
@@ -797,14 +797,14 @@ In the last chapter our image URL rendered by the component looked like this:
 
 All that is missing is the value for the quality. The component knows what property is entered by the author… It could easily be passed to the image rendering servlet as a query parameter when the markup is rendered, like `flower.respi2.jpg?quality=60`:
 
-```
-<div class="respi2">
-<picture>
-  <source src="/content/dam/flower.respi2.jpg?quality=60" …/>
+```plain
+  <div class="respi2">
+  <picture>
+    <source src="/content/dam/flower.respi2.jpg?quality=60" …/>
+    …
+  </picture>
+  </div>
   …
-</picture>
-</div>
-…
 ```
 
 This is a bad idea. Remember? Requests with query parameters are not cacheable.
@@ -823,12 +823,12 @@ This is a slight variation of the last URL. Only this time we use a selector to 
 
 This is much better, but remember that nasty script-kid from the last chapter who looks out for such patterns? He would see how far he can get with looping over values:
 
-```
-/content/dam/flower.respi.q-60.jpg
-/content/dam/flower.respi.q-61.jpg
-/content/dam/flower.respi.q-62.jpg
-/content/dam/flower.respi.q-63.jpg
-…
+```plain
+  /content/dam/flower.respi.q-60.jpg
+  /content/dam/flower.respi.q-61.jpg
+  /content/dam/flower.respi.q-62.jpg
+  /content/dam/flower.respi.q-63.jpg
+  …
 ```
 
 This again is bypassing the cache and creating load on the publish system. So, it might be a bad idea. You can mitigate this by filtering only a small subset of parameters. You want to allow only `q-20, q-40, q-60, q-80, q-100`.
@@ -850,35 +850,35 @@ If you don't have a Web Application Firewall you have to filter in the Dispatche
 
 Let's stress the last point again. The HTTP conversation would look like this:
 
-```
-GET /content/dam/flower.respi.q-41.jpg
+```plain
+  GET /content/dam/flower.respi.q-41.jpg
 
-Response: 404 – Not found
-<< empty response body >>
+  Response: 404 – Not found
+  << empty response body >>
 ```
 
-We have also seen implementations, that did filter invalid parameters but returned a valid fallback rendering when an invalid parameter is used. Let's assume, we only allow parameters from 20-100. The values in between are mapped to the valid ones. So
+We have also seen implementations, that did filter invalid parameters but returned a valid fallback rendering when an invalid parameter is used. Let's assume, we only allow parameters from 20-100. The values in between are mapped to the valid ones. So,
 
 `q-41, q-42, q-43, …`
 
 would always respond the same image as q-40 would have:
 
-```
-GET /content/dam/flower.respi.q-41.jpg
+```plain
+  GET /content/dam/flower.respi.q-41.jpg
 
-Response: 200 – OK
-<< flower.jpg with quality = 40 >>
+  Response: 200 – OK
+  << flower.jpg with quality = 40 >>
 ```
 
 That approach is not helping at all. These requests actually are valid requests.  They consume processing power and take up space in the cache directory on the Dispatcher.
 
 Better is to return a `301 – Moved permanently`:
 
-```
-GET /content/dam/flower.respi.q-41.jpg
+```plain
+  GET /content/dam/flower.respi.q-41.jpg
 
-Response: 301 – Moved permanently
-Location: /content/dam/flower.respi.q-40.jpg
+  Response: 301 – Moved permanently
+  Location: /content/dam/flower.respi.q-40.jpg
 ```
 
 Here AEM is telling the browser. "I don't have `q-41` – but hey – you can ask me about `q-40` ".
@@ -984,7 +984,7 @@ That leads to a URL in the form:
 
 `.respi` is a selector to select the correct servlet to deliver the image
 
-.content-mysite-home-\_jcr\_content-par-respi is a selector. It encodes the path to the component that stores the property necessary for the image transformation. Selectors are limited to a smaller range of characters than paths. The encoding scheme here is just exemplary. It substitutes "/" with "-". It is not taking into account, that the path itself can contain "-" as well. A more sophisticated encoding scheme would be advised in a real-world example. Base64 should be ok. But it makes debugging a bit harder.
+`.content-mysite-home-\_jcr\_content-par-respi` is a selector. It encodes the path to the component that stores the property necessary for the image transformation. Selectors are limited to a smaller range of characters than paths. The encoding scheme here is just exemplary. It substitutes "/" with "-". It is not taking into account, that the path itself can contain "-" as well. A more sophisticated encoding scheme would be advised in a real-world example. Base64 should be ok. But it makes debugging a bit harder.
 
 `.jpg` is the files suffix
 
@@ -1042,25 +1042,25 @@ The statfileslevel is applied equally to all sites in your setup. Therefore, it 
 
 Consider you have some brands in your portfolio that are sold only on a few small markets while others are sold worldwide. The small markets happen to have only one local language while in the global market there are countries where more than one language is spoken:
 
-```
-/content/tiny-local-brand/finland/home
-/content/tiny-local-brand/finland/products
-/content/tiny-local-brand/finland/about
-                            ^
-                        /statfileslevel "2"
-…
+```plain
+  /content/tiny-local-brand/finland/home
+  /content/tiny-local-brand/finland/products
+  /content/tiny-local-brand/finland/about
+                              ^
+                          /statfileslevel "2"
+  …
 
-/content/tiny-local-brand/norway
-…
+  /content/tiny-local-brand/norway
+  …
 
-/content/shiny-global-brand/canada/en
-/content/shiny-global-brand/canada/fr
-/content/shiny-global-brand/switzerland/fr
-/content/shiny-global-brand/switzerland/de
-/content/shiny-global-brand/switzerland/it
-                                         ^
-                              /statfileslevel "3"
-..
+  /content/shiny-global-brand/canada/en
+  /content/shiny-global-brand/canada/fr
+  /content/shiny-global-brand/switzerland/fr
+  /content/shiny-global-brand/switzerland/de
+  /content/shiny-global-brand/switzerland/it
+                                          ^
+                                /statfileslevel "3"
+  ..
 ``` 
 
 The former would require a `statfileslevel` of 2, while the latter requires 3.
@@ -1263,37 +1263,29 @@ Caching UU-files, your sites library files  and images can speed up the reloadin
 
 Your resources are stored under
 
-```
-/content/brand/country/language/…
-```
+`/content/brand/country/language/…`
 
 But of course, this is not the URL you want to surface to the customer. For esthetics, readability and SEO reasons you might want to truncate the part that already is represented in the domain name.
 
 If you have a domain
 
-```
-www.shiny-brand.fi
-```
+`www.shiny-brand.fi`
 
 there usually is no need to put the brand and country into the path. Instead of,
 
-```
-www.shiny-brand.fi/content/shiny-brand/finland/fi/home.html
-```
+`www.shiny-brand.fi/content/shiny-brand/finland/fi/home.html`
 
 you would want to have,
 
-```
-www.shiny-brand.fi/home.html
-```
+`www.shiny-brand.fi/home.html`
 
 You have to implement that mapping on AEM – because AEM needs to know how to render links according to that truncated format.
 
-But do not rely only on AEM. If you do, you would have paths like `/home.html` in your cache's root directory. Now, is that the "home" for the Finish or German or the Canadian website? And if there is a file /home.html in the dispatcher, how does the dispatcher know that this has to be invalidated when an invalidation request for `/content/brand/fi/fi/home` comes in.
+But do not rely only on AEM. If you do, you would have paths like `/home.html` in your cache's root directory. Now, is that the "home" for the Finish or German or the Canadian website? And if there is a file `/home.html` in the dispatcher, how does the dispatcher know that this has to be invalidated when an invalidation request for `/content/brand/fi/fi/home` comes in.
 
 We have seen a project that had separate docroots for each domain. It was a nightmare to debug and maintain – and actually we never saw it running flawlessly.
 
-We could solve the problems by re-structuring the cache. We had a single docroot for all domains, and invalidation requests could be handled 1:1 as all files on the server started with /content.
+We could solve the problems by re-structuring the cache. We had a single docroot for all domains, and invalidation requests could be handled 1:1 as all files on the server started with `/content`.
 
 The truncating part was also very easy.  AEM generated truncated links due to an according configuration in the `/etc/map` configuration.
 
@@ -1301,17 +1293,17 @@ Now when a request `/home.html` is hitting the Dispatcher, first thing that happ
 
 That rule was setup statically in each vhost configuration. Simply put, the rules looked like this,
 
-```
-# vhost www.shiny-brand.fi
+```plain
+  # vhost www.shiny-brand.fi
 
-RewriteRule "^(.\*\.html)" "/content/shiny-brand/finland/fi/$1"
+  RewriteRule "^(.\*\.html)" "/content/shiny-brand/finland/fi/$1"
 ```
 
-In the filesystem we now have plain /content-based paths, that would be found on the Author and Publish as well – which helped debugging quite a bit. Not to mention correct invalidation - that was no longer an issue.
+In the filesystem we now have plain `/content-based` paths, that would be found on the Author and Publish as well – which helped debugging quite a bit. Not to mention correct invalidation - that was no longer an issue.
 
 Note, we did that only for "visible" URLs. URLs that are displayed in the browser's URL slot. URLs for images for example were still pure "/content" URLs. We believe, that beautifying the "main" URL is sufficient in terms of SEO.
 
-Having one common docroot also had another nice feature. When anything went wrong in the Dispatcher, we could clean up the whole cache by executing rm -rf /cache/dispatcher/\* (something you might not want to do at high load peaks).
+Having one common docroot also had another nice feature. When anything went wrong in the Dispatcher, we could clean up the whole cache by executing `rm -rf /cache/dispatcher/*` (something you might not want to do at high load peaks).
 
 **References**
 
@@ -1649,32 +1641,34 @@ We would like to propose a different approach: Most likely, you will not come up
 
 You can then name and group the rules accordingly and provide the reader of the configuration (your dear colleague), some orientation in the file:
 
-```
-# basic setup:
+```plain
+  # basic setup:
 
-/filter {
+  /filter {
 
-  # basic setup
+    # basic setup
 
-  /basic\_01  { /glob "\*"             /type "deny"  }
-  /basic\_02  { /glob "/content/\*"    /type "allow" }
-  /basic\_03  { /glob "/etc/design/\*" /type "allow" }
+    /basic\_01  { /glob "\*"             /type "deny"  }
+    /basic\_02  { /glob "/content/\*"    /type "allow" }
+    /basic\_03  { /glob "/etc/design/\*" /type "allow" }
 
-  /basic\_04  { /extension '(json|xml)'  /type "deny"  }
-  …
+    /basic\_04  { /extension '(json|xml)'  /type "deny"  }
+    …
 
 
-  # login
+    # login
 
-  /login\_01 { /glob "/api/myapp/login/\*" /type "allow" }
-  /login\_02 { … }
+    /login\_01 { /glob "/api/myapp/login/\*" /type "allow" }
+    /login\_02 { … }
 
-  # global exceptions
+    # global exceptions
 
-  /global\_01 { /method "POST" /url '.\*contact-form.html' }
+    /global\_01 { /method "POST" /url '.\*contact-form.html' }
 ```
 
 Most likely you will add a new rule to one of the groups – or maybe even create a new group. In that case, the number of items to renaming/renumbering is limited to that group.
+
+**References**
 
 [https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#DesigningPatternsforglobProperties](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#DesigningPatternsforglobProperties)
 
