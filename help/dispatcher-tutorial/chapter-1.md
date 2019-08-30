@@ -471,24 +471,26 @@ The component is placed in the parsys of the homepage. The resulting structure i
 
 The components markup is rendered like this,
 
-```
-#GET /content/home.html
+```plain
 
-<html>
+  #GET /content/home.html
 
-…
-
-<div class="responsive-image>
-
-<picture>
-  <source src="/content/home/jcr:content/par/respi.img.mobile.jpg" …/>
-  <source src="/content/home/jcr:content/par/respi.img.jpg …/>
+  <html>
 
   …
 
-</picture>
-</div>
-…
+  <div class="responsive-image>
+
+  <picture>
+    <source src="/content/home/jcr:content/par/respi.img.mobile.jpg" …/>
+    <source src="/content/home/jcr:content/par/respi.img.jpg …/>
+
+    …
+
+  </picture>
+  </div>
+  …
+
 ```
 
 and... we have finished with our nicely encapsulated component.
@@ -1746,7 +1748,6 @@ Recording of a webinar about Dispatcher optimization – highly recommended: [ht
 Presentation "The underappreciated power of content invalidation", "adaptTo()" conference in Potsdam 2018 [https://adapt.to/2018/en/schedule/the-underappreciated-power-of-content-invalidation.html](https://adapt.to/2018/en/schedule/the-underappreciated-power-of-content-invalidation.html)
 
 Invalidating Cached Pages From AEM: [https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html)
-
 
 ## Next step
 

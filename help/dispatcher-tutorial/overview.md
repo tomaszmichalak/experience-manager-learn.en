@@ -1,8 +1,8 @@
 ---
 title: AEM Dispatcher Cache Demystified
 seo-title: AEM Dispatcher Cache Demystified
-description: Chapter 1 of the AEM Headless tutorial the baseline setup for the AEM instance for the tutorial.
-seo-description: Chapter 1 of the AEM Headless tutorial the baseline setup for the AEM instance for the tutorial.
+description: The goal of this tutorial is to help you better understand how the Dispatcher works and how you can work with it.
+seo-description: The goal of this tutorial is to help you better understand how the Dispatcher works and how you can work with it.
 ---
 
 # Getting Started with AEM Headless
