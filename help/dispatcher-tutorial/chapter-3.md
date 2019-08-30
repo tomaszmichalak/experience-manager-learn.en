@@ -27,10 +27,10 @@ In this chapter we want to broaden our view on caching further and develop some 
 
 You will need to make trade-offs in these areas,
 
-- Performance and latency
-- Resource consumption / CPU Load / Disk Usage
-- Accuracy / Currency / Staleness / Security
-- Simplicity / Complexity / Cost / Maintainability / Error-proneness
+*Performance and latency
+* Resource consumption / CPU Load / Disk Usage
+* Accuracy / Currency / Staleness / Security
+* Simplicity / Complexity / Cost / Maintainability / Error-proneness
 
 These dimensions are interlinked in a rather complex system. There is no simple if-this-then-that. Making a system simpler can make it faster or slower. It can lower your development costs, but increase costs at the helpdesk, e.g., if customers see stale content or complain about a slow website. All I am saying here is that these factors need to be considered and balanced against each other. But I think you already have the idea, that there is no silver bullet or a single "best-practice" - only a lot of bad practices and a few good ones.
 
@@ -227,9 +227,8 @@ In some simple cases you might also get along with using concurrent hash maps â€
 
 #### References
 
-* ACS Commons http Cache - [https://adobe-consulting-services.github.io/acs-aem-commons/features/http-cache/index.html](https://adobe-consulting-services.github.io/acs-aem-commons/features/http-cache/index.html)
-
-* Ehcache caching framework - [https://www.ehcache.org](https://www.ehcache.org)
+- ACS Commons http Cache - [https://adobe-consulting-services.github.io/acs-aem-commons/features/http-cache/index.html](https://adobe-consulting-services.github.io/acs-aem-commons/features/http-cache/index.html)
+- Ehcache caching framework - [https://www.ehcache.org](https://www.ehcache.org)
 
 ### Basic terms
 
@@ -347,13 +346,9 @@ We advise you to carefully study the SDI documentation. There are a few other li
 
 #### References
 
-
 * How to write custom JSP tags - [https://docs.oracle.com/cd/E11035\_01/wls100/taglib/quickstart.html](https://docs.oracle.com/cd/E11035_01/wls100/taglib/quickstart.html)
-
 * Creating and using component filters - [https://www.slideshare.net/connectwebex/prsentation-dominik-suess](https://www.slideshare.net/connectwebex/prsentation-dominik-suess)
-
 * Description of Sling Dynamic Includes - [https://sling.apache.org/documentation/bundles/dynamic-includes.html](https://sling.apache.org/documentation/bundles/dynamic-includes.html)
-
 * Setting up Sling Dynamic Includes in AEM - [https://helpx.adobe.com/experience-manager/kt/platform-repository/using/sling-dynamic-include-technical-video-setup.html](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/sling-dynamic-include-technical-video-setup.html)
 
 
@@ -403,6 +398,7 @@ A browser reload, a "Simple Reload" and a "Shift Reload" is not the same as a no
 ```
 Cache-Control: max-age=0
 ```
+
 And a Shift-Reload (holding down the "Shift" key while clicking the reload button) set a request header
 
 ```
