@@ -5,7 +5,7 @@ description: The goal of this tutorial is to help you better understand how the 
 seo-description: The goal of this tutorial is to help you better understand how the Dispatcher works and how you can work with it.
 ---
 
-# Getting Started with AEM Headless
+# AEM Dispatcher Cache Demystified
 
 The Dispatcher is an essential part of most, if not all AEM installations. The goal of this tutorial is to help you better understand how the Dispatcher works and how you can work with it.
 
