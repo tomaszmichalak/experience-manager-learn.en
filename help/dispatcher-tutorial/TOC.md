@@ -13,7 +13,7 @@ index: y
  
 # AEM Dispatcher Cache Demystified{#aem-dispatcher-cache-demystified}
 
-+ [Overview](./overview.md)
-+ [1 - Concepts, Patterns, and Antipatterns](./chapter-1.md)
-+ [2 - Infrastructure Pattern](./chapter-2.md)
-+ [3 - Advanced Caching Topics](./chapter-3.md)
++ [Overview](overview.md)
++ [1 - Concepts, Patterns, and Antipatterns](chapter-1.md)
++ [2 - Infrastructure Pattern](chapter-2.md)
++ [3 - Advanced Caching Topics](chapter-3.md)

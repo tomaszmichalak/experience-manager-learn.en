@@ -1713,7 +1713,7 @@ CQ-Handle: <path-pattern>
 
 `CQ-Handle: <path-pattern>` - The content-resource path to be invalidated `<path>` is actually a path and not a pattern.
 
-`CQ-Action-Scope: ResourceOnly` - Optional: If this header is set, the .stat file is not touched.
+`CQ-Action-Scope: ResourceOnly` - Optional: If this header is set, the `.stat` file is not touched.
 
 ```
 [Content-Type: Text/Plain]
@@ -1751,4 +1751,4 @@ Invalidating Cached Pages From AEM: [https://helpx.adobe.com/experience-manager/
 
 ## Next step
 
-* [2 - Infrastructure Pattern](./chapter-2.md)
+* [2 - Infrastructure Pattern](chapter-2.md)

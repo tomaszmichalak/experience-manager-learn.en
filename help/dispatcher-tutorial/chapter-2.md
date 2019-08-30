@@ -112,4 +112,4 @@ We do not advise that you use this scheme as a default option. However, if you d
 
 ## Next Step
 
-* [3 - Advanced Caching Topics](./chapter-3.md)
+* [3 - Advanced Caching Topics](chapter-3.md)
