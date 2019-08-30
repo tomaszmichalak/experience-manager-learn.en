@@ -1530,7 +1530,7 @@ But we do propose that you consider narrowing down the URL space as early in the
 
 [https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#ConfiguringAccesstoContentfilter](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#ConfiguringAccesstoContentfilter)
 
-###  Filtering using Regular Expressions and Globs
+### Filtering using Regular Expressions and Globs
 
 Back in the early days you could only use "globs" – simple placeholders to define filters in the dispatcher configuration.
 
