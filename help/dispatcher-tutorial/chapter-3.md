@@ -27,7 +27,7 @@ In this chapter we want to broaden our view on caching further and develop some 
 
 You will need to make trade-offs in these areas,
 
-*Performance and latency
+* Performance and latency
 * Resource consumption / CPU Load / Disk Usage
 * Accuracy / Currency / Staleness / Security
 * Simplicity / Complexity / Cost / Maintainability / Error-proneness
