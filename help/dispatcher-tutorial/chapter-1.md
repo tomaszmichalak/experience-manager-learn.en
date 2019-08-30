@@ -366,7 +366,7 @@ We are using the same argument as in the last example with teasers referencing t
 
 In our example, the navigation meshes all pages together by using the target page's "NavTitle" to render a name in the navigation. The navigation title "Iceland" is drawn from the "Iceland" page and rendered into each and every page that has a main navigation.
 
-![Main navigation inevitably meshing content of all pages together by pulling their "NavTitles"](assets/chapter-1/navtitles.png)
+![Main navigation inevitably meshing content of all pages together by pulling their "NavTitles"](assets/chapter-1/nav-titles.png)
 *Main navigation inevitably meshing content of all pages together by pulling their "NavTitles"*
 
 If you change the NavTitle on the Iceland page from "Iceland" to "Beautiful Iceland" that title immediately changes on all other pages main menu. Thus the pages rendered and cached before that change become stale and need to be invalidated.
@@ -556,7 +556,7 @@ Again, this is based on real-life experiences. We have seen all those patterns i
 > [!WARNING]
 > This is an anti-pattern. Do not use it. Ever.
 
-You have seen query parameters like ?ck=398547283745, right? This is called a cache-killer ("ck"). The idea is, that if you add a query parameter to a resource it is not cacheable. Moreover, if you add a random number as the parameter's value (like "398547283745") you make sure that no other cache between the AEM system and your screen is able to cache either. Usual in-between suspects would be a "Varnish" cache in front of the Dispatcher, a CDN or even the browser cache. Again: Don't do that. You do want your resources to be cached as much and as long as possible. The cache is your friend. Don't kill friends.
+Query parameters like `?ck=398547283745`, are called a cache-killer ("ck"). The idea is, that if you add a query parameter to a resource it is not cacheable. Moreover, if you add a random number as the parameter's value (like "398547283745") you make sure that no other cache between the AEM system and your screen is able to cache either. Usual in-between suspects would be a "Varnish" cache in front of the Dispatcher, a CDN or even the browser cache. Again: Don't do that. You do want your resources to be cached as much and as long as possible. The cache is your friend. Don't kill friends.
 
 #### Auto Invalidation
 
@@ -1215,14 +1215,14 @@ This relieves you from duplicating header logic in the dispatcher and unleashes 
 
 You might want to cache all pages and images in general – but make exception under some circumstances. For example, you want to cache PNG images, but not PNG images displaying a captcha. The Dispatcher might not recognize a captcha as a captcha… but AEM certainly does. He can ask the Dispatcher not to cache that one request by sending an according header along with the response:
 
-```
-response.setHeader("Dispatcher", "no-cache");
+```plain
+  response.setHeader("Dispatcher", "no-cache");
 
-response.setHeader("Cache-Control: no-cache");
+  response.setHeader("Cache-Control: no-cache");
 
-response.setHeader("Cache-Control: private");
+  response.setHeader("Cache-Control: private");
 
-response.setHeader("Pragma: no-cache");
+  response.setHeader("Pragma: no-cache");
 ```
 
 Cache-Control and Pragma are official HTTP-headers, that are propagated to and interpreted by upper caching layers, such as a CDN. The Dispatcher header is only a hint for the Dispatcher not to cache. It can be used to tell the dispatcher not to cache, while still allowing the upper layers to do so. Actually, it's hard to find a case where that might be useful. But we are sure there are some, somewhere.
@@ -1237,7 +1237,7 @@ The fastest http-response is the response given by the browser itself. Where the
 
 You can help the browser decide when to ask the server for a new version of the file by setting an expiration date on a resource.
 
-You do that statically by using Apache's mod\_expires or by storing the Cache-Control and Expires Header that are coming from AEM if you need a more individual control over what to cache and what not to cache.
+You do that statically by using Apache's mod expires or by storing the Cache-Control and Expires Header that are coming from AEM if you need a more individual control over what to cache and what not to cache.
 
 HTTP caching has two parts. First the expiration date – if a resource is not expired, there is no need to ask the server again. The second part is the Last-Modified date. The browser asks the server: "I have a version from June 10th…do I need an update?" And the server could either respond with `304 – Your version is still up to date` without re-transmitting the resource, or the server could answer with `200 – here is a more recent version` in the HTTP header and the actual more recent content in the HTTP body. To make the second part work, make sure to transmit the Last-Modified date to the browser so it has a reference point to ask for updates.
 
