@@ -143,7 +143,7 @@ That one also is a quite common scheme. You stack several layers of caches, each
 
 It's easy to implement. Unfortunately, it's hard to predict the effective life span of a piece of data.
 
-![Outer chace prolonging the life pan of an inner object](assets/chapter-3/outercache.png)
+![Outer chace prolonging the life pan of an inner object](assets/chapter-3/outer-cache.png)
 *Outer cache prolonging the life span of an inner object*
 
 Consider the illustration above. Each caching layer introduce a TTL of 2 min. Now – the overall TTL must 2 min too, right? Not quite. If the outer layer fetches the object just before it would get stale, the outer layer actually prolongs the effective live time of the object. The effective live time can be between 2 and 4 minutes in that case. Consider you agreed with your business department, one day is tolerable – and you have four layers of caches. The actual TTL on each layer must not be longer than six hours… increasing the cache miss-rate…
