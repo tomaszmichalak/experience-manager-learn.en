@@ -255,11 +255,11 @@ This seem to be a trivial task at first glance… but it is not. Read further an
 
 We have set up our AEM system to dynamically create a thumbnail-rendition for each image when requested with a special "thumb" selector:
 
-```/content/dam/path/to/image.thumb.png```
+`/content/dam/path/to/image.thumb.png`
 
 And - of course - we provide a URL to serve the original image with a selector-less URL:
 
-```/content/dam/path/to/image.png```
+`/content/dam/path/to/image.png`
 
 If we download both, the thumbnail and the original image, we'll end up with something like,
 
@@ -286,7 +286,7 @@ This is sufficient in our case. If a resource has changed, we can safely assume,
 
 The dispatcher can safely delete the resource with all renditions that it has cached. It will do something like,
 
-```$ rm /content/dam/path/to/image.*```
+`$ rm /content/dam/path/to/image.*`
 
 removing image.png and image.thumb.png and all other renditions matching that pattern.
 
@@ -304,11 +304,11 @@ Let's look at a simple example. A travel agency has a web page promoting a trip 
 
 Since both pages display the same teaser it would be unnecessary work to ask the author to create the teaser multiple time for each page it should be displayed on. Instead, the target page "Canada" reserves a section in the page properties to provide the information for the teaser – or better to provide a URL that render's that teaser altogether:
 
-```<sling:include resource="/content/home/destinations/canada" addSelectors="teaser" />```
+`<sling:include resource="/content/home/destinations/canada" addSelectors="teaser" />`
 
 or
 
-```<sling:include resource="/content/home/destinations/canada/jcr:content/teaser" />```
+`<sling:include resource="/content/home/destinations/canada/jcr:content/teaser" />`
 
 ![](assets/chapter-1/content-references.png)
 
@@ -340,7 +340,7 @@ The "Winter Special" page has not been rendered yet, so there is no static versi
 
 You might think that the Dispatcher would keep track of every resource it touches while rendering and flushing all pages which have used this resource when that resource changes. The Dispatcher does not render the pages. The rendering is performed by the Publish system. The Dispatcher does not know what resources go into a rendered html file.
 
-I fear, that you are still not convinced. You might think _"there must be some way to implement some kind of dependency tracking"_. Well there is, or more accurately there _was_. Communiqué 3 the great-great-great-grandfather of AEM had a dependency tracker implemented in the session that was used to render a page.
+I fear, that you are still not convinced. You might think *"there must be some way to implement some kind of dependency tracking"*. Well there is, or more accurately there *was*. Communiqué 3 the great-great-great-grandfather of AEM had a dependency tracker implemented in the session that was used to render a page.
 
 Each resource that was acquired via that session during a request was tracked as a dependency of the URL that was actually being rendered.
 
@@ -382,7 +382,7 @@ All files that have a creation date older than the statfile have been rendered b
 
 You may ask why it is called ".stat"? And not maybe ".invalidated"? Well, you can imagine, having that file in your filesystem helps the Dispatcher determine which resources could *statically* be served – just like from a static web server. These files don't need to be rendered dynamically any longer.
 
-The true nature of the name, however, is less metaphorical. It is derived from the Unix system call ```stat()```, which returns the modification time of a file (among other properties).
+The true nature of the name, however, is less metaphorical. It is derived from the Unix system call `stat()`, which returns the modification time of a file (among other properties).
 
 #### Mixing Simple and Auto Validation
 
@@ -418,17 +418,17 @@ It would be a bit beyond this guide to go into the details, but we want to give 
 
 1. Really know what you are doing. Getting invalidation right is really hard. That's one reason why the auto-invalidation is so rigorous; to avoid delivering stale content.
 
-2. If your agent sends a HTTP-header ```CQ-Action-Scope: ResourceOnly```, that means that this single invalidation request should not trigger an auto-invalidation. This ( [https://github.com/cqsupport/webinar-dispatchercache/tree/master/src/refetching-flush-agent/refetch-bundle](https://github.com/cqsupport/webinar-dispatchercache/tree/master/src/refetching-flush-agent/refetch-bundle)) piece of code might be a good starting point for your own replication agent.
+2. If your agent sends a HTTP-header `CQ-Action-Scope: ResourceOnly`, that means that this single invalidation request should not trigger an auto-invalidation. This ( [https://github.com/cqsupport/webinar-dispatchercache/tree/master/src/refetching-flush-agent/refetch-bundle](https://github.com/cqsupport/webinar-dispatchercache/tree/master/src/refetching-flush-agent/refetch-bundle)) piece of code might be a good starting point for your own replication agent.
 
-3. ```ResourceOnly```, only prevents auto-invalidation. To actually do the necessary dependency resolving and invalidations, you must trigger the invalidation requests yourself. You may want to check the package Dispatcher Flush Rules ([https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-flush-rules/index.html](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-flush-rules/index.html)) for inspiration on how that could actually happen.
+3. `ResourceOnly`, only prevents auto-invalidation. To actually do the necessary dependency resolving and invalidations, you must trigger the invalidation requests yourself. You may want to check the package Dispatcher Flush Rules ([https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-flush-rules/index.html](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-flush-rules/index.html)) for inspiration on how that could actually happen.
 
 We don't recommend that you build a dependency resolving scheme. There is just too much effort and little gain – and as said before there is too much that you will get wrong.
 
-Rather, what you should do is find out which resources don't have any dependencies on other resources and can be invalidated with the ```ResourceOnly``` option.
+Rather, what you should do is find out which resources don't have any dependencies on other resources and can be invalidated with the `ResourceOnly` option.
 
 We said that the main navigation or teasers are a source for dependencies. Well – if you load the navigation and teasers asynchronously or include them with an SSI script in Apache, you won't have that dependency to track. We will elaborate on asynchronously loading components later in this document when we talk about "Sling Dynamic Includes".
 
-The same applies for Pop-Up windows or content that is loaded into a lightbox. These pieces also rarely have navigations (aka., "dependencies") and can be invalidated ```ResourceOnly```.
+The same applies for Pop-Up windows or content that is loaded into a lightbox. These pieces also rarely have navigations (aka., "dependencies") and can be invalidated `ResourceOnly`.
 
 ## Building Components with the Dispatcher in Mind
 
@@ -456,13 +456,13 @@ We call the pattern used here the "Spooler Pattern", because the problem dates b
 
 Here is how our responsive-image component is implemented:
 
-The component has two parts; the first part renders the image's HTML markup, the second part "spools" the referenced image's binary data. As this is a modern website with a responsive design, we are not rendering a simple ```<img src"…">``` tag, but a set of images in ```<picture/>``` tag. For each device, we upload two different images into the DAM and reference them from our image component.
+The component has two parts; the first part renders the image's HTML markup, the second part "spools" the referenced image's binary data. As this is a modern website with a responsive design, we are not rendering a simple `<img src"…">` tag, but a set of images in `<picture/>` tag. For each device, we upload two different images into the DAM and reference them from our image component.
 
 The component has three rendering scripts (implemented in JSP, HTL or as a servlet) each one addressed with a dedicated selector:
 
-1. ```/respi.jsp``` - with no selector to render the HTML markup
-2. ```/respi.img.jsp``` to render the desktop version
-3. ```/respi.img.mobile.jsp``` to render the mobile version.
+1. `/respi.jsp` - with no selector to render the HTML markup
+2. `/respi.img.jsp` to render the desktop version
+3. `/respi.img.mobile.jsp` to render the mobile version.
 
 The component is placed in the parsys of the homepage. The resulting structure in the CRX is illustrated below.
 
@@ -490,6 +490,7 @@ The components markup is rendered like this,
 </div>
 …
 ```
+
 and... we have finished with our nicely encapsulated component.
 
 #### Responsive Image Component in Action
@@ -501,11 +502,11 @@ Now a user requests the page – and the assets via the Dispatcher. This results
 
 Consider a user uploads and activates a new version of the two flower images to the DAM. AEM will send according invalidation request for
 
-```/content/dam/flower.jpg```
+`/content/dam/flower.jpg`
 
 and
 
-```/content/dam/flower-mobile.jpg```
+`/content/dam/flower-mobile.jpg`
 
 to the Dispatcher. These requests are in vain, though. The contents have been cached as files below the component's substructure. These files are now stale but still served upon requests.
 
@@ -513,6 +514,7 @@ to the Dispatcher. These requests are in vain, though. The contents have been ca
 *Structure mismatch leading to stale content*
 
 There is another caveat to this approach. Consider you use the same flower.jpg on multiple pages. Then you will have the same asset cached under multiple URLs or files,
+
 ```
 /content/home/products/jcr:content/par/respi.img.jpg
 
@@ -522,6 +524,7 @@ There is another caveat to this approach. Consider you use the same flower.jpg o
 
 …
 ```
+
 Each time a new and un-cached page is requested, the assets are fetched from AEM at different URLs. No Dispatcher caching and no browser caching can speed up the delivery.
 
 #### Where the Spooler Pattern Shines
@@ -568,19 +571,13 @@ Make sure however, that you understand the vast performance impacts. This will s
 
 A URL fingerprint looks like a cache-killer. But it's not. It's not a random number but a value that characterizes the contents of the resource. This can be a hash of the resource's content or even more simple, a timestamp when the resource was uploaded, edited or updated.
 
-A Unix-timestamp is good enough for a real-world implementation. For better readability we are using a more readable format in this tutorial: ```2018 31.12 23:59 or fp-2018-31-12-23-59```.
+A Unix-timestamp is good enough for a real-world implementation. For better readability we are using a more readable format in this tutorial: `2018 31.12 23:59 or fp-2018-31-12-23-59`.
 
 The fingerprint must not be used as a query parameter, as URLs with query parameters   cannot be cached. You can use a selector for the fingerprint.
 
-Let's assume, the file
+Let's assume, the file `/content/dam/flower.jpg` has a `jcr:lastModified` date of December 31st in 2018, 23:59. The URL with the fingerprint is `/content/home/jcr:content/par/respi.fp-2018-31-12-23-59.jpg`.
 
-```/content/dam/flower.jpg```
-
-has a ```jcr:lastModified``` date of December 31st in 2018, 23:59. The URL with the fingerprint is
-
-```/content/home/jcr:content/par/respi.fp-2018-31-12-23-59.jpg```
-
-This URL remains stable, as long as the referenced resource (```flower.jpg```) file is not changed. So it can be cached for an indefinite amount of time and it is not a cache killer.
+This URL remains stable, as long as the referenced resource (`flower.jpg`) file is not changed. So it can be cached for an indefinite amount of time and it is not a cache killer.
 
 Note, this URL needs to be created and served by the responsive image component. It's not an out-of-the-box AEM functionality.
 
@@ -601,7 +598,7 @@ But we didn't activate the home page, right? And why should we activate a page w
 
 The lazy admin usually "_sets auto-invalidation to jpgs and the statfile-level to zero - that always helps with caching issues of all kinds_." You'll find that advice in tech forums, and it helps with your invalidation issue.
 
-Until now we haven't discussed the statfile-level. Basically, auto-invalidation only works for files in the same subtree. The issue however is that pages and assets usually do not live in the same subtree. Pages are somewhere below ```/content/mysite``` whereas assets live below ```/content/dam```.
+Until now we haven't discussed the statfile-level. Basically, auto-invalidation only works for files in the same subtree. The issue however is that pages and assets usually do not live in the same subtree. Pages are somewhere below `/content/mysite` whereas assets live below `/content/dam`.
 
 The idea of "decreasing" the statfile level to 0 basically is to define the whole /content tree as the one and only subtree to make pages and assets live in the same auto invalidation domain. But doing so auto-invalidates all sites on the server whenever something is published – even on completely unrelated sites. Trust us - that this is a bad idea in the long run because you will degrade your overall cache hit rate severely. All you can do is hope that your AEM servers have enough firepower to run without cache.
 
@@ -618,6 +615,7 @@ Here it helps a lot if you can derive the site's path from the asset's path by n
 Generally speaking, it is a good idea to match the sites and the asset paths like this:
 
 **Example**
+
 ```
 /content/dam/site-a
 /content/dam/site-b
@@ -625,14 +623,17 @@ Generally speaking, it is a good idea to match the sites and the asset paths lik
 /content/site-a
 /content/site-b
 ```
-This way your custom Dispatcher Flushing agent could easily send and invalidation request to /content/site-a when it encounters a change on ```/content/dam/site-a```.
+
+This way your custom Dispatcher Flushing agent could easily send and invalidation request to /content/site-a when it encounters a change on `/content/dam/site-a`.
 
 Actually, it doesn't matter which path you tell the Dispatcher to invalidate – as long as it is in the same site, in the same "subtree". You don't even have to use a real resource path. It can be "virtual" as well:
+
 ```
 GET /dispatcher-invalidate
 Invalidate-path /content/mysite/dummy
 ```
- ![](assets/chapter-1/resource-path.png)
+
+![](assets/chapter-1/resource-path.png)
 
 1. A listener on the publish system is triggered when a file in the DAM changes
 
@@ -653,7 +654,7 @@ Phew. Finished. Hurray! Well… not quite yet.
 
 The path,
 
-```/content/mysite/home/jcr:content/par/respi.img.fp-2018-31-12-23-59.jpg```
+`/content/mysite/home/jcr:content/par/respi.img.fp-2018-31-12-23-59.jpg`
 
 does not relate to any of the invalidated resources. It will probably never be _physically_ deleted. So, the cache will grow and grow and grow. When images are changed and activated, they get new filenames in the Dispatcher's filesystem.
 
@@ -672,6 +673,7 @@ Finally, you come up with some housekeeping cronjob to clean all files older tha
 But wait, there is another flaw in this solution:
 
 We are kind of abusing a selector as a parameter: fp-2018-31-12-23-59 is generated dynamically as some kind of "cache-killer". But maybe some bored kid (or a search engine crawler that has gone wild) starts requesting the pages:
+
 ```
 /content/mysite/home/jcr:content/par/img.fp-0000-00-00-00-00.jpg
 /content/mysite/home/jcr:content/par/img.fp-0000-00-00-00-01.jpg
@@ -679,13 +681,14 @@ We are kind of abusing a selector as a parameter: fp-2018-31-12-23-59 is generat
 
 …
 ```
+
 Each request will bypass the Dispatcher, causing load on a Publish instance. And – even worse – create an according file on the Dispatcher.
 
 So… instead of just using the fingerprint as a simple cache-killer, you would have to check the jcr:lastModified date of image and return a 404 if it is not the expected date. That takes some time and CPU cycles on the Publish system… which is what you wanted to prevent in the first place.
 
 #### Caveats of URL Fingerprints in High Frequency Releases
 
-There is another caveat having URL fingerprints; it ties the URL to the content. You cannot change the content without also changing the URL (aka., update the modification date). That is what the fingerprints are designed for. But consider, you are rolling out a new release, with new CSS and JS files and thus new URLs with new fingerprints. All of your HTML pages still have references to the old fingerprinted URLs. So, to make the new release consistently work, you need to invalidate all HTML pages at once to force a re-rendering with the new fingerprint. If you have multiple sites relying on the same libraries, that can be a considerable amount of re-rendering – and here you cannot leverage the ```statfiles```. So be prepared see load peaks on your Publish systems after a rollout. You might consider a blue-green deployment with cache warming or maybe a TTL-based cache in front of your dispatcher… The possibilities are endless.
+There is another caveat having URL fingerprints; it ties the URL to the content. You cannot change the content without also changing the URL (aka., update the modification date). That is what the fingerprints are designed for. But consider, you are rolling out a new release, with new CSS and JS files and thus new URLs with new fingerprints. All of your HTML pages still have references to the old fingerprinted URLs. So, to make the new release consistently work, you need to invalidate all HTML pages at once to force a re-rendering with the new fingerprint. If you have multiple sites relying on the same libraries, that can be a considerable amount of re-rendering – and here you cannot leverage the `statfiles`. So be prepared see load peaks on your Publish systems after a rollout. You might consider a blue-green deployment with cache warming or maybe a TTL-based cache in front of your dispatcher… The possibilities are endless.
 
 Wow - That's quite a lot of details to be considered, right? And it refuses to be understood, tested and debugged easily. And all for a seemingly elegant solution. Admittedly, it is elegant – but only from an AEM-only perspective. But together with the Dispatcher it becomes nasty.
 
@@ -711,7 +714,7 @@ In our case, we would need a customized replication agent on the Publish system,
 
 Let's say
 
-```/content/dam/flower.jpg```
+`/content/dam/flower.jpg`
 
 Has changed on Publish. The agent would fire up a search for "/content/dam/flower.jpg" and find all pages referencing those images.
 
@@ -742,7 +745,7 @@ By the way - we don't see any issues with code coherence. The servlet can be def
 
 We can even use additional selectors in the global space such as,
 
-```/content/dam/flower.respi.thumbnail.jpg```
+`/content/dam/flower.respi.thumbnail.jpg`
 
 Easy, right? Then why do people come up with complicated patterns like the Spooler?
 
@@ -788,9 +791,10 @@ We now have a binary file in the DAM and a component, that provides a quality pr
 
 In the last chapter our image URL rendered by the component looked like this:
 
-```/content/dam/flower.respi.jpg```
+`/content/dam/flower.respi.jpg`
 
-All that is missing is the value for the quality. The component knows what property is entered by the author… It could easily be passed to the image rendering servlet as a query parameter when the markup is rendered, like "flower.respi2.jpg?quality=60":
+All that is missing is the value for the quality. The component knows what property is entered by the author… It could easily be passed to the image rendering servlet as a query parameter when the markup is rendered, like `flower.respi2.jpg?quality=60`:
+
 ```
 <div class="respi2">
 <picture>
@@ -800,6 +804,7 @@ All that is missing is the value for the quality. The component knows what prope
 </div>
 …
 ```
+
 This is a bad idea. Remember? Requests with query parameters are not cacheable.
 
 #### Naïve Approach 2: Pass Additional Information as Selector
@@ -812,9 +817,10 @@ This is a bad idea. Remember? Requests with query parameters are not cacheable.
 
 This is a slight variation of the last URL. Only this time we use a selector to pass the property to the servlet, so that the result is cacheable:
 
-```/content/dam/flower.respi.q-60.jpg```
+`/content/dam/flower.respi.q-60.jpg`
 
 This is much better, but remember that nasty script-kid from the last chapter who looks out for such patterns? He would see how far he can get with looping over values:
+
 ```
 /content/dam/flower.respi.q-60.jpg
 /content/dam/flower.respi.q-61.jpg
@@ -822,15 +828,18 @@ This is much better, but remember that nasty script-kid from the last chapter wh
 /content/dam/flower.respi.q-63.jpg
 …
 ```
-This again is bypassing the cache and creating load on the publish system. So, it might be a bad idea. You can mitigate this by filtering only a small subset of parameters. You want to allow only ```q-20, q-40, q-60, q-80, q-100```.
+
+This again is bypassing the cache and creating load on the publish system. So, it might be a bad idea. You can mitigate this by filtering only a small subset of parameters. You want to allow only `q-20, q-40, q-60, q-80, q-100`.
 
 #### Filtering of Invalid Requests When Using Selectors
 
 Reducing the number of selectors was a good start. As a rule of thumb, you should always limit the number of valid parameters to an absolute minimum. If you do that cleverly you can even leverage a Web Application Firewall outside AEM using a static set of filters without deep knowledge of the underlying AEM system to protect your systems:
+
 ```
 Allow: /content/dam/(-\_/a-z0-9)+/(-\_a-z0-9)+
        \.respi\.q-(20|40|60|80|100)\.jpg
 ```
+
 If you don't have a Web Application Firewall you have to filter in the Dispatcher or in AEM itself. If you do it in AEM, please make sure that
 
 1. The filter is implemented super efficiently, without accessing the CRX too much and wasting memory and time.
@@ -838,35 +847,41 @@ If you don't have a Web Application Firewall you have to filter in the Dispatche
 1. The filter responds a "404 – Not found" error message
 
 Let's stress the last point again. The HTTP conversation would look like this:
+
 ```
 GET /content/dam/flower.respi.q-41.jpg
 
 Response: 404 – Not found
 << empty response body >>
 ```
+
 We have also seen implementations, that did filter invalid parameters but returned a valid fallback rendering when an invalid parameter is used. Let's assume, we only allow parameters from 20-100. The values in between are mapped to the valid ones. So
 
-```q-41, q-42, q-43, …```
+`q-41, q-42, q-43, …`
 
 would always respond the same image as q-40 would have:
+
 ```
 GET /content/dam/flower.respi.q-41.jpg
 
 Response: 200 – OK
 << flower.jpg with quality = 40 >>
 ```
+
 That approach is not helping at all. These requests actually are valid requests.  They consume processing power and take up space in the cache directory on the Dispatcher.
 
-Better is to return a ```301 – Moved permanently```:
+Better is to return a `301 – Moved permanently`:
+
 ```
 GET /content/dam/flower.respi.q-41.jpg
 
 Response: 301 – Moved permanently
 Location: /content/dam/flower.respi.q-40.jpg
 ```
-Here AEM is telling the browser. "I don't have ```q-41``` – but hey – you can ask me about ```q-40``` ".
 
-That adds an additional request-response loop to the conversation, which is a bit of overhead, but it is cheaper than doing the full processing on ```q-41```. And you can leverage the file that is already cached under ```q-40```. You have to understand though, that 302 responses are not cached in the Dispatcher, we are talking about logic that is executed in the AEM. Over and over again. So you better make it slim and fast.
+Here AEM is telling the browser. "I don't have `q-41` – but hey – you can ask me about `q-40` ".
+
+That adds an additional request-response loop to the conversation, which is a bit of overhead, but it is cheaper than doing the full processing on `q-41`. And you can leverage the file that is already cached under `q-40`. You have to understand though, that 302 responses are not cached in the Dispatcher, we are talking about logic that is executed in the AEM. Over and over again. So you better make it slim and fast.
 
 We personally like the 404 respond the most. It makes it super obvious what is happening. And helps detecting errors on your website when you are analyzing logfiles. 301s can be intended, where 404 always should be analyzed and eliminated.
 
@@ -907,11 +922,13 @@ quality = q-20, q-40, q-60, q-80, q-100
 width = w-100, w-200, w-400, w-800, w-1000, w-1200
 
 But all combinations are now valid URLs:
+
 ```
 /content/dam/flower.respi.q-40.w-200.jpg
 /content/dam/flower.respi.q-60.w-400.jpg
 …
 ```
+
 Now we have already 5x6=30 valid URLs for one resource. Each additional property adds to the complexity. And there might be properties, that cannot be reduced to a reasonable amount of values.
 
 So, this approach soon reaches its limits.
@@ -955,17 +972,19 @@ For the Inverted Spooler has to be based on the images resource, to have all the
 But it must not expose any parameters. All properties should be encapsulated in the component. But we can expose the components path – as an opaque reference to the properties.
 
 That leads to a URL in the form:
+
 ```
 /content/dam/flower.respi3
 .content-mysite-home-\_jcr\_content-par-respi.jpg
 
 /content/dam/flower is the path to the images resource
 ```
-```.respi``` is a selector to select the correct servlet to deliver the image
+
+`.respi` is a selector to select the correct servlet to deliver the image
 
 .content-mysite-home-\_jcr\_content-par-respi is a selector. It encodes the path to the component that stores the property necessary for the image transformation. Selectors are limited to a smaller range of characters than paths. The encoding scheme here is just exemplary. It substitutes "/" with "-". It is not taking into account, that the path itself can contain "-" as well. A more sophisticated encoding scheme would be advised in a real-world example. Base64 should be ok. But it makes debugging a bit harder.
 
-```.jpg``` is the files suffix
+`.jpg` is the files suffix
 
 ### Conclusion
 
@@ -977,11 +996,11 @@ Wow… the discussion of the spooler got longer and more complicated than expect
 
 #### Introduction
 
-We already have mentioned the statfile before. It is related to auto-invalidation. All cache files in the Dispatcher's filesystem that are configured to be auto-invalidated are considered invalid if their last-modified date is older than the ```statfile's``` last-modified date.
+We already have mentioned the statfile before. It is related to auto-invalidation. All cache files in the Dispatcher's filesystem that are configured to be auto-invalidated are considered invalid if their last-modified date is older than the `statfile's` last-modified date.
 
-Note, the last-modified date we are talking of is the cached file is the date the file was requested from the client's browser and ultimately created in the filesystem. It is not the ```jcr:lastModified``` date of the resource.
+Note, the last-modified date we are talking of is the cached file is the date the file was requested from the client's browser and ultimately created in the filesystem. It is not the `jcr:lastModified` date of the resource.
 
-The last-modified date of the statfile (```.stat```) is the date the invalidation request from AEM was received on the dispatcher.
+The last-modified date of the statfile (`.stat`) is the date the invalidation request from AEM was received on the dispatcher.
 
 If you have more than one dispatcher this can lead to strange effects. Your browser might have a more recent version than one of the dispatchers or a dispatcher might think that the browser's version that was issued by the other dispatcher is outdated and unnecessarily sends a new copy. These effects don't have a significant impact on the performance or the functional requirements. And they will level out over time, when the browser has the latest version. However, it can be a bit confusing when you are optimizing and debugging the browser caching behavior. So be warned.
 
@@ -993,7 +1012,7 @@ That's not quite accurate. Usually, all files that share a common main navigatio
 
 Wouldn't it be a waste to in invalidate Site B because there is a change in Site A? Yes, it is. And it doesn't have to be like that.
 
-The Dispatcher provides a simple means to separate the sites from each other: The ```statfiles-level```.
+The Dispatcher provides a simple means to separate the sites from each other: The `statfiles-level`.
 
 It is a number that defines from which level in the filesystem on, two subtrees are considered independent.
 
@@ -1002,13 +1021,13 @@ Let's look at the default case where the statfileslevel is 0.
  ![/statfileslevel "0": The_ _.stat_ _is created in the docroot. The invalidation domain spans the whole installation including all sites](assets/chapter-1/statfile-level-0.png)
 */statfileslevel "0": The_ _.stat_ _is created in the docroot. The invalidation domain spans the whole installation including all sites*
 
-Whichever file is invalidated, the ```.stat``` file at the very top of the dispatchers docroot is always updated. So when you invalidate ```/content/site-b/home```, also all files in ```/content/site-a``` are invalidated too, as they are now older than the .stat file in the docroot. Clearly not what you need, when you invalidate site-b.
+Whichever file is invalidated, the `.stat` file at the very top of the dispatchers docroot is always updated. So when you invalidate `/content/site-b/home`, also all files in `/content/site-a` are invalidated too, as they are now older than the .stat file in the docroot. Clearly not what you need, when you invalidate site-b.
 
-In this example you would rather set the ```statfileslevel``` to 1.
+In this example you would rather set the `statfileslevel` to 1.
 
-Now if you publish and thus invalidate ```/content/site-b/home``` or any other resource below ```/content/site-b```, the .stat file is created at ```/content/site-b/```.
+Now if you publish and thus invalidate `/content/site-b/home` or any other resource below `/content/site-b`, the .stat file is created at `/content/site-b/`.
 
-Content below ```/content/site-a/``` is not affected. This content would be compared to a .stat file at ```/content/site-a/```. We have created two separate invalidation domains.
+Content below `/content/site-a/` is not affected. This content would be compared to a .stat file at `/content/site-a/`. We have created two separate invalidation domains.
 
  ![A statfileslevel "1" creates different invalidation domains](assets/chapter-1/statfiles-level-1.png)
 *A statfileslevel "1" creates different invalidation domains*
@@ -1020,6 +1039,7 @@ Large installations usually are structured a bit more complex and deeper. A comm
 The statfileslevel is applied equally to all sites in your setup. Therefore, it is necessary to have all sites following the same structure and start at the same level.
 
 Consider you have some brands in your portfolio that are sold only on a few small markets while others are sold worldwide. The small markets happen to have only one local language while in the global market there are countries where more than one language is spoken:
+
 ```
 /content/tiny-local-brand/finland/home
 /content/tiny-local-brand/finland/products
@@ -1040,13 +1060,15 @@ Consider you have some brands in your portfolio that are sold only on a few smal
                               /statfileslevel "3"
 ..
 ``` 
-The former would require a statfileslevel of 2, while the latter requires 3.
 
-Not an ideal situation. If you set it to 3, then auto invalidation would not work within the smaller sites between the sub-branches ```/home```, ```/products``` and ```/about```.
+The former would require a `statfileslevel` of 2, while the latter requires 3.
 
- Setting it to 2 means that in the larger sites you are declaring ```/canada/en``` and ```/canada/fr``` dependent, which they might not be. Thus each invalidation in ```/en``` would also invalidate ```/fr```. This will lead to a slightly decreased cache hit rate, but still is better than delivering stale cached content.
+Not an ideal situation. If you set it to 3, then auto invalidation would not work within the smaller sites between the sub-branches `/home`, `/products` and `/about`.
+
+ Setting it to 2 means that in the larger sites you are declaring `/canada/en` and `/canada/fr` dependent, which they might not be. Thus each invalidation in `/en` would also invalidate `/fr`. This will lead to a slightly decreased cache hit rate, but still is better than delivering stale cached content.
 
 The best solution of course is to make all sites' roots equally deep:
+
 ```
 /content/tiny-local-brand/finland/fi/home
 /content/tiny-local-brand/finland/fi/products
@@ -1056,6 +1078,7 @@ The best solution of course is to make all sites' roots equally deep:
                                  ^
                         /statfileslevel "3"
 ```
+
 ### Inter-Site linking
 
 Now which is the right level? That depends on the number of dependencies you have between the sites. While it is very likely to simply hyperlink between brands and languages. And it is safe to do so. As it is safe to set a hyperlink to any other website – Google, Facebook, or any external website. Dependency occurs if you read content from the linked resource (e.g., the navigation title). Such dependencies can be avoided if you just rely on locally entered navigation titles and not draw them from the target page (as you would with external links, too).
@@ -1095,7 +1118,7 @@ There were now navigable links between the language sites, we set the statfilesl
 
 Search engines like Google consider having the same content on different URLs deceptive. A user might want try to get ranked higher or listed more often by creating farms serving identical content. Search engines recognize these attempts and actually rank pages lower that re-cycle content.
 
-You can prevent that if you make transparent, that you actually have more than one page with the same content, and that you are not attempting to game the system ```[https://support.google.com/webmasters/answer/189077?hl=en]``` by setting ```<link rel="alternate">``` tags to each related page in the header section of each page:
+You can prevent that if you make transparent, that you actually have more than one page with the same content, and that you are not attempting to game the system `[https://support.google.com/webmasters/answer/189077?hl=en]` by setting `<link rel="alternate">` tags to each related page in the header section of each page:
 
 ```
 # URL: www.shiny-brand.fr/fr/home/produits.html
@@ -1124,7 +1147,7 @@ You can prevent that if you make transparent, that you actually have more than o
 
 Search Engine Optimization (SEO), is a field with lots of different opinions what actually helps ranking. We didn't have our own – but relied on some expert advice when we created that scheme. And that scheme created a huge number of links. First you do not want an editor to have to manually maintain these links – they have to be generated by the system automatically. Second, they should be accurate. Whenever the system detects a new "relative" to pop up, you want to link it from all other pages with the same content.
 
-New relatives popped up – but on sites that where supposedly independent. So, for instance, when the ```de-de/produkte``` page was published on the German website, it wasn't immediately visible on the other sites.
+New relatives popped up – but on sites that where supposedly independent. So, for instance, when the `de-de/produkte` page was published on the German website, it wasn't immediately visible on the other sites.
 
 You know one solution already how to solve that issue. Just decrease the statfileslevel to 2 to broaden the invalidation domain. Of course, that also decreases the cache hit ratio and potentially increase the load on the Publish systems.
 
@@ -1132,7 +1155,7 @@ In our case it was even more complicated.
 
 Even though we had the same content, the actual brand-names were different in each country.
 
-```shiny-brand``` was called ```marque-brillant``` in France and ```blitzmarke``` in Germany:
+`shiny-brand` was called `marque-brillant` in France and `blitzmarke` in Germany:
 
 ```
 /content/marque-brillant/france/fr
@@ -1142,7 +1165,7 @@ Even though we had the same content, the actual brand-names were different in ea
 …
 ```
 
-That would have meant to set the ```statfiles``` level to 1 - which would have resulted in too huge an invalidation domain.
+That would have meant to set the `statfiles` level to 1 - which would have resulted in too huge an invalidation domain.
 
 Restructuring the site would have fixed that. Merging all brands together under one common root. But we didn't have the capacity back then, and – that would have given us only a level 2.
 
@@ -1214,7 +1237,7 @@ You can help the browser decide when to ask the server for a new version of the 
 
 You do that statically by using Apache's mod\_expires or by storing the Cache-Control and Expires Header that are coming from AEM if you need a more individual control over what to cache and what not to cache.
 
-HTTP caching has two parts. First the expiration date – if a resource is not expired, there is no need to ask the server again. The second part is the Last-Modified date. The browser asks the server: "I have a version from June 10th…do I need an update?" And the server could either respond with ```304 – Your version is still up to date``` without re-transmitting the resource, or the server could answer with ```200 – here is a more recent version``` in the HTTP header and the actual more recent content in the HTTP body. To make the second part work, make sure to transmit the Last-Modified date to the browser so it has a reference point to ask for updates.
+HTTP caching has two parts. First the expiration date – if a resource is not expired, there is no need to ask the server again. The second part is the Last-Modified date. The browser asks the server: "I have a version from June 10th…do I need an update?" And the server could either respond with `304 – Your version is still up to date` without re-transmitting the resource, or the server could answer with `200 – here is a more recent version` in the HTTP header and the actual more recent content in the HTTP body. To make the second part work, make sure to transmit the Last-Modified date to the browser so it has a reference point to ask for updates.
 
 If you are using URL fingerprints, then you can set very long expiration dates. You can cache fingerprinted resources forever in the browser. A new version is marked with a new URL and older versions never have to be updated.
 
@@ -1264,15 +1287,15 @@ www.shiny-brand.fi/home.html
 
 You have to implement that mapping on AEM – because AEM needs to know how to render links according to that truncated format.
 
-But do not rely only on AEM. If you do, you would have paths like ```/home.html``` in your cache's root directory. Now, is that the "home" for the Finish or German or the Canadian website? And if there is a file /home.html in the dispatcher, how does the dispatcher know that this has to be invalidated when an invalidation request for ```/content/brand/fi/fi/home``` comes in.
+But do not rely only on AEM. If you do, you would have paths like `/home.html` in your cache's root directory. Now, is that the "home" for the Finish or German or the Canadian website? And if there is a file /home.html in the dispatcher, how does the dispatcher know that this has to be invalidated when an invalidation request for `/content/brand/fi/fi/home` comes in.
 
 We have seen a project that had separate docroots for each domain. It was a nightmare to debug and maintain – and actually we never saw it running flawlessly.
 
 We could solve the problems by re-structuring the cache. We had a single docroot for all domains, and invalidation requests could be handled 1:1 as all files on the server started with /content.
 
-The truncating part was also very easy.  AEM generated truncated links due to an according configuration in the ```/etc/map``` configuration.
+The truncating part was also very easy.  AEM generated truncated links due to an according configuration in the `/etc/map` configuration.
 
-Now when a request ```/home.html``` is hitting the Dispatcher, first thing that happens is applying a rewrite rule that internally expands the path.
+Now when a request `/home.html` is hitting the Dispatcher, first thing that happens is applying a rewrite rule that internally expands the path.
 
 That rule was setup statically in each vhost configuration. Simply put, the rules looked like this,
 
@@ -1298,13 +1321,13 @@ Having one common docroot also had another nice feature. When anything went wron
 
 In AEM classes you learn how to program an error handler in Sling. This is not so different from writing a usual template. You simply write a template in JSP or HTL, right?
 
-Yes – but this is the AEM part, only. The dispatcher does not cache ```404 – not found``` or ```500 – internal server error``` responses.
+Yes – but this is the AEM part, only. The dispatcher does not cache `404 – not found` or `500 – internal server error` responses.
 
 If you are rendering these pages dynamically on each request, you will have an unnecessary high load on the publish system.
 
 What we found useful is to not render the full error page when the error occurs but only a super simplified and small – even static version of that page, without any ornaments or logic.
 
-This of course is not what the customer saw. In the Dispatcher, we registered ```ErrorDocuments``` like so:
+This of course is not what the customer saw. In the Dispatcher, we registered `ErrorDocuments` like so:
 
 ```
 ErrorDocument 404 "/content/shiny-brand/fi/fi/edocs/error-404.html"
@@ -1313,9 +1336,9 @@ ErrorDocument 500 "/content/shiny-brand/fi/fi/edocs/error-500.html"
 
 Now the AEM system could just notify the Dispatcher that something was wrong, and the dispatcher could deliver a shiny and beautiful version of the error document.
 
-Two things should be noted here. First, the ```error-404.html``` always is the same page. So, there is no individual message like "Your search for ```produkten``` did not yield a result". We could easily live with that. Second… well, if we see an internal server error – or even worse we encounter an outage of the AEM system, there is no way to ask AEM to render an error page, right? The necessary subsequent request as defined in the ```ErrorDocument``` directive would fail, too.
+Two things should be noted here. First, the `error-404.html` always is the same page. So, there is no individual message like "Your search for `produkten` did not yield a result". We could easily live with that. Second… well, if we see an internal server error – or even worse we encounter an outage of the AEM system, there is no way to ask AEM to render an error page, right? The necessary subsequent request as defined in the `ErrorDocument` directive would fail, too.
 
-We worked around that issue by running a cron-job that would periodically pull the error pages from their defined locations via ```wget``` and store them in the locations defined in the ```ErrorDocuments``` directive.
+We worked around that issue by running a cron-job that would periodically pull the error pages from their defined locations via `wget` and store them in the locations defined in the `ErrorDocuments` directive.
 
 **References**
 
@@ -1352,15 +1375,15 @@ The diagram below illustrates a possible timing when accessing a single page.  T
  ![Frequent activations leading to invalid cache for most of the time](assets/chapter-1/frequent-activations.png)
 *Frequent activations leading to invalid cache for most of the time*
 
-To mitigate the problem of this "cache invalidation storm" as it is sometimes called, you can be less rigorous about the ```statfile``` interpretation.
+To mitigate the problem of this "cache invalidation storm" as it is sometimes called, you can be less rigorous about the `statfile` interpretation.
 
-You can set the dispatcher to use a grace period for auto-invalidation. This would internally add some extra time to the ```statfiles``` modification date.
+You can set the dispatcher to use a grace period for auto-invalidation. This would internally add some extra time to the `statfiles` modification date.
 
-Let's say, your ```statfile``` has a modification time of today 12:00 and your ```gracePeriod``` is set to 2 minutes. Then all auto-invalidated files will be considered valid at 12:01 and at 12:02. They will be re-rendered after 12:02.
+Let's say, your `statfile` has a modification time of today 12:00 and your `gracePeriod` is set to 2 minutes. Then all auto-invalidated files will be considered valid at 12:01 and at 12:02. They will be re-rendered after 12:02.
 
-The reference proposes a ```gracePeriod``` of two minutes for a good reason. You might think "Two minutes? That's almost nothing. I can easily wait 10 minutes for the content to show up…".  So you might be tempted to set a longer period – let's say 10 minutes. You might think "Two minutes? That's almost nothing. I can easily wait 10 minutes for the content to show up…".  So, you might be tempted to set the gracePeriod to 10 minutes assuming that your content shows up at least after these 10 minutes.
+The reference proposes a `gracePeriod` of two minutes for a good reason. You might think "Two minutes? That's almost nothing. I can easily wait 10 minutes for the content to show up…".  So you might be tempted to set a longer period – let's say 10 minutes. You might think "Two minutes? That's almost nothing. I can easily wait 10 minutes for the content to show up…".  So, you might be tempted to set the gracePeriod to 10 minutes assuming that your content shows up at least after these 10 minutes.
 
-Be warned! This is not the case. This is not how ```gracePeriod``` is working. Let us illustrate how ```gracePeriod``` actually is working with an example:
+Be warned! This is not the case. This is not how `gracePeriod` is working. Let us illustrate how `gracePeriod` actually is working with an example:
 
 Let's say you are operating a media site and your editing staff provides regular content updates every 5 minutes. Consider you set the gracePeriod to 5 minutes.
 
@@ -1372,19 +1395,19 @@ We will start with a quick example at 12:00.
 
 12:05 - Another editor publishes his article – prolonging the grace time by another gracePeriod to 12:10.
 
-And so on… content is never invalidated. Each invalidation *within* the gracePeriod effectively prolongs the grace time. The ```gracePeriod``` is designed to weather the invalidation storm… but you must go out into the rain eventually… so, keep the ```gracePeriod``` considerably short to prevent hiding in the shelter forever.
+And so on… content is never invalidated. Each invalidation *within* the gracePeriod effectively prolongs the grace time. The `gracePeriod` is designed to weather the invalidation storm… but you must go out into the rain eventually… so, keep the `gracePeriod` considerably short to prevent hiding in the shelter forever.
 
 #### A Deterministic Grace Period
 
 We would like to introduce another idea how you could weather an invalidation storm. It is only an idea. We haven't tried it in production, but we found the concept interesting enough to share the idea with you.
 
-The ```gracePeriod``` can become unpredictably long, if your regular replication interval is shorter than your ```gracePeriod```.
+The `gracePeriod` can become unpredictably long, if your regular replication interval is shorter than your `gracePeriod`.
 
 The alternative idea is as follows, only invalidate in fixed time intervals. The time in between always means serving stale content. The invalidation will happen eventually, but a number of invalidations are collected to one "bulk" invalidation, so that the dispatcher has a chance to serve some cached content in the meantime and give the Publish system some air to breathe.
 
 The implementation would look like this:
 
-You use a "Custom Invalidation Script" (see reference), that would run after the invalidation occurred. This script would read the ```statfile's``` last modification date and round it up to the next interval stop. The Unix shell command ```touch --time```, let's you specify a time.
+You use a "Custom Invalidation Script" (see reference), that would run after the invalidation occurred. This script would read the `statfile's` last modification date and round it up to the next interval stop. The Unix shell command `touch --time`, let's you specify a time.
 
 For example, if you set the grace period to 30 sec, the Dispatcher would round the last-modified date of the statfile to the next 30 sec. Invalidation requests that happen in between just set the same next full 30 sec.
 
@@ -1422,6 +1445,7 @@ To enable re-fetching you must tell the dispatcher which resources to re-fetch a
 Re-fetching actually means telling the dispatcher in each (!) invalidation request that you want to re-fetch the most popular ones – and which the most popular ones are.
 
 This is achieved by putting a list of resource URLs (actual URLs – not just paths) in the invalidation requests body:
+
 ```
 POST /dispatcher/invalidate.cache HTTP/1.1
 
@@ -1436,6 +1460,7 @@ Content-Length: 207
 /content/my-brand/products/product-1.html
 /content/my-brand/products/product-2.html
 ```
+
 When the dispatcher sees such a request, it will trigger auto-invalidation as usual, and it will immediately queue up requests to re-fetch fresh content from the Publish system.
 
 As now we are using a request body, we also need to set content-type and content-length according to the HTTP standard.
@@ -1452,7 +1477,7 @@ If you look into your Dispatcher's cache directory, you will see temporary files
 
 ### Shielding the Publish System
 
-The dispatcher gives a bit of extra security by shielding the Publish system from requests that are intended only for maintenance purposes. For example, you don't want to expose you ```/crx/de``` or ```/system/console``` URLs to the public.
+The dispatcher gives a bit of extra security by shielding the Publish system from requests that are intended only for maintenance purposes. For example, you don't want to expose you `/crx/de` or `/system/console` URLs to the public.
 
 It does no harm to have a web application firewall (WAF) installed in your system. But that adds a significant number to your budget and not all projects are in a situation where they can afford and - lest not forget – operate and maintain a WAF.
 
@@ -1471,7 +1496,7 @@ According to the dispatcher configuration, the dispatcher module is bound to a c
 
 But why bind the handler to the whole docroot, when you need to filter down afterwards?
 
-You can narrow down the binding of the handler in the first place. ```SetHandler``` just binds a handler to a directory, you could bind the handler to a URL or to a URL-pattern:
+You can narrow down the binding of the handler in the first place. `SetHandler` just binds a handler to a directory, you could bind the handler to a URL or to a URL-pattern:
 
 ```
 <LocationMatch "^(/content|/etc/design|/dispatcher/invalidate.cache)/.\*">
@@ -1487,7 +1512,7 @@ You can narrow down the binding of the handler in the first place. ```SetHandler
 
 If you do this, don't forget to always bind the dispatcher-handler to the dispatcher's invalidation URL – otherwise you won't be able to send invalidation requests from AEM to the Dispatcher.
 
-Another alternative to use the Dispatcher as a filter is to set up filter directives in the ```dispatcher.any```
+Another alternative to use the Dispatcher as a filter is to set up filter directives in the `dispatcher.any`
 
 ```
 /filter {
@@ -1527,13 +1552,13 @@ Luckily that has changed in the later versions of the dispatcher. Now you can us
 
 You see the difference?
 
-Version B uses single quotes ```'``` to mark the pattern – that means it is a regular expression. Any character is expressed by ```.*```.
+Version B uses single quotes `'` to mark the pattern – that means it is a regular expression. Any character is expressed by `.*`.
 
-Globbing patterns in contrast use double quotes ```"``` and you can only use simple placeholders like ```*```.
+Globbing patterns in contrast use double quotes `"` and you can only use simple placeholders like `*`.
 
 If you know that difference, it's trivial – but if not, you can easily mix up the quotes and spend a sunny afternoon debugging your configuration. So now you are warned.
 
-What is that ```/glob``` in the filter you may ask?
+What is that `/glob` in the filter you may ask?
 
 That directive represents the whole request string, including the method and path. It could stand for
 
@@ -1578,11 +1603,12 @@ Like so:
 
 Note, that you can mix regex and glob expressions in on rule.
 
-One last word about the "line numbers" like ```/005``` in front of each definition,
+One last word about the "line numbers" like `/005` in front of each definition,
 
 They have no meaning at all! You can choose arbitrary denominators for rules. Using numbers doesn't require much effort to think about a scheme, but keep in mind, that the order matters.
 
 If you have hundreds of rules like so:
+
 ```
 /001
 /002
@@ -1674,27 +1700,27 @@ CQ-Handle: <path-pattern>
 <refetch-url-n>
 ```
 
-```POST /dispatcher/invalidate.cache HTTP/1.1``` - The first line is the URL of the dispatcher control endpoint and you will likely not change it.
+`POST /dispatcher/invalidate.cache HTTP/1.1` - The first line is the URL of the dispatcher control endpoint and you will likely not change it.
 
-```CQ-Action: <action>``` - What should happen. ```<action>``` is either:
+`CQ-Action: <action>` - What should happen. `<action>` is either:
 
-```Activate: delete /path-pattern.\*```
-```Deactive: delete /path-pattern.\*``` AND ```delete /path-pattern/*```
-```Delete:```   Same as ```Deactivate```
-```Test:```   Return "ok" but do nothing
+`Activate: delete /path-pattern.\*`
+`Deactive: delete /path-pattern.\*` AND `delete /path-pattern/*`
+`Delete:`   Same as `Deactivate`
+`Test:`   Return "ok" but do nothing
 
-```CQ-Handle: <path-pattern>``` - The content-resource path to be invalidated <path> is actually a path and not a pattern.
+`CQ-Handle: <path-pattern>` - The content-resource path to be invalidated `<path>` is actually a path and not a pattern.
 
-```CQ-Action-Scope: ResourceOnly``` - Optional: If this header is set, the .stat file is not touched.
+`CQ-Action-Scope: ResourceOnly` - Optional: If this header is set, the .stat file is not touched.
 
 ```
 [Content-Type: Text/Plain]
 [Content-Length: <bytes in request body>]
 ```
 
-Set these headers, if you define a list of auto-refetch URLs. <bytes in request body> is the number of characters in the HTTP body
+Set these headers, if you define a list of auto-refetch URLs. `<bytes in request body>` is the number of characters in the HTTP body
 
-```<newline>``` - If you have a request body, it must be separated from the header by an empty row.
+`<newline>` - If you have a request body, it must be separated from the header by an empty row.
 
 ```
 <refetch-url-1>
