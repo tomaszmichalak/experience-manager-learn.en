@@ -227,8 +227,8 @@ In some simple cases you might also get along with using concurrent hash maps â€
 
 #### References
 
-- ACS Commons http Cache - [https://adobe-consulting-services.github.io/acs-aem-commons/features/http-cache/index.html](https://adobe-consulting-services.github.io/acs-aem-commons/features/http-cache/index.html)
-- Ehcache caching framework - [https://www.ehcache.org](https://www.ehcache.org)
+* ACS Commons http Cache - [https://adobe-consulting-services.github.io/acs-aem-commons/features/http-cache/index.html](https://adobe-consulting-services.github.io/acs-aem-commons/features/http-cache/index.html)
+* Ehcache caching framework - [https://www.ehcache.org](https://www.ehcache.org)
 
 ### Basic terms
 
