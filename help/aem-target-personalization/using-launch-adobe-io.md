@@ -158,13 +158,15 @@ The Target extension consists of two main parts:
 #### Build and Publish {#launch-publishing}
 
 1. Click on the **Publishing** tab for your site property, and let's create a library to build, and deploy our changes (data elements, rules) to a development Environment.
-
     >[!VIDEO](https://video.tv.adobe.com/v/28412t1?quality=9)
-
 2. Publish your changes from Development to Staging environment.
-
->[!VIDEO](https://video.tv.adobe.com/v/28419t1?quality=9)
-
+    >[!VIDEO](https://video.tv.adobe.com/v/28419t1?quality=9)
+3. Run the **Build for Staging option**. 
+4. Once the build is complete, run **Approve for Publishing**, which moves your changes from Staging environment to Production environment.
+  ![Staging to Production](assets/using-launch-adobe-io/build-staging.png)
+5. Finally, run the **Build and Publish to production** option to push your changes to production.
+  ![Build and Publish to Production](assets/using-launch-adobe-io/build-and-publish.png)
+  
 ### Adobe Experience Manager {#aem-setup}
 
 1. From your [AEM author home page](http://localhost:4502/aem/start.html), click on Tools, Security, and select Adobe IMS Configuration.
