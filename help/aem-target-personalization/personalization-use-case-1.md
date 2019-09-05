@@ -150,7 +150,7 @@ At this point, we have successfully created audiences for all WKND Site visitors
 18. Navigate to the [WKND Site Home Page](http://localhost:4503/content/wknd/en.html) and you should be able to see the WKND SkateFest Offer based off your geolocation (*state: California*).
     ![Activity QA](assets/personalization-use-case-1/wknd-california.png)
 
-## Target Activity QA {#content-editor}
+### Target Activity QA {#marketer-activity-qa}
 
 1. Under **Activity Details > Overview** tab, click on the **Activity QA** button and you can get the direct QA link to all your experiences.
     ![Activity QA](assets/personalization-use-case-1/activity-qa.png)
