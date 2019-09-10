@@ -76,4 +76,6 @@ For this exercise, the following users needs to be involved, and to perform some
    18. From the Activity details screen, make sure to **Activate** your activity.
     ![Activate Activity](assets/personalization-use-case-3/save-activity.png)
    19. Navigate to WKND Home Page (http://localhost:4503/content/wknd/en.html) and you notice the changes we added to the WKND Home Page Refresh A/B Test activity.
-     ![WKND Home Page Redesigned](assets/personalization-use-case-3/activity-result.png)
+     ![WKND Home Page Refreshed](assets/personalization-use-case-3/activity-result.png)
+   20. Open your browser console, and inspect the network tab to look for target response for the WKND Home Page Refresh A/B Test activity.
+     ![Network Activity](assets/personalization-use-case-3/activity-result.png)
