@@ -18,7 +18,7 @@ Experience fragments represent a huge step forward to link the content/experienc
 ## Prerequisites
 
 * **AEM**
-  * [AEM author and publish instance](./implementation.md#getting-aem) running on localhost 4502 and 4503 respectively. Before your proceed with the tutorial, make sure 
+  * [AEM author and publish instance](./implementation.md#getting-aem) running on localhost 4502 and 4503 respectively.
 * **Experience Cloud**
   * Access to your organizations Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
   * Experience Cloud provisioned with the following solutions
@@ -117,9 +117,9 @@ At this point, we have successfully created audiences for all WKND Site visitors
 
 ### Create an Activity with Geo Targeting {#marketer-activity}
 
-1. From you Adobe Target window, navigate to **Activites** tab.
+1. From you Adobe Target window, navigate to **Activities** tab.
 2. Click **Create Activity** and select the **Experience Targeting** activity type.
-3. Select the **Web** channel and choose Eperience Composer as **Visual**.
+3. Select the **Web** channel and choose the **Visual Experience Composer**
 4. Enter the **Activity URL** and Click **Next** to open the Virtual Experience Composer.
 
     WKND Site Home Page Publish URL: http://localhost:4503/content/wknd/en.html

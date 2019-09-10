@@ -5,7 +5,7 @@ description: An end-to-end tutorial showing how to create and deliver personaliz
 seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Experience Manager and Adobe Target. In this tutorial, you will also learn about different personas involved in the end to end process and how they collaborate with each other
 ---
 
-# Using Launch, By Adobe via Adobe I/O Console
+# Using Launch, By Adobe via Adobe I/O Console {#aem-target-using-launch-by-adobe}
 
 ## Prerequisites
 
