@@ -21,8 +21,8 @@ Adobe Experience Manager (AEM) provides an easy-to-use solution to create, manag
     *Plot more than one series in the same chart.The multiple series charts are typically used in association with Line,Bar,Column chart type.*
 
 * **[Creating re-usable workflow models](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
-    <br/>
-    * Create workflow models not tied to a specific form
+    <br>
+    _Create workflow models not tied to a specific form_
      
 ## Staff Picks
 
@@ -30,7 +30,7 @@ Adobe Experience Manager (AEM) provides an easy-to-use solution to create, manag
 <tr>
   <td>
     <a href="./creating-your-first-adaptive-form/adaptive-forms-getting-started-tutorial-use.md">
-      <img alt="400 x 225px" src="./landingpage-images/afhero.png" />
+      <img alt="400 x 225px" src="./assets/afhero.png" />
     </a>
     <div>
       <a href="./creating-your-first-adaptive-form/adaptive-forms-getting-started-tutorial-use.md">
@@ -43,7 +43,7 @@ Adobe Experience Manager (AEM) provides an easy-to-use solution to create, manag
   </td>
    <td>
     <a href="./ic-print-channel-tutorial/introduction.md">
-      <img alt="400 x 225px" src="./landingpage-images/printchannel.png" />
+      <img alt="400 x 225px" src="./assets/correspondence-management1.png" />
     </a>
     <div>
       <a href="./ic-print-channel-tutorial/introduction.md">
@@ -56,7 +56,7 @@ Adobe Experience Manager (AEM) provides an easy-to-use solution to create, manag
   </td>
   <td>
     <a href="./adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md">
-      <img alt="400 x 225px" src="./landingpage-images/fdmlogo.png" />
+      <img alt="400 x 225px" src="./assets/fdmlogo.png" />
     </a>
     <div>
       <a href="./adaptive-forms/form-data-model-service-as-step-in-workflow-video-use.md">
@@ -72,6 +72,11 @@ Adobe Experience Manager (AEM) provides an easy-to-use solution to create, manag
 
 ## Additional Resources
 
-* [Generate Document Of Record Using API](adaptive-forms/document-of-record-api-tutorial-use.md)
-* [Using Output and Forms Service in AEM Forms](document-services/output-and-forms-services-article-develop.md)
-* [Sending Email on Adaptive Form Submission](handling-form-submissions/sending-email-on-adaptive-form-submission.md)
+* [Experience League - Explore AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [AEM Sites Authoring Documentation](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/user-guide.html)
+* [AEM Sites Developing Documentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
+* [AEM Sites Administering Documentation](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
+* [AEM Sites Deploying Documentation](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/user-guide.html)
+* [AEM Assets Tutorials](/help/assets/overview.md)
+* [AEM Forms Tutorials](/help/forms/overview.md)
+* [AEM Foundation Tutorials](/help/foundation/overview.md)
