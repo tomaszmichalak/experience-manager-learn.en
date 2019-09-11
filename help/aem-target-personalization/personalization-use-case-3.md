@@ -18,8 +18,7 @@ In this chapter, we are going to explore how to create an experience using Visua
   * [AEM integrated with Adobe Target using Launch, By Adobe](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
   * Access to your organizations Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
-  * Experience Cloud provisioned with the following solutions
-    * [Adobe Target](https://marketing.adobe.com)
+  * Experience Cloud provisioned with [Adobe Target](https://marketing.adobe.com)
 
 ## WKND Site - Use Case {#wknd-site-use-case}
 
@@ -27,7 +26,7 @@ WKND site home page displays local activities or best thing to do around a city 
 
 ## Users Involved
 
-For this exercise, the following users needs to be involved, and to perform some tasks, you might need administrative access.
+For this exercise, the following users need to be involved and to perform some tasks you might need administrative access.
 
 * **Content Producer/Content Editor** (Adobe Experience Manager)
 * **Marketer** (Adobe Target / Optimization Team)
@@ -38,8 +37,8 @@ For this exercise, the following users needs to be involved, and to perform some
 
 ## Marketer
 
-1. Marketer creates an A/B target activity within Adobe Target.
-   1. From you Adobe Target window, navigate to **Activities** tab.
+1. The Marketer creates an A/B target activity within Adobe Target.
+   1. From your Adobe Target window, navigate to **Activities** tab.
    2. Click **Create Activity** button and select the activity type as **A/B Test**
     ![Adobe Target - Create Activity](assets/personalization-use-case-2/create-ab-activity.png)
    3. Select the **Web** channel and choose the **Visual Experience Composer**
@@ -49,17 +48,17 @@ For this exercise, the following users needs to be involved, and to perform some
     ![Experience Targeting Activity](assets/personalization-use-case-1/load-unsafe-scripts.png)
    6. Notice the WKND Site home page open in Virtual Experience Composer editor.
     ![VEC](assets/personalization-use-case-2/vec.png)
-   7. Select **Experience B** for changing content layout. **Experience A** provides the default WKND Home Page.
+   7. **Experience A** provides the default WKND Home Page, and let's edit the content layout for **Experience B**
     ![Experience B](assets/personalization-use-case-3/use-case3-experience-b.png)
    8. Click on one of the card layout container (*Best Roasters*) and select **Rearrange** option.
     ![Container Selection](assets/personalization-use-case-3/container-selection.png)
-   9. Click on the container that you would like to rearrange and drag drop it to a desired location. Let's rearrange the *Best Roasters* container from 1st row 1st column to 1st row 3rd column. Now the *Best Roasters* container will be next to *Photography Exhibitions* container.
+   9. Click on the container that you would like to rearrange and drag-drop it to the desired location. Let's rearrange the *Best Roasters* container from 1st row 1st column to 1st row 3rd column. Now the *Best Roasters* container will be next to *Photography Exhibitions* container.
     ![Container Swap](assets/personalization-use-case-3/container-swap.png)
     **After Swap**
     ![Container Swapped](assets/personalization-use-case-3/after-swap-1-3.png)
    10. Similarly, rearrange positions for the other card containers.
     ![Container Swapped](assets/personalization-use-case-3/after-swap-all.png)
-   11. Lets also add a header text beneath the carousel component and above the card layout.
+   11. Let's also add a header text beneath the carousel component and above the card layout.
    12. Click on the carousel container and Select the **Inset After > HTML** option to add HTML.
     ![Add Text](assets/personalization-use-case-3/add-text.png)
         ``` html
@@ -75,7 +74,7 @@ For this exercise, the following users needs to be involved, and to perform some
    17. Provide a name (**WKND Home Page Refresh**) for your Activity and save your changes.
    18. From the Activity details screen, make sure to **Activate** your activity.
     ![Activate Activity](assets/personalization-use-case-3/save-activity.png)
-   19. Navigate to WKND Home Page (http://localhost:4503/content/wknd/en.html) and you notice the changes we added to the WKND Home Page Refresh A/B Test activity.
+   19. Navigate to WKND Home Page (http://localhost:4503/content/wknd/en.html), and you notice the changes we added to the WKND Home Page Refresh A/B Test activity.
      ![WKND Home Page Refreshed](assets/personalization-use-case-3/activity-result.png)
    20. Open your browser console, and inspect the network tab to look for target response for the WKND Home Page Refresh A/B Test activity.
      ![Network Activity](assets/personalization-use-case-3/activity-result.png)

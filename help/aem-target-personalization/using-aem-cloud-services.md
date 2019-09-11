@@ -9,12 +9,12 @@ seo-description: An end-to-end tutorial showing how to create and deliver person
 
 In this section, we will discuss how to set up Adobe Experience Manager with Adobe Target using legacy Cloud Services.
 
-For AEM customers, who would like to use Experience Fragment offers to create an activity within Adobe Target, you might need to integrate Adobe Target with AEM using the Legacy Cloud Services. This integration is required to push Experience Fragments from AEM to Target as HTML/JSON offers and to keep the target offers in sync with AEM. *This integration is required for implementing Use Case 1.*
+For using AEM Experience Fragment offers to power you personalization activities, lets proceed to the next chapter, and integrate AEM with Adobe Target using the legacy cloud services. This integration is required to push Experience Fragments from AEM to Target as HTML/JSON offers and to keep the target offers in sync with AEM. This integration is required for implementing [Use Case 1 discussed in the overview section](./overview.md#personalization-using-aem-experience-fragment).
 
 ## Prerequisites
 
 * **AEM**
-    * AEM author and publish instance are necessary to complete this tutorial. If you haven't setup your AEM instance yet, you can follow the steps [here](./implementation.md#getting-aem).
+    * AEM author and publish instance are necessary to complete this tutorial. If you haven't set up your AEM instance yet, you can follow the steps [here](./implementation.md#getting-aem).
 
 * **Experience Cloud**
   * Access to your organizations Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
@@ -23,7 +23,7 @@ For AEM customers, who would like to use Experience Fragment offers to create an
   
     >[!NOTE]
     >
-    > Customer needs to be properly provisioned with Adobe Launch and Adobe I/O from [Adobe support](https://helpx.adobe.com/contact/enterprise-support.ec.html) or reach out to your system administrator
+    > Customer needs to be provisioned with Adobe Launch and Adobe I/O from [Adobe support](https://helpx.adobe.com/contact/enterprise-support.ec.html) or reach out to your system administrator
 
 ### Integrating AEM with Adobe Target
 
