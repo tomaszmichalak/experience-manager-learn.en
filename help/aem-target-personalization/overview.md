@@ -17,15 +17,15 @@ In this tutorial, we cover three different use cases for AEM and Target, which h
 
 ## Personalization using AEM Experience Fragments {#personalization-using-aem-experience-fragment}
 
-With the ability to export AEM Experience Fragments into Adobe Target as HTML offers, you can combine the ease-of-use and power of AEM with powerful Automated Intelligence (AI) and Machine Learning (ML) capabilities in Target to test and personalize experiences at scale.
+For this scenario, we are going to use AEM and Target. Clearly, both the products has its own advantages and when it comes to delivering personalized experience to your site users, you need 2 things: 1) personalized content for your site 2) an intelligent way to serve these content based on a specific user.
 
-AEM brings together all of your content and assets in a central location to fuel your personalization strategy. AEM lets you easily create content for desktops, tablets, and mobile devices in one place without writing code. There’s no need to create pages for every device—AEM automatically adjusts each experience using your content.
+AEM can help you with creating your personalized content. AEM brings together all of your content and assets in a central location to fuel your personalization strategy. AEM lets you easily create content for desktops, tablets, and mobile devices in one place without writing code. There’s no need to create pages for every device—AEM automatically adjusts each experience using your content. You can also export the content from AEM to Adobe Target with push of a button.
 
-Target lets you deliver personalized experiences at scale based on a combination of rules-based and AI-driven machine learning approaches that incorporate behavioral, contextual, and offline variables.  With Target, you can easily set up and run A/B and Multivariate (MVT) activities to determine the best offers, content, and experiences.
+We now have personalized content from AEM in Target, and how to deliver this personalized content to your site users? Target lets you deliver personalized experiences at scale based on a combination of rules-based and AI-driven machine learning approaches that incorporate behavioral, contextual, and offline variables.  With Target, you can easily set up and run A/B and Multivariate (MVT) activities to determine the best offers, content, and experiences.
 
-Experience fragments represent a huge step forward to link the content/experience creators and managers to the optimization and personalization professionals who are driving business outcomes using Target.
+**Experience fragments** represent a huge step forward to link the content/experience creators to the personalization professionals who are driving business outcomes using Target.
 
-* AEM content editors authors personalized content as Experience Fragments
+* AEM content editor authors personalized content as Experience Fragments and its variations
 * AEM exports Experience Fragment markup to Target​
 * Target​ uses AEM Experience Fragment markup as offers in activities
 * Target delivers Experience Fragment markup, AEM provides referenced images
