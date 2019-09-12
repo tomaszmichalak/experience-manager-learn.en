@@ -120,13 +120,13 @@ At this point, we have successfully created audiences for all WKND Site visitors
 1. From your Adobe Target window, navigate to **Activities** tab.
 2. Click **Create Activity** and select the **Experience Targeting** activity type.
 3. Select the **Web** channel and choose the **Visual Experience Composer**
-4. Enter the **Activity URL** and Click **Next** to open the Virtual Experience Composer.
+4. Enter the **Activity URL** and Click **Next** to open the Visual Experience Composer.
 
     WKND Site Home Page Publish URL: http://localhost:4503/content/wknd/en.html
     ![Experience Targeting Activity](assets/personalization-use-case-1/target-activity.png)
-5. For **Virtual Experience Composer** to load, enable **Allow Load Unsafe scripts** on your browser and reload your page.
+5. For **Visual Experience Composer** to load, enable **Allow Load Unsafe scripts** on your browser and reload your page.
     ![Experience Targeting Activity](assets/personalization-use-case-1/load-unsafe-scripts.png)
-6. Notice the WKND Site home page open in Virtual Experience Composer editor.
+6. Notice the WKND Site home page open in Visual Experience Composer editor.
     ![VEC](assets/personalization-use-case-1/vec.png)  
 7. To add an audience to your VEC, click on **Add Experience Targeting** under Audiences, and select the WKND-California audience and Click **Next**.
    ![VEC](assets/personalization-use-case-1/vec-select-audience.png)

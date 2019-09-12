@@ -7,9 +7,9 @@ seo-description: An end-to-end tutorial showing how to create and deliver person
 
 # Getting Started with AEM and Adobe Target {#getting-started-with-aem-target}
 
-An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Experience Manager and Adobe Target. In this tutorial, you will also learn about different personas involved in the end to end process, and how they collaborate.
+AEM and Target are both powerful solutions with seemingly overlapping capabilities. Customers sometimes struggle with questions like: 1. When should I use Target to personalize content vs AEM? 2. How do internal teams working with these different solutions collaborate in order to personalize effectively ?, etc.
 
-In this tutorial, we cover three different use cases for AEM and Target, which helps you understand what works best for your organization.
+In this tutorial, we cover three different use cases for AEM and Target, which helps you understand what works best for your organization and how different teams collaborate.
 
 * Use Case 1 : Personalization using AEM Experience Fragments
 * Use Case 2 : Home Page Redesign and Redirects
@@ -42,7 +42,7 @@ Integrating Adobe Experience Manager with Adobe Target helps you deliver a perso
 
 ## Personalization using Visual Experience Composer
 
-Marketers can make quick changes on their website without changing any code to run a test using Adobe Targets Virtual Experience Composer.The VEC is WYSIWYG (What you see is what you get) user interface that lets you easily create and test personalized experiences and offers in the site context. You can create experiences and offers for Target activities by dragging and dropping, swapping, and modifying the layout and content of a web page (or offer) or mobile web page.
+Marketers can make quick changes on their website without changing any code to run a test using Adobe Targets Visual Experience Composer.The VEC is WYSIWYG (What you see is what you get) user interface that lets you easily create and test personalized experiences and offers in the site context. You can create experiences and offers for Target activities by dragging and dropping, swapping, and modifying the layout and content of a web page (or offer) or mobile web page.
 
 VEC is one of the main features of Adobe Target. The VEC lets marketers and designers create and change content using a visual interface. Many design choices can be made without requiring direct editing of the code. Editing HTML and JavaScript is also possible using the editing options available in the composer.
 
