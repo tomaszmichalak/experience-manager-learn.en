@@ -49,11 +49,11 @@ For this exercise, the following users need to be involved and to perform some t
    2. Click **Create Activity** button and select the activity type as **A/B Test**
     ![Adobe Target - Create Activity](assets/personalization-use-case-2/create-ab-activity.png)
    3. Select the **Web** channel and choose the **Visual Experience Composer**
-   4. Enter the **Activity URL** and Click **Next** to open the Virtual Experience Composer.
+   4. Enter the **Activity URL** and Click **Next** to open the Visual Experience Composer.
     ![Adobe Target - Create Activity](assets/personalization-use-case-2/create-activity-ab-name.png)
-   5. For **Virtual Experience Composer** to load, enable **Allow Load Unsafe scripts** on your browser and reload your page.
+   5. For **Visual Experience Composer** to load, enable **Allow Load Unsafe scripts** on your browser and reload your page.
     ![Experience Targeting Activity](assets/personalization-use-case-1/load-unsafe-scripts.png)
-   6. Notice the WKND Site home page open in Virtual Experience Composer editor.
+   6. Notice the WKND Site home page open in Visual Experience Composer editor.
     ![VEC](assets/personalization-use-case-2/vec.png)
    7. Hover over **Experience B** and select view other options.
     ![Experience B](assets/personalization-use-case-2/redirect-url.png)
