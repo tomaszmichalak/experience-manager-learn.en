@@ -30,7 +30,7 @@ We now have personalized content from AEM in Target, and how to deliver this per
 * Target​ uses AEM Experience Fragment markup as offers in activities
 * Target delivers Experience Fragment markup, AEM provides referenced images
 
-![diagram](assets/personalization-use-case-1/use-case-1-diagram.png)
+    ![diagram](assets/personalization-use-case-1/use-case-1-diagram.png)
 
 ## Personalization using Visual Experience Composer
 
@@ -44,6 +44,8 @@ VEC is one of the main features of Adobe Target. The VEC lets marketers and desi
 * Net new content is created using Adobe Targets VEC
 * Applies to both AEM hosted sites and non-AEM hosted sites
 
+    ![diagram](assets/personalization-use-case-2/use-case-2-diagram.png)
+
 ## Home Page Redesign and Redirects {#homepage-redesign-redirects}
 
 Integrating Adobe Experience Manager with Adobe Target helps you deliver a personalized experience to your site users. Additionally, it also helps you better understand what versions of your website content best improve your conversions during a pre-specified test period. For example, An A/B test compares two or more versions of your Website content to see which best lifts your conversions, sales, or other metrics you identify. A marketer can create activities within Adobe Target to understand how users interact with your site's content and how it affects your site metrics.
@@ -53,3 +55,5 @@ Integrating Adobe Experience Manager with Adobe Target helps you deliver a perso
 * Target delivers personalized content
 * No net new content is created here
 * Applies to both AEM hosted sites and non-AEM hosted sites
+
+    ![diagram](assets/personalization-use-case-2/use-case-2-diagram.png)
