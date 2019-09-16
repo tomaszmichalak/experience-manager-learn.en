@@ -32,9 +32,15 @@ We now have personalized content from AEM in Target, and how to deliver this per
 
     ![diagram](assets/personalization-use-case-1/use-case-1-diagram.png)
 
+For implementing this scenario, you need the following integrations:
+- [Integrating AEM and Adobe Target using Launch and Adobe I/O](./implementation.md#integrating-aem-target-options)
+- [AEM and Adobe Target using Legacy Cloud Services](./implementation.md#integrating-aem-target-options)
+
+After implementing the above integrations, lets explore the [scenario in detail](./personalization-use-case-1.md).
+
 ## Personalization using Visual Experience Composer
 
-Marketers can make quick changes on their website without changing any code to run a test using Adobe Targets Visual Experience Composer.The VEC is WYSIWYG (What you see is what you get) user interface that lets you easily create and test personalized experiences and offers in the site context. You can create experiences and offers for Target activities by dragging and dropping, swapping, and modifying the layout and content of a web page (or offer) or mobile web page.
+Marketers can make quick changes on their website without changing any code to run a test using Adobe Targets Visual Experience Composer. The VEC is WYSIWYG (What you see is what you get) user interface that lets you easily create and test personalized experiences and offers in the site context. You can create experiences and offers for Target activities by dragging and dropping, swapping, and modifying the layout and content of a web page (or offer) or mobile web page.
 
 VEC is one of the main features of Adobe Target. The VEC lets marketers and designers create and change content using a visual interface. Many design choices can be made without requiring direct editing of the code. Editing HTML and JavaScript is also possible using the editing options available in the composer.
 
@@ -45,6 +51,10 @@ VEC is one of the main features of Adobe Target. The VEC lets marketers and desi
 * Applies to both AEM hosted sites and non-AEM hosted sites
 
     ![diagram](assets/personalization-use-case-2/use-case-2-diagram.png)
+
+For implementing this scenario, you need to [Integrating AEM and Adobe Target using Launch and Adobe I/O](./implementation.md#integrating-aem-target-options)
+
+After implementing the above integration, lets explore the [scenario in detail](./personalization-use-case-3.md).
 
 ## Home Page Redesign and Redirects {#homepage-redesign-redirects}
 
@@ -57,3 +67,7 @@ Integrating Adobe Experience Manager with Adobe Target helps you deliver a perso
 * Applies to both AEM hosted sites and non-AEM hosted sites
 
     ![diagram](assets/personalization-use-case-2/use-case-2-diagram.png)
+
+For implementing this scenario, you need to [Integrating AEM and Adobe Target using Launch and Adobe I/O](./implementation.md#integrating-aem-target-options)
+
+After implementing the above integration, lets explore the [scenario in detail](./personalization-use-case-2.md).
