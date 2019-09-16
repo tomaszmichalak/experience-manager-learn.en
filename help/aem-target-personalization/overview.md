@@ -68,6 +68,6 @@ Integrating Adobe Experience Manager with Adobe Target helps you deliver a perso
 
     ![diagram](assets/personalization-use-case-2/use-case-2-diagram.png)
 
-For implementing this scenario, you need to [Integrating AEM and Adobe Target using Launch and Adobe I/O](./implementation.md#integrating-aem-target-options)
+For implementing this scenario, you need to [integrating AEM and Adobe Target using Launch and Adobe I/O](./implementation.md#integrating-aem-target-options)
 
 After implementing the above integration, lets explore the [scenario in detail](./personalization-use-case-2.md).
