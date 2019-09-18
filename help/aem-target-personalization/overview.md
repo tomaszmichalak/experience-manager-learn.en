@@ -33,8 +33,8 @@ We now have personalized content from AEM in Target, and how to deliver this per
     ![diagram](assets/personalization-use-case-1/use-case-1-diagram.png)
 
 For implementing this scenario, you need the following integrations:
-- [Integrating AEM and Adobe Target using Launch and Adobe I/O](./implementation.md#integrating-aem-target-options)
-- [AEM and Adobe Target using Legacy Cloud Services](./implementation.md#integrating-aem-target-options)
+* [Integrating AEM and Adobe Target using Launch and Adobe I/O](./implementation.md#integrating-aem-target-options)
+* [AEM and Adobe Target using Legacy Cloud Services](./implementation.md#integrating-aem-target-options)
 
 After implementing the above integrations, lets explore the [scenario in detail](./personalization-use-case-1.md).
 
@@ -52,7 +52,7 @@ VEC is one of the main features of Adobe Target. The VEC lets marketers and desi
 
     ![diagram](assets/personalization-use-case-2/use-case-2-diagram.png)
 
-For implementing this scenario, you need to [Integrating AEM and Adobe Target using Launch and Adobe I/O](./implementation.md#integrating-aem-target-options)
+For implementing this scenario, you need to [integrate AEM and Adobe Target using Launch and Adobe I/O](./implementation.md#integrating-aem-target-options)
 
 After implementing the above integration, lets explore the [scenario in detail](./personalization-use-case-3.md).
 
@@ -68,6 +68,6 @@ Integrating Adobe Experience Manager with Adobe Target helps you deliver a perso
 
     ![diagram](assets/personalization-use-case-2/use-case-2-diagram.png)
 
-For implementing this scenario, you need to [integrating AEM and Adobe Target using Launch and Adobe I/O](./implementation.md#integrating-aem-target-options)
+For implementing this scenario, you need to [integrate AEM and Adobe Target using Launch and Adobe I/O](./implementation.md#integrating-aem-target-options)
 
 After implementing the above integration, lets explore the [scenario in detail](./personalization-use-case-2.md).
