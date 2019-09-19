@@ -1,8 +1,8 @@
 ---
 title: Creating a new page in AEM Sites
 seo-title: Create a new page in Adobe Experience Manager Sites
-description: The following video highlights how to create a site page based on a template, introduces page editor features, and shows how to manage a page in Adobe Experience Manager.
-seo-description: The following video highlights how to create a site page based on a template, introduces page editor features, and shows how to manage a page in Adobe Experience Manager.
+description: The following video highlights how to create a site page using template editor, introduces page editor features, and shows how to manage a page in Adobe Experience Manager.
+seo-description: The following video highlights how to create a site page using template editor, introduces page editor features, and shows how to manage a page in Adobe Experience Manager.
 feature: page-editor, template-editor
 topics: authoring, publishing
 audience: author, marketer
@@ -11,15 +11,15 @@ activity: use
 version: 6.3, 6.4, 6.5
 ---
 
-# Creating a Page {#creating-page-aem-sites}
+# Creating a Page in AEM Sites {#creating-page-aem-sites}
 
-The following video highlights how to create a site page based on a template, introduces page editor features, and shows how to manage a page in Adobe Experience Manager.
+The following video highlights how to create a site page using template editor, introduces page editor features, and shows how to manage a page in Adobe Experience Manager.
 
->[!VIDEO](https://video.tv.adobe.com/v/28692/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/28692/?quality=9)
 
 In this video, the following capabilities or features are covered:
 
-* Creating a page based on a template
+* Creating a page using template editor
 * Introduces different authoring modes for a page
   * Edit
   * Layout
