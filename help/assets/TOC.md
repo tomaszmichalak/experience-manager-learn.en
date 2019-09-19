@@ -28,15 +28,15 @@ team: TM
   + [Understanding Brand Portal with AEM Assets](brand-portal/brand-portal-article-understand.md)
   + [Using Brand Portal with AEM Assets](brand-portal/brand-portal-feature-video-use.md)
   + [Developing for Brand Portal with AEM Assets](brand-portal/brand-portal-technical-video-develop.md)
-  + [Set up Asset Share Commons on local AEM](brand-portal/asset-share-commons-feature-video-theming.md)
-  + [Introduction to Theming in Asset Share Commons](brand-portal/asset-share-commons-technical-video-setup.md)
+  + [Set up Asset Share Commons on local AEM](brand-portal/asset-share-commons-technical-video-setup.md)
+  + [Introduction to Theming in Asset Share Commons](brand-portal/asset-share-commons-feature-video-theming.md)
   + [Understanding the User Experience of Asset Share Commons](brand-portal/asset-share-commons-user-experience-feature-video-understand.md)
 + Creative Cloud Integration {creative-cloud}
   + [Using Adobe Asset Link](creative-cloud/adobe-asset-link-feature-video-use.md)
   + [Understanding Asset Link Authentication](creative-cloud/adobe-asset-link-authentication-article-understand.md)
   + [Using Adobe Stock](creative-cloud/stock-assets-feature-video-use.md)
   + [Configure Adobe Stock](creative-cloud/adobe-stock-aem-assets-technical-video-setup.md)
-  + [Using Desktop App](creative-cloud/aem-desktop-app-sync-status-technical-video-use.md)
+  + [Use AEM Desktop App](creative-cloud/use-aem-desktop-app.md)
 + Asset Template {#asset-template}
   + [Using Asset Templates](asset-template/asset-templates-feature-video-use.md)
   + [Set up Asset Templates](asset-template/asset-templates-technical-video-setup.md)
