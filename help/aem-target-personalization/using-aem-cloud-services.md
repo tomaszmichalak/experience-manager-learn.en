@@ -39,4 +39,4 @@ For using AEM Experience Fragment offers to power you personalization activities
 
 At this point, you have successfully integrated [AEM with Adobe Target using Legacy Cloud Services](./using-aem-cloud-services.md#integrating-aem-target-options) as detailed in Option 2. You should now be able to create an Experience Fragment within AEM, and publish the Experience Fragment as HTML offer or JSON Offer to Adobe Target, and can then be used to create an activity.
 
-[NEXT CHAPTER](./personalization-use-case-1.md): In the next chapter, you will be integrating Launch with AEM.
+[NEXT CHAPTER](./personalization-use-case-1.md): In the next chapter, you will learn how to create and deliver personalized experience using AEM Experience Fragments and Adobe Target.

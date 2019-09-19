@@ -12,8 +12,8 @@ AEM and Target are both powerful solutions with seemingly overlapping capabiliti
 In this tutorial, we cover three different use cases for AEM and Target, which helps you understand what works best for your organization and how different teams collaborate.
 
 * Use Case 1 : Personalization using AEM Experience Fragments
-* Use Case 2 : Home Page Redesign and Redirects
-* Use Case 3 : Personalization using Visual Experience Composer
+* Use Case 2 : Personalization using Visual Experience Composer
+* Use Case 3 : Home Page Redesign and Redirects
 
 ## Personalization using AEM Experience Fragments {#personalization-using-aem-experience-fragment}
 
