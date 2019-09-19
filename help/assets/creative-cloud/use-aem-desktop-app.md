@@ -18,7 +18,7 @@ redirect-from: https://docs.adobe.com/content/help/en/experience-manager-learn/a
  
 # Use AEM Desktop App
 
->![VIDEO](https://video.tv.adobe.com/v/28868/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/28868/?quality=12)
 
 + Discover assets by browsing and searching in a dedicated desktop application
 + Users are guided to what they can do with assets via a Desktop App's dedicated UI, and dependency on macOS Finder / Windows Explorer is minimized
@@ -26,7 +26,7 @@ redirect-from: https://docs.adobe.com/content/help/en/experience-manager-learn/a
 + Access synchronized assets offline
 + Optimized for bulk operations, including bulk upload of folders and assets
 
->![NOTE]
+>[!NOTE]
 >
 > [Adobe Asset Link](./adobe-asset-link-feature-video-use.md) is Adobe's dedicated solution for working with AEM assets inside Adobe Creative Cloud applications: Photoshop, Illustrator, InDesign. When using AEM Assets in these applications, Adobe Asset Link is preferred over AEM Desktop App.
 
