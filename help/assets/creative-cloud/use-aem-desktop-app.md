@@ -32,4 +32,4 @@ redirect-from: https://docs.adobe.com/content/help/en/experience-manager-learn/a
 
 ## Additional Resources
 
-* [Download the latest AEM Desktop App](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)
++ [Download the latest AEM Desktop App](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)
