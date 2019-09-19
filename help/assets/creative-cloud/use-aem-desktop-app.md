@@ -20,11 +20,10 @@ redirect-from: https://docs.adobe.com/content/help/en/experience-manager-learn/a
 
 >[!VIDEO](https://video.tv.adobe.com/v/28868/?quality=12)
 
-+ Discover assets by browsing and searching in a dedicated desktop application
-+ Users are guided to what they can do with assets via a Desktop App's dedicated UI, and dependency on macOS Finder / Windows Explorer is minimized
-+ Network bandwidth is utilized optimally by only downloading the full asset binary as needed
++ Discover assets in AEM via browse and search using a dedicated desktop application
++ Optimized bandwidth management allows upload and download of many, large assets
++ Bulk upload and download folders and assets
 + Access synchronized assets offline
-+ Optimized for bulk operations, including bulk upload of folders and assets
 
 >[!NOTE]
 >
