@@ -9,7 +9,7 @@ seo-description: An end-to-end tutorial showing how to create and deliver person
 
 In this section, we will discuss how to set up Adobe Experience Manager with Adobe Target for different use cases. Based on your use case and organizational requirements, you can choose either one of the options or both.
 
-* **Option 1 - Using Launch, By Adobe via Adobe I/O Console**
+* **Option 1 - Using Adobe Experience Platform Launch via Adobe I/O Console**
     For sites hosted on AEM, you can add Target libraries to your site using Adobe's Tag Management system, [Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html) (*formerly known as DTM*). Launch provides a simple way to deploy and manage all tags necessary to power relevant customer experiences.
 * **Option 2 - Using AEM legacy Cloud Services**
     For AEM customers, who would like to use Experience Fragment offers to create an activity within Adobe Target, you might need to integrate Adobe Target with AEM using the Legacy Cloud Services. This integration is required to push Experience Fragments from AEM to Target as HTML/JSON offers and to keep the target offers in sync with AEM. *This integration is required for implementing Use Case 1.*
@@ -27,7 +27,7 @@ In this section, we will discuss how to set up Adobe Experience Manager with Ado
 * **Experience Cloud**
   * Access to your organizations Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
   * Experience Cloud provisioned with the following solutions
-    * [Launch, By Adobe](https://marketing.adobe.com)
+    * [Adobe Experience Platform Launch](https://marketing.adobe.com)
     * [Adobe Target](https://marketing.adobe.com)
     * [Adobe I/O Console](https://console.adobe.io)
 

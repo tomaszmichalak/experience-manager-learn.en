@@ -5,7 +5,7 @@ description: An end-to-end tutorial showing how to create and deliver personaliz
 seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Experience Manager and Adobe Target. In this tutorial, you will also learn about different personas involved in the end to end process and how they collaborate with each other
 ---
 
-# Using Launch, By Adobe via Adobe I/O Console {#aem-target-using-launch-by-adobe}
+# Using Adobe Experience Platform Launch via Adobe I/O Console {#aem-target-using-launch-by-adobe}
 
 ## Prerequisites
 
@@ -13,7 +13,7 @@ seo-description: An end-to-end tutorial showing how to create and deliver person
 * **Experience Cloud**
   * Access to your organizations Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
   * Experience Cloud provisioned with the following solutions
-    * [Launch, By Adobe](https://marketing.adobe.com)
+    * [Adobe Experience Platform Launch](https://marketing.adobe.com)
     * [Adobe Target](https://marketing.adobe.com)
     * [Adobe I/O Console](https://console.adobe.io)
   
@@ -183,7 +183,7 @@ The Target extension consists of two main parts:
 6. Using Launch/DTM browser plugin. (06:34 to 06:50)
 7. Using Adobe Experience Cloud Debugger browser plugin. (06:51 to 07:22)
 
-At this point, you have successfully integrated [AEM with Adobe Target using Launch, By Adobe](./using-aem-cloud-services.md#integrating-aem-target-options) as detailed in Option 1.
+At this point, you have successfully integrated [AEM with Adobe Target using Adobe Experience Platform Launch](./using-aem-cloud-services.md#integrating-aem-target-options) as detailed in Option 1.
 
 For using AEM Experience Fragment offers to power you personalization activities, lets proceed to the next chapter, and integrate AEM with Adobe Target using the legacy cloud services.
 

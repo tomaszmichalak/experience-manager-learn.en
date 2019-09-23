@@ -15,7 +15,7 @@ In this chapter, we are going to explore how to create an experience using Visua
 
 * **AEM**
   * [AEM publish instance](./implementation.md#getting-aem) running on 4503.
-  * [AEM integrated with Adobe Target using Launch, By Adobe](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
+  * [AEM integrated with Adobe Target using Adobe Experience Platform Launch](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
   * Access to your organizations Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
   * Experience Cloud provisioned with [Adobe Target](https://marketing.adobe.com)

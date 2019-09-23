@@ -15,7 +15,7 @@ In this chapter, we are going to explore how to create an activity to redirect y
 
 * **AEM**
   * [AEM author and publish instance](./implementation.md#getting-aem) running on localhost 4502 and 4503 respectively.
-  * [AEM integrated with Adobe Target using Launch, By Adobe](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
+  * [AEM integrated with Adobe Target using Adobe Experience Platform Launch](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
   * Access to your organizations Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
   * Experience Cloud provisioned with the following solutions
