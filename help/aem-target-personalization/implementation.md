@@ -7,12 +7,12 @@ seo-description: An end-to-end tutorial showing how to create and deliver person
 
 # Integrating Adobe Experience Manager with Adobe Target
 
-In this section, we will discuss how to set up Adobe Experience Manager with Adobe Target for different use cases. Based on your use case and organizational requirements, you can choose either one of the options or both.
+In this section, we will discuss how to set up Adobe Experience Manager with Adobe Target for different use cases. Based on your use case and organizational requirements.
 
-* **Option 1 - Using Adobe Experience Platform Launch via Adobe I/O Console**
-    For sites hosted on AEM, you can add Target libraries to your site using Adobe's Tag Management system, [Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html) (*formerly known as DTM*). Launch provides a simple way to deploy and manage all tags necessary to power relevant customer experiences.
-* **Option 2 - Using AEM legacy Cloud Services**
-    For AEM customers, who would like to use Experience Fragment offers to create an activity within Adobe Target, you might need to integrate Adobe Target with AEM using the Legacy Cloud Services. This integration is required to push Experience Fragments from AEM to Target as HTML/JSON offers and to keep the target offers in sync with AEM. *This integration is required for implementing Use Case 1.*
+* **Add Adobe Target's JavaScript Library (required for all scenarios)**
+    For sites hosted on AEM, you can add Target libraries to your site using, [Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html). Launch provides a simple way to deploy and manage all tags necessary to power relevant customer experiences.
+* **Add the Adobe Target Cloud Services (required for the Experience Fragments scenario)**
+    For AEM customers, who would like to use Experience Fragment offers to create an activity within Adobe Target, you will need to integrate Adobe Target with AEM using the Legacy Cloud Services. This integration is required to push Experience Fragments from AEM to Target as HTML/JSON offers and to keep the offers in sync with AEM. *This integration is required for implementing Use Case 1.*
 
 ## Prerequisites
 
