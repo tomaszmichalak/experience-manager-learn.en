@@ -5,7 +5,7 @@ description: An end-to-end tutorial showing how to create and deliver personaliz
 seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Experience Manager and Adobe Target. In this tutorial, you will also learn about different personas involved in the end to end process and how they collaborate with each other
 ---
 
-# Personalization using AEM Experience Fragments and Adobe Target {#personalization-use-case-1}
+# Personalization using AEM Experience Fragments and Adobe Target
 
 With the ability to export AEM Experience Fragments into Adobe Target as HTML offers, you can combine the ease-of-use and power of AEM with powerful Automated Intelligence (AI) and Machine Learning (ML) capabilities in Target to test and personalize experiences at scale.
 
@@ -24,7 +24,7 @@ Experience fragments represent a huge step forward to link content creators with
   * Experience Cloud provisioned with the following solutions
     * [Adobe Target](https://marketing.adobe.com)
 
-## WKND Site - Use Case {#wknd-site-use-case}
+## WKND Site - Use Case
 
 WKND site is planning to announce a **SkateFest Challenge** across America through their website and would like to have their site users sign up for the audition conducted in each state. As a marketer, you have been assigned the task to run a campaign on the WKND site home page, with banners messages relevant to the users' location and a link to the event details page. Let us explore the WKND site home page and learn how to create and deliver a personalized experience for a user based on his/her current location.
 
@@ -56,13 +56,13 @@ For this exercise, the following users need to be involved and to perform some t
      * Link
      * Button
 
-## Content Editor {#content-editor}
+## Content Editor
 
 >[!VIDEO](https://video.tv.adobe.com/v/28596?quality=9)
 > [!NOTE]
 > Publish the Experience Fragment before exporting it to Adobe Target.
 
-## Marketer {#marketer}
+## Marketer
 
 ### Create an Audience with Geo-Targeting {#marketer-audience}
 
@@ -115,7 +115,7 @@ For this exercise, the following users need to be involved and to perform some t
 
 At this point, we have successfully created audiences for all WKND Site visitors across different states in the United States of America and also have the corresponding HTML offer for each state. So now let's create an Experience Targeting activity to target the audience with a corresponding offer for the WKND Site Home Page.
 
-### Create an Activity with Geo-Targeting {#marketer-activity}
+### Create an Activity with Geo-Targeting
 
 1. From your Adobe Target window, navigate to **Activities** tab.
 2. Click **Create Activity** and select the **Experience Targeting** activity type.
@@ -150,7 +150,7 @@ At this point, we have successfully created audiences for all WKND Site visitors
 18. Navigate to the [WKND Site Home Page](http://localhost:4503/content/wknd/en.html), and you should be able to see the WKND SkateFest Offer based off your geolocation (*state: California*).
     ![Activity QA](assets/personalization-use-case-1/wknd-california.png)
 
-### Target Activity QA {#marketer-activity-qa}
+### Target Activity QA
 
 1. Under **Activity Details > Overview** tab, click on the **Activity QA** button, and you can get the direct QA link to all your experiences.
     ![Activity QA](assets/personalization-use-case-1/activity-qa.png)
@@ -159,6 +159,6 @@ At this point, we have successfully created audiences for all WKND Site visitors
 
 >[!VIDEO](https://video.tv.adobe.com/v/28658?quality=9)
 
-## Summary {#Summary}
+## Summary
 
 In this chapter, a content editor was able to create all the content to support the WKND SkateFest campaign within Adobe Experience Manager and export it to Adobe Target as HTML Offers, for creating Experience Targeting, based off users geolocation.

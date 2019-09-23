@@ -5,7 +5,7 @@ description: An end-to-end tutorial showing how to create and deliver personaliz
 seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Experience Manager and Adobe Target. In this tutorial, you will also learn about different personas involved in the end to end process and how they collaborate with each other
 ---
 
-# Personalization using Visual Experience Composer {#personalization-using-visual-experience-composer}
+# Personalization using Visual Experience Composer
 
 In the previous chapter, we learned how to create an activity to redirect your site pages that's hosted on AEM to a new page using Adobe Target.
 
@@ -20,7 +20,7 @@ In this chapter, we are going to explore how to create an experience using Visua
   * Access to your organizations Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
   * Experience Cloud provisioned with [Adobe Target](https://marketing.adobe.com)
 
-## WKND Site - Use Case {#wknd-site-use-case}
+## WKND Site - Use Case
 
 WKND site home page displays local activities or best thing to do around a city in the form of card layouts. As a marketer, you have been assigned the task to modify the home page, by re-arranging the card layouts to see how it affects user engagement and drives conversion.
 
@@ -61,9 +61,11 @@ For this exercise, the following users need to be involved and to perform some t
    11. Let's also add a header text beneath the carousel component and above the card layout.
    12. Click on the carousel container and Select the **Inset After > HTML** option to add HTML.
     ![Add Text](assets/personalization-use-case-3/add-text.png)
+
         ``` html
         <h1 style="text-align:center">Check Out the Hot Spots in Town</h1>
         ```
+
         ![Add Text](assets/personalization-use-case-3/after-changes.png)
    13. Click **Next** to continue with your activity.
    14. Select the **Traffic Allocation Method** as manual and allot 100% traffic to **Experience B**.

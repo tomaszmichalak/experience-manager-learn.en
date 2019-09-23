@@ -5,7 +5,7 @@ description: An end-to-end tutorial showing how to create and deliver personaliz
 seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Experience Manager and Adobe Target. In this tutorial, you will also learn about different personas involved in the end to end process and how they collaborate with each other
 ---
 
-# Using Adobe Experience Platform Launch via Adobe I/O Console {#aem-target-using-launch-by-adobe}
+# Using Adobe Experience Platform Launch via Adobe I/O Console
 
 ## Prerequisites
 
@@ -49,9 +49,9 @@ In this section, we would be cover the following integration steps:
   * Create a Cloud Service
   * Create
 
-### Launch {#launch-setup}
+### Launch
 
-#### Create a Launch Property {#create-launch-property}
+#### Create a Launch Property
 
 A property is a container that you fill with extensions, rules, data elements, and libraries as you deploy tags to your site.
 
@@ -76,7 +76,7 @@ A property is a container that you fill with extensions, rules, data elements, a
 
 8. Open the property that you just created and click on the Extensions tab.
 
-#### Adding Target Extension {#adding-target-extension}
+#### Adding Target Extension
 
 The Adobe Target extension supports client-side implementations using Target's JavaScript SDK for the modern web, at.js. Customers still using Target's older library, mbox.js, [should upgrade to at.js](https://marketing.adobe.com/resources/help/en_US/target/ov2/t_target-migrate-atjs.html) to use Launch.
 
@@ -119,7 +119,7 @@ The Target extension consists of two main parts:
     > [!NOTE]
     > Digital data layer script added in the implementations' section of this tutorial can be accessed using the *digitalData* JS object to collect page information.
 
-#### Create a Page Rule {#launch-page-rule}
+#### Create a Page Rule
 
 [Rules Documentation](https://adobe.com/go/launch_help_rules_en)
 1. Click on the **Rules** tab for your site property, and let's create a new rule.
@@ -149,13 +149,13 @@ The Target extension consists of two main parts:
 
     >[!VIDEO](https://video.tv.adobe.com/v/28423?quality=9)
 
-#### Setup Environments {#launch-environment}
+#### Setup Environments
 
 1. Click on the **Environment** tab for your site property, and you can see the list of environment that gets created for your site property. By default, we have one instance each created for development, staging, and production.
 
  ![Data Element - Page Name](assets/using-launch-adobe-io/launch-environment-setup.png)
 
-#### Build and Publish {#launch-publishing}
+#### Build and Publish
 
 1. Click on the **Publishing** tab for your site property, and let's create a library to build, and deploy our changes (data elements, rules) to a development environment.
     >[!VIDEO](https://video.tv.adobe.com/v/28412t1?quality=9)
@@ -167,7 +167,7 @@ The Target extension consists of two main parts:
 5. Finally, run the **Build and Publish to production** option to push your changes to production.
   ![Build and Publish to Production](assets/using-launch-adobe-io/build-and-publish.png)
   
-### Adobe Experience Manager {#aem-setup}
+### Adobe Experience Manager
 
 1. From your [AEM author home page](http://localhost:4502/aem/start.html), click on Tools, Security, and select Adobe IMS Configuration.
 

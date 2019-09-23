@@ -5,7 +5,7 @@ description: An end-to-end tutorial showing how to create and deliver personaliz
 seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Experience Manager and Adobe Target. In this tutorial, you will also learn about different personas involved in the end to end process and how they collaborate with each other
 ---
 
-# Integrating Adobe Experience Manager with Adobe Target {#integrating-aem-target-options}
+# Integrating Adobe Experience Manager with Adobe Target
 
 In this section, we will discuss how to set up Adobe Experience Manager with Adobe Target for different use cases. Based on your use case and organizational requirements, you can choose either one of the options or both.
 
@@ -40,7 +40,7 @@ In this section, we will discuss how to set up Adobe Experience Manager with Ado
 >
 > Customer needs to be provisioned with Adobe Launch and Adobe I/O from [Adobe support](https://helpx.adobe.com/contact/enterprise-support.ec.html) or reach out to your system administrator
 
-### Getting your AEM Instance ready {#getting-aem}
+### Getting your AEM Instance ready
 
 AEM author and publish instance is necessary to complete this tutorial. We have the author instance running on localhost:4502 and publish instance running on localhost:4503. For more information see: [Set up a Local AEM Development Environment](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/local-aem-dev-environment-article-setup.html).
 

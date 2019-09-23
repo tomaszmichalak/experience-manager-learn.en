@@ -5,7 +5,7 @@ description: An end-to-end tutorial showing how to create and deliver personaliz
 seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Experience Manager and Adobe Target. In this tutorial, you will also learn about different personas involved in the end to end process and how they collaborate with each other
 ---
 
-# Using AEM legacy Cloud Services {#aem-target-cloud-services}
+# Using AEM legacy Cloud Services
 
 In this section, we will discuss how to set up Adobe Experience Manager with Adobe Target using legacy Cloud Services.
 
@@ -14,7 +14,8 @@ For using AEM Experience Fragment offers to power you personalization activities
 ## Prerequisites
 
 * **AEM**
-    * AEM author and publish instance are necessary to complete this tutorial. If you haven't set up your AEM instance yet, you can follow the steps [here](./implementation.md#getting-aem).
+
+  * AEM author and publish instance are necessary to complete this tutorial. If you haven't set up your AEM instance yet, you can follow the steps [here](./implementation.md#getting-aem).
 
 * **Experience Cloud**
   * Access to your organizations Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com

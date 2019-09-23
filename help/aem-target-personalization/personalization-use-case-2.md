@@ -5,7 +5,7 @@ description: An end-to-end tutorial showing how to create and deliver personaliz
 seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Experience Manager and Adobe Target. In this tutorial, you will also learn about different personas involved in the end to end process and how they collaborate with each other
 ---
 
-# Personalization using Adobe Target {#personalization-use-case-2}
+# Personalization using Adobe Target
 
 In the previous chapter, we learned how to create a geolocation based activity within Adobe Target using content created and exported from AEM as HTML Offers.
 
@@ -21,7 +21,7 @@ In this chapter, we are going to explore how to create an activity to redirect y
   * Experience Cloud provisioned with the following solutions
     * [Adobe Target](https://marketing.adobe.com)
 
-## WKND Site - Use Case {#wknd-site-use-case}
+## WKND Site - Use Case
 
 WKND site redesigned their homepage and would like to redirect their current homepage visitors to the new home page. At the same time, also understand how the redesigned home page helps to improve user engagement and revenue. As a marketer, you have been assigned the task to create an activity to redirect the visitors to the new home page. Let us explore the WKND site home page and learn how to create an activity using Adobe Target.
 
