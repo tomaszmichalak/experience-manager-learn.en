@@ -112,7 +112,7 @@ Sample swagger file is given to you as part of the asset's related to this artic
 
 To test the solution please follow the following steps:
 * [Make sure you have followed the steps as described here](aem-forms-with-campaign-standard-getting-started-tutorial.md) 
-* [Download and unzip this file to get the swagger file](assets/createacsprofile.zip)
+* [Download and unzip this file to get the swagger file](assets/create-acs-profile-swagger-file.zip)
 * Create Data Source using the swagger file
 Create Form Data Model and base it on the Data Source created in the previous step
 * Create an Adaptive Form based on the Form Data Model created in the earlier step.

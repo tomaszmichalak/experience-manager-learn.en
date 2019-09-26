@@ -232,7 +232,7 @@ return "Pre Fill Forms Using Campaign Profile";
 To get this working on your system please follow the following instructions:
 
 * [Make sure you have followed the steps as described here](aem-forms-with-campaign-standard-getting-started-tutorial.md) 
-* [Import Sample Adaptive Form into AEM using the package manager](assets/prefillaffromcampaign.zip)
+* [Import Sample Adaptive Form into AEM using the package manager](assets/pre-fill-af-from-campaign.zip)
 * Make sure you log in to AEM with a user whose email id is shared by a profile in Adobe Campaign. For example, if the email id of the AEM user is johndoe@adobe.com, you need to have a profile in ACS whose email is johndoe@adobe.com.
 * [Preview the form](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled).
 

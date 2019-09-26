@@ -267,7 +267,7 @@ Once we have defined the service and the custom submit action, we are ready to t
 
 
 * [Make sure you have followed the steps as described here](aem-forms-with-campaign-standard-getting-started-tutorial.md) 
-* [Import Adaptive Form and Custom Submit Handler using package manager](assets/create-acs-profile-on-af-submission).This package contains Adaptive Form configured to submit to custom submit action.
+* [Import Adaptive Form and Custom Submit Handler using package manager](assets/create-acs-profile-on-af-submission.zip).This package contains Adaptive Form configured to submit to custom submit action.
 * Preview the [form](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
 * Fill in all the fields and submit
 * A new profile will be created in your ACS instance
