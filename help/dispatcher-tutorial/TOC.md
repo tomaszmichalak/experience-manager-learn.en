@@ -1,5 +1,5 @@
 ---
-user-guide-title: AEM Dispatcher Cache Demystified
+user-guide-title: AEM Dispatcher Cache Tutorial
 product: AEM
 version: 6.x
 sub-product: foundation
@@ -11,7 +11,7 @@ kt: 2233
 index: y
 ---
  
-# AEM Dispatcher Cache Demystified{#aem-dispatcher-cache-demystified}
+# AEM Dispatcher Cache Tutorial{#dispatcher-tutorial}
 
 + [Overview](overview.md)
 + [1 - Concepts, Patterns, and Antipatterns](chapter-1.md)

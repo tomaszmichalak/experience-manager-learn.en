@@ -1265,7 +1265,7 @@ This relieves you from duplicating header logic in the Dispatcher and unleashes 
 
 **References**
 
-- [helpx.adobe.com - Caching Response Headers](https://helpx.adobe.com/experience-manager/kb/dispatcher-cache-response-headers.html)
+* [helpx.adobe.com - Caching Response Headers](https://helpx.adobe.com/experience-manager/kb/dispatcher-cache-response-headers.html)
 
 ### Individual Caching Exceptions
 
@@ -1285,7 +1285,7 @@ Cache-Control and Pragma are official HTTP-headers, that are propagated to and i
 
 **References**
 
-- [Dispatcher - No Cache](https://helpx.adobe.com/experience-manager/kb/DispatcherNoCache.html)
+* [Dispatcher - No Cache](https://helpx.adobe.com/experience-manager/kb/DispatcherNoCache.html)
 
 ### Browser Caching
 
@@ -1337,11 +1337,11 @@ Caching UI-files, your sites library files  and images can speed up the reloadin
 
 **References**
 
-- [developer.mozilla.org - Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)
+*[developer.mozilla.org - Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)
 
-- [apache.org - Mod Expires](https://httpd.apache.org/docs/current/mod/mod_expires.html)
+* [apache.org - Mod Expires](https://httpd.apache.org/docs/current/mod/mod_expires.html)
 
-- [ACS Commons - Etag Support](https://adobe-consulting-services.github.io/acs-aem-commons/features/etag/index.html)
+* [ACS Commons - Etag Support](https://adobe-consulting-services.github.io/acs-aem-commons/features/etag/index.html)
 
 ### Truncating URLs
 
@@ -1387,17 +1387,19 @@ In the filesystem we now have plain `/content`-based paths, that would be found 
 
 Note, we did that only for "visible" URLs, URLs that are displayed in the browser's URL slot. URLs for images for example were still pure "/content" URLs. We believe, that beautifying the "main" URL is sufficient in terms of Search Engine Optimization.
 
-Having one common docroot also had another nice feature. When anything went wrong in the Dispatcher, we could clean up the whole cache by executing 
+Having one common docroot also had another nice feature. When anything went wrong in the Dispatcher, we could clean up the whole cache by executing,
+
 ```
 rm -rf /cache/dispatcher/*
 ```
+
 (something you might not want to do at high load peaks).
 
 **References**
 
-- [apache.org - Mod Rewrite](https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html)
+* [apache.org - Mod Rewrite](https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html)
 
-- [helpx.adobe.com - Resource Mapping](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/resource-mapping.html)
+* [helpx.adobe.com - Resource Mapping](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/resource-mapping.html)
 
 ### Error Handling
 
@@ -1426,7 +1428,7 @@ Second… well, if we see an internal server error – or even worse we encounte
 
 **References**
 
-- [apache.org - Custom Error Documents](https://httpd.apache.org/docs/2.4/custom-error.html)
+* [apache.org - Custom Error Documents](https://httpd.apache.org/docs/2.4/custom-error.html)
 
 ### Caching Protected Content
 
@@ -1451,7 +1453,7 @@ And of course, you can apply your own mix of all three approaches.
 
 **References**
 
-- [helpx.adobe.com - Permission sensitive caching](https://helpx.adobe.com/experience-manager/dispatcher/using/permissions-cache.html)
+* [helpx.adobe.com - Permission sensitive caching](https://helpx.adobe.com/experience-manager/dispatcher/using/permissions-cache.html)
 
 ### Setting the Grace Period
 
@@ -1810,12 +1812,12 @@ CQ-Handle: <path-pattern>
 
 `CQ-Action: <action>` - What should happen. `<action>` is either:
 
-- `Activate:` deletes `/path-pattern.*`
-- `Deactive:` delete `/path-pattern.*` 
+* `Activate:` deletes `/path-pattern.*`
+* `Deactive:` delete `/path-pattern.*` 
 AND delete `/path-pattern/*`
-- `Delete:`   delete `/path-pattern.*` 
+* `Delete:`   delete `/path-pattern.*` 
 AND delete `/path-pattern/*`
-- `Test:`   Return "ok" but do nothing
+* `Test:`   Return "ok" but do nothing
 
 `CQ-Handle: <path-pattern>` - The content-resource path to be invalidated. Note, `<path-pattern>` is actually a "path" and not a "pattern".
 
