@@ -124,7 +124,7 @@ Now you can use different strategies on different cache layers, but there are a 
 ![Pure Event based invalidation](assets/chapter-3/event-based-invalidation.png)
 *Pure Event based invalidation: Invalidate from the inner cache to the outer layer*
 
-Pure event-based invalidation is the easiest one to comprehend, easiest to get theoretically right and the most accurate one. 
+Pure event-based invalidation is the easiest one to comprehend, easiest to get theoretically right and the most accurate one.
 
 Simply put, the caches are invalidated one by one after the object has changed.
 
