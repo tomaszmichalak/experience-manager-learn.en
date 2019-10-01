@@ -34,7 +34,7 @@ Adobe Experience Manager assets can now be used by designers and creative users 
 * Creatives can place, download or drag-n-drop assets into their layout
 * Creatives can modify assets by checking them out from AEM Assets and working on them (WIP) within their Creative Cloud Assets account
 * Creatives can check an asset back into AEM Assets after they have finished modifying it, and the new version will be reflected in AEM Assets.
-* Supports Creative Cloud 2017 and 2018
+* Supports Creative Cloud 2018 and 2019
 * A user can perform an asset search from the Adobe Asset Link In-App panel and sort them based on size, type, alphabetically and last modified
 * Users can access and browse AEM Assets collections and smart collections directly from the Asset Link panel
 * Add newly created assets to AEM Assets directly from the panel
@@ -61,6 +61,10 @@ You can place an asset to your InDesign layout using one of the below options:
 ### For Placement Only (FPO) Resolution
 
 When large asset files are placed into InDesign Documents from AEM Assets using Adobe Asset Link, creatives users need to wait for few secs after initiating the place operation. This impacts the overall user experience. With Adobe Asset Link you can now temporarily place a low resolution image of the original asset from AEM Assets, thereby reducing the time taken to place an image. At the same time, it increases the overall user experience and productivity. The lower resolution image is placed temporarily and when the final output is required for printing or publishing, the original full-resolution asset gets replaces the lower resolution image and it all happens in the background. This new lower resolution is also called as for placement only resolution.
+
+>[!NOTE]
+>
+> *For Placement Only (FPO)* rendition works only for Place Linked option. You should also enable FPO rendition support within the AEM Assets *Dam Update Asset* workflow.
 
 FPO renditions are lightweight substitutes of the original assets. They have the same aspect ratio, but are of smaller size compared to the original images. Currently, InDesign supports importing FPO renditions for the following image types only:
 
