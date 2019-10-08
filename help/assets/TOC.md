@@ -24,6 +24,7 @@ team: TM
   + [Configure Smart Tags](metadata/smart-tags-technical-video-setup.md)
   + [Enhanced Smart Tags](metadata/enhanced-smart-tags-feature-video-use.md)
   + [Configure Enhanced Smart Tags](metadata/enhanced-smart-tags-technical-video-setup.md)
+  + [Visual Search](metadata/use-visual-search.md)
 + Brand Portal {#brand-portal}
   + [Understanding Brand Portal with AEM Assets](brand-portal/brand-portal-article-understand.md)
   + [Using Brand Portal with AEM Assets](brand-portal/brand-portal-feature-video-use.md)
