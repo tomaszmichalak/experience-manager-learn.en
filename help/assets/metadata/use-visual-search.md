@@ -22,6 +22,6 @@ Adobe Experience Manager Assets integrates with Adobe Sensei with Visual Search,
 >[!VIDEO](https://video.tv.adobe.com/v//?quality=12)
 
 ## Additional Resources
- 
+
 + [Search Assets in AEM - Visual Search](https://helpx.adobe.com/experience-manager/6-5/assets/using/search-assets.html#visualsearch)
 + [Search Assets in AEM - Configure Visual Search](https://helpx.adobe.com/experience-manager/6-5/assets/using/search-assets.html#configvisualsearch)
