@@ -19,7 +19,7 @@ audience: marketer
 
 Adobe Experience Manager Assets integrates with Adobe Sensei with Visual Search, allowing marketers to search for image assets in Experience Manager that are visually similar to a selected asset. This is a great way to discover new images, or even, just a quick, simple way to find alternatives to a selected asset.
 
->![VIDEO](https://video.tv.adobe.com/v//?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v//?quality=12)
 
 ## Additional Resources
  

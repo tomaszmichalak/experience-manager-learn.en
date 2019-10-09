@@ -12,6 +12,10 @@ Adobe Experience Manager Assets is a digital asset management tool on AEM Platfo
 
 ## What's New
 
+* **[Use Visual Search (Video)](./metadata/use-visual-search.md)**
+    <br>
+    *Find image assets based on how similar they look to other images*
+
 * **[Using Adobe Asset Link (Video)](./creative-cloud/adobe-asset-link-feature-video-use.md)**
     <br>
     *Learn about how designers and creative users can collaborate using their favorite Adobe Creative Cloud desktop applications*
