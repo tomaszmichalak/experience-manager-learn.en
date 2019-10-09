@@ -18,6 +18,7 @@ We will sketch the most common topologies and describe the advantages and where 
 In the early days, the number of potential visitors was small, hardware was expensive and web servers were not seen quite as business critical as they are today. A common setup was to have one Dispatcher serving as a load balancer and cache in front of two or more Publish systems. The Apache server at the core of the Dispatcher was very stable and - in most settings - capable enough to serve a decent amount of request.
 
  !["Legacy" Dispatcher Setup – Not very common by today's standards](assets/chapter-2/legacy-dispatcher-setup.png)
+
 *"Legacy" Dispatcher Setup – Not very common by today's standards*
 
 This is where the dispatcher received its name from: It was basically dispatching requests. This setup is not very common any longer as it cannot meet the higher demands in performance and stability required today.
@@ -27,6 +28,7 @@ This is where the dispatcher received its name from: It was basically dispatchin
 Nowadays a slightly different topology is more common. A multi-legged topology would have one Dispatcher per Publish server. A dedicated (hardware) load balancer sits in front of the AEM infrastructure dispatching the requests to these two (or more) legs:
 
  ![Modern "Standard" Dispatcher Setup – Easy to handle and maintain](assets/chapter-2/modern-standard-dispatcher-setup.png)
+
 *Modern "Standard" Dispatcher Setup – Easy to handle and maintain*
 
 Here are the reasons for this kind of setup,
@@ -46,6 +48,7 @@ Here are the reasons for this kind of setup,
 Apache Servers are cheap and easy to provision, why not push scaling out that level a bit more. Why not have two or more Dispatchers in front of each Publish server?
 
 !["Scale Out" Setup – Has some application areas but also limitations and caveats](assets/chapter-2/scale-out-setup.png)
+
 *"Scale Out" Setup – Has some application areas but also limitations and caveats*
 
 You can absolutely do that! And there is a lot of valid application scenarios for that setup. But there are also some limitations and complexities you should consider.
@@ -79,6 +82,7 @@ Adding proxy servers should normally increase the performance. There are, howeve
 If you have two Dispatchers, the second visitor has a 50% chance that the page is not cached, and he would then experience a larger latency when that page is rendered again. Having even more Dispatchers per Publish makes things even worse. What happens is, that the Publish server receives more load because it has to re-render the page for each Dispatcher separately.
 
 ![Decreased performance in a scale-out scenario with frequent cache flushes.](assets/chapter-2/decreased-performance.png)
+
 *Decreased performance in a scale-out scenario with frequent cache flushes.*
 
 #### Mitigating Over-Scaling Issues
@@ -98,6 +102,7 @@ If you are also concerned about the latency a visitor experiences, consider usin
 Another setup we have seen every now and then is the "cross connected" setup: The Publish instances do not have dedicated Dispatchers but all Dispatchers are connected to all Publish systems.
 
  ![Cross-connected topology: Increased redundancy and more complexity](assets/chapter-2/cross-connected-setup.png)
+ 
 *Cross-connected topology: Increased redundancy and more complexity.*
 
 At first glance, this provides some more redundancy for a relatively small budget. When one of the Apache servers is down, you can still have two Publish systems doing the rendering work. Also, if one of the Publish systems crashes, you still have two Dispatchers serving the cached load.

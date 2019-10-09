@@ -66,6 +66,7 @@ In the early days of the web, you would expect a few hundred visitors to a site.
 We will see different ways of setting up Dispatchers and Publish systems later in this article. First let's start with some http caching basics.
 
  ![Basic functionality of a Dispatcher Cache](assets/chapter-1/basic-functionality-dispatcher.png)
+
 *Basic functionality of a Dispatcher Cache*
 
 The very basics of the dispatcher is explained here. The dispatcher is a simple caching reverse proxy with the ability to receive and create HTTP requests. A normal request/response cycle goes like this:
@@ -131,8 +132,8 @@ If the URL has a suffix `path/suffix/.ext` then,
 
 * `suffix.ext` is a file in the `path` folder. Note: If the suffix does not have an extension, the file is not cached.
 
-
 ![Filesystem layout after getting URLs from the Dispatcher](assets/chapter-1/filesystem-layout-urls-from-dispatcher.png)
+
 *Filesystem layout after getting URLs from the Dispatcher*
 
 #### Basic Limitations
@@ -141,7 +142,7 @@ The mapping between a URL, the resource and the filename is pretty straightforwa
 
 You might have noticed a few traps however,
 
-1. URLs can become very long. Adding the "path" portion of a `/docroot` on the local filesystem could easily exceed limits of some filesystems. Running the Dispatcher in NTFS on Windows can be a challenge. You are safe with Linux.
+1. URLs can become very long. Adding the "path" portion of a `/docroot` on the local filesystem could easily exceed limits of some filesystems. Running the Dispatcher in NTFS on Windows can be a challenge. You are safe with Linux, however.
 
 2. URLs can contain special characters and umlauts. This is usually is not a problem for the dispatcher. Bear in mind though, that the URL is interpreted in many places of your application. More often than not, we have seen strange behaviors of an application – just to find out that one piece of rarely used (custom) code was not tested thoroughly for special characters. You should avoid them if you can. And if you can't, plan for thorough testing.
 
@@ -198,11 +199,13 @@ If you request `home.html` first, it will be created as a file.
 Subsequent requests to `home.html/suffix.html` return valid results, but as the file `home.html` "blocks" the position in the filesystem,  `home.html` cannot be created a second time as a folder and thus `home.html/suffix.html` is not cached.
 
 ![File blocking position in the filesystem preventing sub-resources to be cached](assets/chapter-1/file-blocking-position-in-filesystem.png)
+
 *File blocking position in the filesystem preventing sub-resources to be cached*
 
 If you do it the other way round, first requesting `home.html/suffix.html` then `suffix.html` is cached under a folder `/home.html` at first. However, this folder is deleted and replaced by a file `home.html` when you subsequently request `home.html` as a resource.
 
 ![Deleting a path structure when a parent is fetched as a resource](assets/chapter-1/deleting-path-structure.png)
+
 *Deleting a path structure when a parent is fetched as a resource*
 
 So, the result of what is cached is entirely random and depending on the order of the incoming requests. What makes matters even more tricky, is the fact that you usually have more than one dispatcher. And the performance, cache hit-rate and behavior might vary differently from one Dispatcher to the other. If you want to find out why your website is unresponsive you need to be sure you are looking at the correct Dispatcher with the unfortunate caching order. If you are looking on the Dispatcher which - by lucky chance - had a more favorable request pattern, you'll be lost in trying to find the issue.
@@ -335,6 +338,7 @@ Now the marketer has learned that teaser headlines should be actionable. So, he 
 He publishes the edited "Canada" page and revisits the previously published home page to see his changes. But – nothing changed there. It still displays the old teaser. He double checks on the "Winter Special". That page has never been requested before, and thus is not statically cached in the Dispatcher. So, this page is freshly rendered by Publish and this page now contains the new "Visit Canada" teaser.
 
 ![Dispatcher storing stale included content in the home page](assets/chapter-1/dispatcher-storing-stale-content.png)
+
 *Dispatcher storing stale included content in the home page*
 
 What happened? The Dispatcher stores a static version of a page containing all content and markup that has been drawn from other resources while rendering.
@@ -372,6 +376,7 @@ We are using the same argument as in the last example with teasers referencing t
 So, in our example, the navigation meshes all pages together by using the target page's "NavTitle" to render a name in the navigation. The navigation title for "Iceland" is drawn from the "Iceland" page and rendered into each and every page that has a main navigation.
 
 ![Main navigation inevitably meshing content of all pages together by pulling their "NavTitles"](assets/chapter-1/nav-titles.png)
+
 *Main navigation inevitably meshing content of all pages together by pulling their "NavTitles"*
 
 If you change the NavTitle on the Iceland page from "Iceland" to "Beautiful Iceland" that title immediately changes on all other pages main menu. Thus the pages rendered and cached before that change, all become stale and need to be invalidated.
@@ -383,6 +388,7 @@ Now if you have a large site with thousands of pages, it would take quite some t
 All files in the dispatcher, that have a creation date older than the statfile, have been rendered before the last activation (and invalidation) and thus are considered "invalid". They still are physically present in the filesystem, but the Dispatcher ignores them. They are "stale". Whenever a request to a stale resource is made, the Dispatcher asks the AEM system to re-render page. That newly rendered page then is stored in the filesystem – now with a new creation date and it is fresh again.
 
 ![Creation date of the .stat file defines which content is stale and which is fresh](assets/chapter-1/creation-date.png)
+
 *Creation date of the .stat file defines which content is stale and which is fresh*
 
 You may ask why it is called ".stat"? And not maybe ".invalidated"? Well, you can imagine, having that file in your filesystem helps the Dispatcher determine which resources could *statically* be served – just like from a static web server. These files don't need to be rendered dynamically any longer.
@@ -477,6 +483,7 @@ The component has three rendering scripts (implemented in JSP, HTL or as a servl
 The component is placed in the parsys of the homepage. The resulting structure in the CRX is illustrated below.
 
 ![Resource-structure of the responsive image in the CRX](assets/chapter-1/responsive-image-crx.png)
+
 *Resource-structure of the responsive image in the CRX*
 
 The components markup is rendered like this,
@@ -510,6 +517,7 @@ and... we have finished with our nicely encapsulated component.
 Now a user requests the page – and the assets via the Dispatcher. This results in files in the Dispatcher filesystem as illustrated below,
 
 ![Cached structure of the encapsulated responsive image component](assets/chapter-1/cached-structure-encapsulated-image-comonent.png)
+
 *Cached structure of the encapsulated responsive image component*
 
 Consider a user uploads and activates a new version of the two flower images to the DAM. AEM will send according invalidation request for
@@ -523,6 +531,7 @@ and
 to the Dispatcher. These requests are in vain, though. The contents have been cached as files below the component's substructure. These files are now stale but still served upon requests.
 
 ![Structure mismatch leading to stale content](assets/chapter-1/structure-mismatch.png)
+
 *Structure mismatch leading to stale content*
 
 There is another caveat to this approach. Consider you use the same flower.jpg on multiple pages. Then you will have the same asset cached under multiple URLs or files,
@@ -600,6 +609,7 @@ In our example, the component was rendered and cached at 23:59. Now the image ha
 You might think it _should_…  but it doesn't. As only the binary of the image has been changed and the including page was not touched, re-rendering of the HTML markup is not required. So, the Dispatcher serves the page with the old fingerprint, and thus the old version of the image.
 
 ![Image component more recent than referenced image, no fresh fingerprint rendered.](assets/chapter-1/recent-image-component.png)
+
 *Image component more recent than referenced image, no fresh fingerprint rendered.*
 
 Now, if you re-activated the home page (or any other page of that site) the statfile would be updated, the Dispatcher would consider the home.html stale and re-render it with a new fingerprint in the image component.
@@ -760,6 +770,7 @@ A much more elegant way to solve the dependency problem is to not have dependenc
 Our example is easily solved:
 
 ![Spooling the image with a servlet that is bound to the image, not the component.](assets/chapter-1/spooling-image.png)
+
 *Spooling the image with a servlet that is bound to the image, not the component.*
 
 We use the assets original resource paths to render the data. If we need to render the original image as is, we can just use AEMs default renderer for assets.
@@ -795,6 +806,7 @@ Let us introduce a small extension of our "respi" component, that is a bit of a 
 The respi2 component is a component that displays a responsive image - as is the respi component. But it has a slight add-on,
 
 ![CRX structure: respi2 component adding a quality property to the delivery](assets/chapter-1/respi2.png)
+
 *CRX structure: respi2 component adding a quality property to the delivery*
 
 The images are jpegs, and jpegs can be compressed. When you compress a jpeg image you trade quality for file size. Compression is defined as a numeric "quality" parameter ranging from "1" to "100". "1" means "small but poor quality", "100" stands for "excellent quality but large files". So which is the perfect value then?
@@ -838,6 +850,7 @@ This is a bad idea. Remember? Requests with query parameters are not cacheable.
 > This might become an anti-pattern. Use it carefully.
 
 ![Passing Component Properties as Selectors](assets/chapter-1/passing-component-properties.png)
+
 *Passing Component Properties as Selectors*
 
 This is a slight variation of the last URL. Only this time we use a selector to pass the property to the servlet, so that the result is cacheable:
@@ -1060,6 +1073,7 @@ Now if you publish - and thus invalidate `/content/site-b/home` or any other res
 Content below `/content/site-a/` is not affected. This content would be compared to a `.stat` file at `/content/site-a/`. We have created two separate invalidation domains.
 
  ![A statfileslevel "1" creates different invalidation domains](assets/chapter-1/statfiles-level-1.png)
+
 *A statfileslevel "1" creates different invalidation domains*
 
 Large installations usually are structured a bit more complex and deeper. A common scheme is to structure sites by brand, country and language. In that case you can set the statfileslevel even higher. _1_ would create invalidation domains per brand, _2_ per country and _3_ per language.
@@ -1193,6 +1207,7 @@ You can prevent being down-ranked  by making transparent, that you actually have
 ```
 
 ![Inter-linking all](assets/chapter-1/inter-linking-all.png)
+
 *Inter-linking all*
 
 > Some SEO experts even argue, that this could transfer reputation or "link-juice" from a high-ranked website in one language to the same website in a different language. 
@@ -1462,6 +1477,7 @@ If you are frequently invalidating in short succession – e.g., by a tree activ
 The diagram below illustrates a possible timing when accessing a single page.  The problem of course gets worse when the number of different pages requested grows larger.
 
  ![Frequent activations leading to invalid cache for most of the time](assets/chapter-1/frequent-activations.png)
+
 *Frequent activations leading to invalid cache for most of the time*
 
 To mitigate the problem of this "cache invalidation storm" as it is sometimes called, you can be less rigorous about the `statfile` interpretation.
@@ -1503,6 +1519,7 @@ You use a "Custom Invalidation Script" (see reference), that would run after the
 For example, if you set the grace period to 30 sec, the Dispatcher would round the last-modified date of the statfile to the next 30 sec. Invalidation requests that happen in between just set the same next full 30 sec.
 
  ![Postponing the invalidation to the next full 30 second increases the hit-rate.](assets/chapter-1/postponing-the-invalidation.png)
+
 *Postponing the invalidation to the next full 30 second increases the hit-rate.*
 
 The cache hits that happen between the invalidation request and the next round 30 sec slot are then considered stale; There was an update on Publish – but the Dispatcher still serves old content.
@@ -1526,11 +1543,13 @@ Subsequently,as these pages are so popular, there are new incoming requests from
 As now the cache is invalid, all requests to the home page that are coming in at the same time are forwarded to the Publish system generating a high load.
 
 ![Parallel requests to same resource on empty cache: Requests are forwarded to Publish](assets/chapter-1/parallel-requests.png)
+
 *Parallel requests to same resource on empty cache: Requests are forwarded to Publish*
 
 With automatic re-fetching you can mitigate that to some extent. Most invalidated pages are still physically stored on the Dispatcher after auto-invalidation. They are only _considered_ stale. _Automatic Refetching_ means, that you still serve these stale pages for a few seconds while initiating _one single_ request to the publish system to re-fetch the stale content:
 
  ![Delivering stale content while re-fetching in the background](assets/chapter-1/fetching-background.png)
+ 
 *Delivering stale content while re-fetching in the background*
 
 To enable re-fetching you must tell the Dispatcher which resources to re-fetch after an auto invalidation. Remember, that any page you activate also auto-invalidates all other pages – including your popular ones.
