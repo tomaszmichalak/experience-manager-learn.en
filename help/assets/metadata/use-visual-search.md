@@ -7,7 +7,7 @@ kt: 3768
 product: experience-manager
 sub-product: assets
 feature: visual-search
-topics: search, images
+topics: search, images, metadata
 version: 6.5.2
 doc-type: feature-video
 activity: use

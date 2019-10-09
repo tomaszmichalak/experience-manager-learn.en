@@ -22,3 +22,9 @@ In these videos, we look at some enhancements to Assets search introduced in AEM
 The **multi-value search predicate** is made available for easy text matching in search results. Several enhancements to the Tag predicate has also been made for more efficient filtering of Asset search results.
 
 >[!VIDEO](https://video.tv.adobe.com/v/16457/?quality=9)
+
+## Visual Search
+
+**Visual search** in Experience Manager levers Adobe Sensei to find image assets in the DAM that look similar to a selected asset.
+
++ [Watch a short video about Visual Search](./use-visual-search.md)
