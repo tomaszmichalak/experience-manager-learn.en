@@ -22,6 +22,7 @@ In the early days, the number of potential visitors was small, hardware was expe
 *"Legacy" Dispatcher Setup – Not very common by today's standards*
 
 <br>&nbsp;
+
 This is where the dispatcher received its name from: It was basically dispatching requests. This setup is not very common any longer as it cannot meet the higher demands in performance and stability required today.
 
 ### Multi-Legged Setup
@@ -33,6 +34,7 @@ Nowadays a slightly different topology is more common. A multi-legged topology w
 *Modern "Standard" Dispatcher Setup – Easy to handle and maintain*
 
 <br>&nbsp;
+
 Here are the reasons for this kind of setup,
 
 1. Websites on average serve much more traffic than they have in the past. Thus, there is a need to scale up the "Apache infrastructure."
@@ -54,6 +56,7 @@ Apache Servers are cheap and easy to provision, why not push scaling out that le
 *"Scale Out" Setup – Has some application areas but also limitations and caveats*
 
 <br>&nbsp;
+
 You can absolutely do that! And there is a lot of valid application scenarios for that setup. But there are also some limitations and complexities you should consider.
 
 #### Invalidation
@@ -90,6 +93,7 @@ If you have two Dispatchers, the second visitor has a 50% chance that the page i
 *Decreased performance in a scale-out scenario with frequent cache flushes.*
 
 <br>&nbsp;
+
 #### Mitigating Over-Scaling Issues
 
 You might consider using a central shared storage for all Dispatchers or synching the file systems of the Apache servers to mitigate the issues. We can provide only limited first-hand experience but be prepared that this adds up to the complexity of the system and can introduce a whole new class of errors.
@@ -109,6 +113,7 @@ Another setup we have seen every now and then is the "cross connected" setup: Th
  ![Cross-connected topology: Increased redundancy and more complexity](assets/chapter-2/cross-connected-setup.png)
 
 <br>&nbsp;
+
 *Cross-connected topology: Increased redundancy and more complexity.*
 
 At first glance, this provides some more redundancy for a relatively small budget. When one of the Apache servers is down, you can still have two Publish systems doing the rendering work. Also, if one of the Publish systems crashes, you still have two Dispatchers serving the cached load.
