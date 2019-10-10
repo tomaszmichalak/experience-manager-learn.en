@@ -67,7 +67,8 @@ We will see different ways of setting up Dispatchers and Publish systems later i
 
  ![Basic functionality of a Dispatcher Cache](assets/chapter-1/basic-functionality-dispatcher.png)
 
-*Basic functionality of a Dispatcher Cache*
+*Basic functionality of a Dispatcher Cac
+<br>&nbsp;
 
 The very basics of the dispatcher is explained here. The dispatcher is a simple caching reverse proxy with the ability to receive and create HTTP requests. A normal request/response cycle goes like this:
 
@@ -136,6 +137,8 @@ If the URL has a suffix `path/suffix/.ext` then,
 
 *Filesystem layout after getting URLs from the Dispatcher*
 
+<br>&nbsp;
+
 #### Basic Limitations
 
 The mapping between a URL, the resource and the filename is pretty straightforward.
@@ -202,12 +205,14 @@ Subsequent requests to `home.html/suffix.html` return valid results, but as the 
 
 *File blocking position in the filesystem preventing sub-resources to be cached*
 
+<br>&nbsp;
 If you do it the other way round, first requesting `home.html/suffix.html` then `suffix.html` is cached under a folder `/home.html` at first. However, this folder is deleted and replaced by a file `home.html` when you subsequently request `home.html` as a resource.
 
 ![Deleting a path structure when a parent is fetched as a resource](assets/chapter-1/deleting-path-structure.png)
 
 *Deleting a path structure when a parent is fetched as a resource*
 
+<br>&nbsp;
 So, the result of what is cached is entirely random and depending on the order of the incoming requests. What makes matters even more tricky, is the fact that you usually have more than one dispatcher. And the performance, cache hit-rate and behavior might vary differently from one Dispatcher to the other. If you want to find out why your website is unresponsive you need to be sure you are looking at the correct Dispatcher with the unfortunate caching order. If you are looking on the Dispatcher which - by lucky chance - had a more favorable request pattern, you'll be lost in trying to find the issue.
 
 #### Avoiding Conflicting URLs
@@ -341,6 +346,7 @@ He publishes the edited "Canada" page and revisits the previously published home
 
 *Dispatcher storing stale included content in the home page*
 
+<br>&nbsp;
 What happened? The Dispatcher stores a static version of a page containing all content and markup that has been drawn from other resources while rendering.
 
 The Dispatcher, being a mere filesystem-based webserver, is fast but also relatively simple. If an included resource changes it doesn't realize that. It still clings to the content that was there when the including page was rendered.
@@ -379,6 +385,7 @@ So, in our example, the navigation meshes all pages together by using the target
 
 *Main navigation inevitably meshing content of all pages together by pulling their "NavTitles"*
 
+<br>&nbsp;
 If you change the NavTitle on the Iceland page from "Iceland" to "Beautiful Iceland" that title immediately changes on all other pages main menu. Thus the pages rendered and cached before that change, all become stale and need to be invalidated.
 
 #### How Auto-Invalidation is implemented: The .stat File
@@ -391,6 +398,7 @@ All files in the dispatcher, that have a creation date older than the statfile, 
 
 *Creation date of the .stat file defines which content is stale and which is fresh*
 
+<br>&nbsp;
 You may ask why it is called ".stat"? And not maybe ".invalidated"? Well, you can imagine, having that file in your filesystem helps the Dispatcher determine which resources could *statically* be served – just like from a static web server. These files don't need to be rendered dynamically any longer.
 
 The true nature of the name, however, is less metaphorical. It is derived from the Unix system call `stat()`, which returns the modification time of a file (among other properties).
@@ -465,7 +473,7 @@ The way we implement it here is a common pattern we have seen in many projects a
 
 We call the pattern used here the "Spooler Pattern", because the problem dates back into the early days of Communiqué 3 where there was a method "spool" that could be called on a resource to stream it's binary raw-data into the response. 
 
->The original term "spooling" actually refers to shared slow offline peripherals, such as printers, so it is not applied here correctly. But we like the term anyway because it's rarely in the online world thus distinguishable. And each pattern should have a distinguishable name anyway, right? It's up to you to decide if this is a pattern or an anti-pattern.
+The original term "spooling" actually refers to shared slow offline peripherals, such as printers, so it is not applied here correctly. But we like the term anyway because it's rarely in the online world thus distinguishable. And each pattern should have a distinguishable name anyway, right? It's up to you to decide if this is a pattern or an anti-pattern.
 
 #### Implementation
 
@@ -486,6 +494,7 @@ The component is placed in the parsys of the homepage. The resulting structure i
 
 *Resource-structure of the responsive image in the CRX*
 
+<br>&nbsp;
 The components markup is rendered like this,
 
 ```plain
@@ -520,6 +529,7 @@ Now a user requests the page – and the assets via the Dispatcher. This results
 
 *Cached structure of the encapsulated responsive image component*
 
+<br>&nbsp;
 Consider a user uploads and activates a new version of the two flower images to the DAM. AEM will send according invalidation request for
 
 `/content/dam/flower.jpg`
@@ -534,6 +544,7 @@ to the Dispatcher. These requests are in vain, though. The contents have been ca
 
 *Structure mismatch leading to stale content*
 
+<br>&nbsp;
 There is another caveat to this approach. Consider you use the same flower.jpg on multiple pages. Then you will have the same asset cached under multiple URLs or files,
 
 ```
@@ -612,6 +623,7 @@ You might think it _should_…  but it doesn't. As only the binary of the image 
 
 *Image component more recent than referenced image, no fresh fingerprint rendered.*
 
+<br>&nbsp;
 Now, if you re-activated the home page (or any other page of that site) the statfile would be updated, the Dispatcher would consider the home.html stale and re-render it with a new fingerprint in the image component.
 
 But we didn't activate the home page, right? And why should we activate a page we didn't touch it anyway? And besides, maybe the we don't have sufficient rights to activate pages or the approval workflow is so long and time consuming, that we simply can't do that on short notice. So - what to do?
@@ -773,6 +785,7 @@ Our example is easily solved:
 
 *Spooling the image with a servlet that is bound to the image, not the component.*
 
+<br>&nbsp;
 We use the assets original resource paths to render the data. If we need to render the original image as is, we can just use AEMs default renderer for assets.
 
 If we need to do some special processing for a specific component, we would register a dedicated servlet on that path and selector to do the transformation on behalf of the component. We did that here exemplary with the ".respi." selector. It is wise to keep track of the selector names that are used on the global URL space (such as `/content/dam`) and have a good naming convention to avoid naming conflicts.
@@ -809,6 +822,7 @@ The respi2 component is a component that displays a responsive image - as is the
 
 *CRX structure: respi2 component adding a quality property to the delivery*
 
+<br>&nbsp;
 The images are jpegs, and jpegs can be compressed. When you compress a jpeg image you trade quality for file size. Compression is defined as a numeric "quality" parameter ranging from "1" to "100". "1" means "small but poor quality", "100" stands for "excellent quality but large files". So which is the perfect value then?
 
 As in all IT things, the answer is: "It depends."
@@ -846,12 +860,13 @@ This is a bad idea. Remember? Requests with query parameters are not cacheable.
 
 #### Naïve Approach 2: Pass Additional Information as Selector
 
-> [!WARNING] 
+> [!WARNING]
 > This might become an anti-pattern. Use it carefully.
 
 ![Passing Component Properties as Selectors](assets/chapter-1/passing-component-properties.png)
 
 *Passing Component Properties as Selectors*
+<br>&nbsp;
 
 This is a slight variation of the last URL. Only this time we use a selector to pass the property to the servlet, so that the result is cacheable:
 
@@ -1040,7 +1055,8 @@ We already briefly mentioned the _statfile_ before. It is related to auto-invali
 
 All cache files in the Dispatcher's filesystem that are configured to be auto-invalidated are considered invalid if their last-modified date is older than the `statfile's` last-modified date.
 
->**Note:** The last-modified date we are talking of is the cached file is the date the file was requested from the client's browser and ultimately created in the filesystem. It is not the `jcr:lastModified` date of the resource.
+> [!NOTE]  
+> The last-modified date we are talking of is the cached file is the date the file was requested from the client's browser and ultimately created in the filesystem. It is not the `jcr:lastModified` date of the resource.
 
 The last-modified date of the statfile (`.stat`) is the date the invalidation request from AEM was received on the Dispatcher.
 
@@ -1076,6 +1092,7 @@ Content below `/content/site-a/` is not affected. This content would be compared
 
 *A statfileslevel "1" creates different invalidation domains*
 
+<br>&nbsp;
 Large installations usually are structured a bit more complex and deeper. A common scheme is to structure sites by brand, country and language. In that case you can set the statfileslevel even higher. _1_ would create invalidation domains per brand, _2_ per country and _3_ per language.
 
 ### Necessity of a Homogenous Site Structure
@@ -1210,7 +1227,8 @@ You can prevent being down-ranked  by making transparent, that you actually have
 
 *Inter-linking all*
 
-> Some SEO experts even argue, that this could transfer reputation or "link-juice" from a high-ranked website in one language to the same website in a different language. 
+<br>&nbsp;
+Some SEO experts even argue, that this could transfer reputation or "link-juice" from a high-ranked website in one language to the same website in a different language. 
 
 This scheme created not only a number of links but also some problems. The number of links that are required for _p_ in _n_ languages is _p x (n<sup>2</sup>-n)_: Each page links to each other page (_n x n_) except to itself (_-n_). This scheme is applied to each page. If we have a small site in 4 languages with 20 pages, each this amounts to _240_ links.   
 
@@ -1459,7 +1477,8 @@ And of course, you can apply your own mix of all three approaches.
 
 **Option 1**. An "SSO" Gateway might be enforced by your organization anyway. If your access scheme is very coarse grained, you may not need information from  AEM to decide whether to grant or deny access to a resource. 
 
-> Note: Tis pattern requires a _Gateway_ that _intercepts_ each request and performs the actual _authorization_ - granting or denying requests to the Dispatcher. If your SSO system is an _authenticator_, that only establishes the identity of a user you have to implement Option 3. If you read terms like "SAML" or "OAauth" in your SSO system's handbook - that is a strong indicator that you have to implement Option 3.   
+> [!NOTE]  
+> This pattern requires a _Gateway_ that _intercepts_ each request and performs the actual _authorization_ - granting or denying requests to the Dispatcher. If your SSO system is an _authenticator_, that only establishes the identity of a user you have to implement Option 3. If you read terms like "SAML" or "OAauth" in your SSO system's handbook - that is a strong indicator that you have to implement Option 3.   
 
 
 **Option 2**. "Not caching" generally is a bad idea. If you go that way, make sure the amount of traffic and the number of sensitive resources which are excluded are small. Or make sure to have some in-memory cache in the Publish system installed, that the Publish systems can handle the resulting load - more on that in Part III of this series.
@@ -1480,6 +1499,7 @@ The diagram below illustrates a possible timing when accessing a single page.  T
 
 *Frequent activations leading to invalid cache for most of the time*
 
+<br>&nbsp;
 To mitigate the problem of this "cache invalidation storm" as it is sometimes called, you can be less rigorous about the `statfile` interpretation.
 
 You can set the Dispatcher to use a `grace period` for auto-invalidation. This would internally add some extra time to the `statfiles` modification date.
@@ -1488,7 +1508,8 @@ Let's say, your `statfile` has a modification time of today 12:00 and your `grac
 
 The reference configuration proposes a `gracePeriod` of two minutes for a good reason. You might think "Two minutes? That's almost nothing. I can easily wait 10 minutes for the content to show up…".  So you might be tempted to set a longer period – let's say 10 minutes, assuming that your content shows up at least after these 10 minutes.
 
-> **Warning!** This is not how `gracePeriod` is working. The grace period is _not_ the time after which a document is guaranteed to be invalidated, but a time-frame no invalidation happens. Each subsequent invalidation that fall within this frame _prolongs_ the time frame - this can be indefinitely long.  
+> [!WARNING]  
+> This is not how `gracePeriod` is working. The grace period is _not_ the time after which a document is guaranteed to be invalidated, but a time-frame no invalidation happens. Each subsequent invalidation that fall within this frame _prolongs_ the time frame - this can be indefinitely long.  
 
 Let us illustrate how `gracePeriod` actually is working with an example:
 
@@ -1522,6 +1543,7 @@ For example, if you set the grace period to 30 sec, the Dispatcher would round t
 
 *Postponing the invalidation to the next full 30 second increases the hit-rate.*
 
+<br>&nbsp;
 The cache hits that happen between the invalidation request and the next round 30 sec slot are then considered stale; There was an update on Publish – but the Dispatcher still serves old content.
 
 This approach could help defining longer grace-periods without having to fear that subsequent requests prolong the period indeterministically. Though as we stated before – it's just an idea and we didn't have a chance to test it.
@@ -1552,6 +1574,7 @@ With automatic re-fetching you can mitigate that to some extent. Most invalidate
  
 *Delivering stale content while re-fetching in the background*
 
+<br>&nbsp;
 To enable re-fetching you must tell the Dispatcher which resources to re-fetch after an auto invalidation. Remember, that any page you activate also auto-invalidates all other pages – including your popular ones.
 
 Re-fetching actually means telling the Dispatcher in each (!) invalidation request that you want to re-fetch the most popular ones – and which the most popular ones are.
@@ -1581,7 +1604,7 @@ The Dispatcher also marks the according URLs internally so that it knows that it
 
 All listed URLs are requested one-by-one. So, you don't need to worry about creating too high a load on the Publish systems. But you wouldn't want to put too many URLs in that list either. In the end, the queue needs to be processed eventually in a bounded time to not serve stale content for too long. Just include your 10 most frequently accessed pages.
 
->If you look into your Dispatcher's cache directory, you will see temporary files marked with time-stamps. These are the files that are currently being loaded in the background.
+If you look into your Dispatcher's cache directory, you will see temporary files marked with time-stamps. These are the files that are currently being loaded in the background.
 
 **References**
 
@@ -1795,7 +1818,8 @@ You can then name and group the rules accordingly and provide the reader of the 
 
 Most likely you will add a new rule to one of the groups – or maybe even create a new group. In that case, the number of items to renaming/renumbering is limited to that group.
 
->**Warning:** More sophisticated setups split filtering rules into a number of files, that are inlcuded by the main `dispatcher.any` configuration file. A new file however does not introduce a new namespace. So if you have a rule "001" in one file and "001" in another you will get an error. Even more reason to come up with semantically strong names.
+> [!WARNING]
+> More sophisticated setups split filtering rules into a number of files, that are inlcuded by the main `dispatcher.any` configuration file. A new file however does not introduce a new namespace. So if you have a rule "001" in one file and "001" in another you will get an error. Even more reason to come up with semantically strong names.
 
 **References**
 

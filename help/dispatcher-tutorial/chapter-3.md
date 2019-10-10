@@ -46,6 +46,7 @@ Delivering a page from a server to a client's browser crosses a multitude of sys
 
 *Data flow of a typical CMS application*
 
+<br>&nbsp;
 Let's start our journey with a piece of data that sits on a hard disk and that needs to be displayed in a browser.
 
 #### Hardware and Operating System
@@ -98,7 +99,7 @@ To give you a rough idea of what factors you might take into consideration,
 
 **Network bandwidth and latency** – Speaking of latency, who are your customers and what kind of network are they using? Maybe your customers are mobile customers in an under-developed country using 3G connection of older-generation smartphones? Consider creating smaller objects and cache them in the browser caches.
 
->This list by far is not comprehensive, but we think you get the idea by now.
+This list by far is not comprehensive, but we think you get the idea by now.
 
 ### Basic Rules for Chained Caching
 
@@ -112,11 +113,9 @@ Each of the layers introduced in the last chapter provides some value in the cac
 
 There are three basic invalidation strategies:
 
-**TTL, Time to Live:** An object expires after a fixed amount of time (e.g., "2 hours from now")
-
-**Expiration Date:** The object expires at defined time in the future (e.g., "5:00 PM on June 10, 2019")
-
-**Event based:** The object is invalidated explicitly by an event that happened in the platform (e.g., when a page is changed and activated)
+* **TTL, Time to Live:** An object expires after a fixed amount of time (e.g., "2 hours from now")
+* **Expiration Date:** The object expires at defined time in the future (e.g., "5:00 PM on June 10, 2019")
+* **Event based:** The object is invalidated explicitly by an event that happened in the platform (e.g., when a page is changed and activated)
 
 Now you can use different strategies on different cache layers, but there are a few "toxic" ones.
 
@@ -126,13 +125,14 @@ Now you can use different strategies on different cache layers, but there are a 
 
 *Pure Event based invalidation: Invalidate from the inner cache to the outer layer*
 
+<br>&nbsp;
 Pure event-based invalidation is the easiest one to comprehend, easiest to get theoretically right and the most accurate one.
 
 Simply put, the caches are invalidated one by one after the object has changed.
 
 You just need to keep one rule in mind:
 
->Always invalidate from the inside to the outside cache. If you invalidated an outer cache first, it might re-cache stale content from an inner one. Don't make any assumptions at what time a cache is fresh again – make it sure. Best, by triggering the invalidation of the outer cache _after_ invalidating the inner one.
+Always invalidate from the inside to the outside cache. If you invalidated an outer cache first, it might re-cache stale content from an inner one. Don't make any assumptions at what time a cache is fresh again – make it sure. Best, by triggering the invalidation of the outer cache _after_ invalidating the inner one.
 
 Now, that's the theory. But in practice there are a number of gotchas. The events must be distributed – potentially over a network. In practice, this makes it the most difficult invalidation scheme to implement. 
 
@@ -146,6 +146,7 @@ With event-based invalidation, you should have a contingency plan. What if an in
 
 *Unsynchronized TTL based invalidation*
 
+<br>&nbsp;
 That one also is a quite common scheme. You stack several layers of caches, each one entitled to serve an object for a certain amount of time.
 
 It's easy to implement. Unfortunately, it's hard to predict the effective life span of a piece of data.
@@ -154,6 +155,7 @@ It's easy to implement. Unfortunately, it's hard to predict the effective life s
 
 *Outer cache prolonging the life span of an inner object*
 
+<br>&nbsp;
 Consider the illustration above. Each caching layer introduce a TTL of 2 min. Now – the overall TTL must 2 min too, right? Not quite. If the outer layer fetches the object just before it would get stale, the outer layer actually prolongs the effective live time of the object. The effective live time can be between 2 and 4 minutes in that case. Consider you agreed with your business department, one day is tolerable – and you have four layers of caches. The actual TTL on each layer must not be longer than six hours… increasing the cache miss-rate…
 
 We are not saying it is a bad scheme. You just should know its limits. And it's a nice and easy strategy to start with. Only if your site's traffic increases you might consider a more accurate strategy.
@@ -168,6 +170,7 @@ You get a more predictable effective life time, if you are setting a specific da
 
 *Synchronizing expiration dates*
 
+<br>&nbsp;
 However, not all caches are able to propagate the dates. And it can become nasty, when the outer cache aggregates two inner objects with different expiration dates.
 
 #### Mixing Event-based and TTL-based invalidation
@@ -176,6 +179,7 @@ However, not all caches are able to propagate the dates. And it can become nasty
 
 *Mixing event-based and TTL-based strategies*
 
+<br>&nbsp;
 Also a common scheme in the AEM world is to use event based invalidation at the inner caches (e.g., in-memory caches where events can be processed in near real time) and TTL-based caches on the outside – where maybe you don't have access to explicit invalidation.
 
 In the AEM world you would have an in-memory cache for business objects and HTML fragments in the Publish systems, that is invalidated, when the underlying resources change and you propagate this change event to the dispatcher which also works event-based. In front of that you would have for example a TTL-based CDN.
@@ -188,12 +192,14 @@ Having a layer of (short) TTL-based caching in front of a Dispatcher could effec
 
 *Toxic: Mixing TTL – and event-based Invalidation*
 
+<br>&nbsp;
 This combination is toxic. Never place and event-based cache after a TTL or Expiry-based cached. Remember that spill-over effect that we had in the "pure-TTL" strategy? The same effect can be observed here. Only that the invalidation event of the outer cache already has happened might not happen again - ever, This can expand the life span of you cached object to infinity.
 
 ![TTL-based and event-based combined: Spill-over to infinity](assets/chapter-3/infinity.png)
 
 *TTL-based and event-based combined: Spill-over to infinity*
 
+<br>&nbsp;
 ## Partial Caching and In-Memory Caching
 
 You can hook into stage of the rendering process to add caching layers. From getting remote data transfer objects or creating local business objects to caching the rendered markup of a single component. We will leave concrete implementations to a later tutorial. But maybe you plan to already have implemented a few of these caching layers yourself already. So the least we can do here is to introduce the basic priniciples - and gotchas. 
@@ -212,7 +218,8 @@ You are not sharing that same menu-structure between all pages but also with all
 
 If any – that's the most important piece of advice, we can give you:
 
->**Warning:** Only cache objects that are yours, that are immutable, that you built yourself, that are shallow and have no outgoing reference.
+> [!WARNING]  
+>  Only cache objects that are yours, that are immutable, that you built yourself, that are shallow and have no outgoing reference.
 
 What does that mean?
 
@@ -295,6 +302,7 @@ Which objects are depending on what others is genuine in each single application
 
 *Re-using a rendered fragment on different pages*
 
+<br>&nbsp;
 HTML Fragment Caching is a mighty tool. The idea is to cache the HTML markup that was generated by a component in an in-memory-cache. You may ask, why should I do that? I am caching the whole page's markup in the dispatcher anyway – including that component's markup. We agree. You do - but once per page. You are not sharing that markup between the pages.
 
 Imagine, you are rendering a navigation on top of each page. The markup looks the same on each page. But you are rendering it over and over again for each page, that is not in the Dispatcher. And remember: After auto-invalidation all pages need to be re-rendered. So basically, you are running the same code with the same results hundreds of times.
@@ -359,13 +367,14 @@ In this case, you might give [Sling Dynamic Includes](https://sling.apache.org/d
 
 *Sequence Diagram of a Request using Sling Dynamic Include*
 
+<br>&nbsp;
 The SDI documentation says you should disable caching for URLs ending in "*.nocache.html", which makes sense – as you are dealing with dynamic components.
 
 You might see another option how to use SDI: If you _do not_ disable the dispatcher cache for the includes, the Dispatcher acts like a fragment-cache similar to the one we described in the last chapter: Pages and component fragments equally and independently are cached in the dispatcher and stitched together by the SSI script in the Apache server when the page is requested. Doing so, you could implement shared components like the main navigation (given you always use the same component URL).
 
 That should work – in theory. But...
 
-> We advise not to do that: You would lose the ability to bypass the cache for the real dynamic components. SDI is configured globally and the changes you would make for your "poor-mans-fragment-cache" would also apply to the dynamic components. 
+We advise not to do that: You would lose the ability to bypass the cache for the real dynamic components. SDI is configured globally and the changes you would make for your "poor-mans-fragment-cache" would also apply to the dynamic components.
 
 We advise you to carefully study the SDI documentation. There are a few other limitations, but SDI is a valuable tool in some cases.
 
@@ -383,6 +392,7 @@ We advise you to carefully study the SDI documentation. There are a few other li
 
 *Model based caching: One business object with two different renderings*
 
+<br>&nbsp;
 Let us revisit the case with the navigation again. We were assuming, that each page would require that same markup of the navigation.
 
 But maybe, that is not the case. You might want to render different markup for the item in the navigation that represents the _current page_. 
@@ -436,15 +446,15 @@ If you are optimizing your Dispatcher settings for browser caching it is extreme
 
 Using Charles, you can read the requests and responses, which are transmitted to and from the server. And – you can learn a lot about the HTTP protocol. Modern browsers also offer some debugging capabilities, but the features of a desktop proxy are unprecedented. You can manipulate the data transferred, throttle the transmission, replay single requests and much more. And the user interface is clearly arranged and quite comprehensive.
 
-The most basic test is to use the website as a normal user - with the proxy in between - and check in the proxy if the number of the static requests (to /etc/…) is getting smaller over time – as these should be in the cache and not be requested any longer. 
+The most basic test is to use the website as a normal user - with the proxy in between - and check in the proxy if the number of the static requests (to /etc/…) is getting smaller over time – as these should be in the cache and not be requested any longer.
 
->Note: We found, a proxy might give a clearer overview, as cached request don't appear in the log whereas some browswer-built-in debuggers still show these requests with "0 ms" or "from disk". Which is ok and accurate but could cloud your view a bit.
+We found, a proxy might give a clearer overview, as cached request don't appear in the log whereas some browswer-built-in debuggers still show these requests with "0 ms" or "from disk". Which is ok and accurate but could cloud your view a bit.
 
 You can then drill-down and check the headers of the transferred files to see, for example, if the "Expires" http headers are correct. You can replay requests with if-modified-since headers set to see if the server correctly responds with a 304 or 200 response code. You can observe the timing of asynchronous calls and you can also test your security assumptions to a certain degree. Remember we told you to not accept all selectors that are not are not explicitly expected? Here you can play around with the URL and the parameters and see if your application behaves well.
 
 There is only one thing we ask you not to do, when you are debugging your cache:
 
->Do not reload pages in the browser!
+Do not reload pages in the browser!
 
 A "browser reload", a _simple-reload_ as well as a _forced-reload_ ("_shift-reload_") is not the same as a normal page request. A simple reload request sets a header
 

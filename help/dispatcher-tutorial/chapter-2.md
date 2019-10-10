@@ -9,7 +9,7 @@ seo-description: Chapter 2 of the AEM Headless tutorial covers enabling and defi
 
 ## Setting up a Caching Infrastructure
 
-We introduced the basic topology of a Publish system and a dispatcher in Part 1 of this series. A set of Publish and Dispatcher servers can be configured in a lot of variations – depending on the expected load, the topology of your data center(s) and the desired failover properties.
+We introduced the basic topology of a Publish system and a dispatcher in Chapter 1 of this series. A set of Publish and Dispatcher servers can be configured in a lot of variations – depending on the expected load, the topology of your data center(s) and the desired failover properties.
 
 We will sketch the most common topologies and describe the advantages and where they fall short. The list - of course – never can be comprehensive. The only limit is your imagination.
 
@@ -21,6 +21,7 @@ In the early days, the number of potential visitors was small, hardware was expe
 
 *"Legacy" Dispatcher Setup – Not very common by today's standards*
 
+<br>&nbsp;
 This is where the dispatcher received its name from: It was basically dispatching requests. This setup is not very common any longer as it cannot meet the higher demands in performance and stability required today.
 
 ### Multi-Legged Setup
@@ -31,6 +32,7 @@ Nowadays a slightly different topology is more common. A multi-legged topology w
 
 *Modern "Standard" Dispatcher Setup – Easy to handle and maintain*
 
+<br>&nbsp;
 Here are the reasons for this kind of setup,
 
 1. Websites on average serve much more traffic than they have in the past. Thus, there is a need to scale up the "Apache infrastructure."
@@ -51,6 +53,7 @@ Apache Servers are cheap and easy to provision, why not push scaling out that le
 
 *"Scale Out" Setup – Has some application areas but also limitations and caveats*
 
+<br>&nbsp;
 You can absolutely do that! And there is a lot of valid application scenarios for that setup. But there are also some limitations and complexities you should consider.
 
 #### Invalidation
@@ -69,7 +72,8 @@ The load-balancer usually "pings", a particular page to see if the server is up 
 
 "Worldwide Distribution" is a "Scale out"  setup where you have multiple Dispatchers in front of each Publish system - now distributed all over the world to be closer to the customer and provide a better performance. Of course, in that scenario you don't have a central load balancer but a DNS and geo-IP based load balancing scheme.
 
-> **Note:** Actually, you are building kind of a Content Distribution Network (CDN) with that approach – so you should consider buying an off-the-shelf CDN solution innstead of building one yourself. Building and maintaining a custom CDN is no trivial task.
+> [!NOTE]  
+> Actually, you are building kind of a Content Distribution Network (CDN) with that approach – so you should consider buying an off-the-shelf CDN solution innstead of building one yourself. Building and maintaining a custom CDN is no trivial task.
 
 #### Horizontal Scaling
 
@@ -77,7 +81,7 @@ Even in a local datacenter a "Scale Out" topology whith multiple Dispatchers in 
 
 #### Limits of the Scale Out Topology
 
-Adding proxy servers should normally increase the performance. There are, however, scenarios where adding servers actually can decrease the performance. How? Consider you have a news portal, where you introduce new articles and pages every minute. A Dispatcher invalidates by "auto-invalidation": Whenever a page is published, all pages in the cache on the same site are invalidated. This is a useful feature – we covered this in [Part 1](chapter-1.md) of this series – but it also means, that when you have frequent changes on your website you are invalidating the cache quite often. If you  only have one Dispatcher per Publish instance, the first visitor requesting a page, triggers a re-caching of that page. The second visitor already gets the cached version.
+Adding proxy servers should normally increase the performance. There are, however, scenarios where adding servers actually can decrease the performance. How? Consider you have a news portal, where you introduce new articles and pages every minute. A Dispatcher invalidates by "auto-invalidation": Whenever a page is published, all pages in the cache on the same site are invalidated. This is a useful feature – we covered this in [Chapter 1](chapter-1.md) of this series – but it also means, that when you have frequent changes on your website you are invalidating the cache quite often. If you  only have one Dispatcher per Publish instance, the first visitor requesting a page, triggers a re-caching of that page. The second visitor already gets the cached version.
 
 If you have two Dispatchers, the second visitor has a 50% chance that the page is not cached, and he would then experience a larger latency when that page is rendered again. Having even more Dispatchers per Publish makes things even worse. What happens is, that the Publish server receives more load because it has to re-render the page for each Dispatcher separately.
 
@@ -85,24 +89,26 @@ If you have two Dispatchers, the second visitor has a 50% chance that the page i
 
 *Decreased performance in a scale-out scenario with frequent cache flushes.*
 
+<br>&nbsp;
 #### Mitigating Over-Scaling Issues
 
 You might consider using a central shared storage for all Dispatchers or synching the file systems of the Apache servers to mitigate the issues. We can provide only limited first-hand experience but be prepared that this adds up to the complexity of the system and can introduce a whole new class of errors.
 
 We have had some experiments with NFS – but NFS introduces huge performance issues due to content locking. This actually decreased the overall performance.
 
->**Conclusion** - Sharing a common file system among several dispatchers is NOT a recommended approach.
+**Conclusion** - Sharing a common file system among several dispatchers is NOT a recommended approach.
 
 If you are facing performance issues, scale up Publish and Dispatchers equally to avoid peak load on the Publisher instances. There is no golden rule about the Publish / Dispatcher ratio – it highly depends on the distribution of the requests and the frequency of publications and cache invalidations.
 
-If you are also concerned about the latency a visitor experiences, consider using a content delivery network, cache re-fetching, preemptive cache warming, setting a grace time as described in [Part 1](chapter-1.md) of this series or refer to some advanced ideas of [Part 3](chapter-3.md).
+If you are also concerned about the latency a visitor experiences, consider using a content delivery network, cache re-fetching, preemptive cache warming, setting a grace time as described in [Chapter 1](chapter-1.md) of this series or refer to some advanced ideas of [Part 3](chapter-3.md).
 
 ### The "Cross Connected" Setup
 
 Another setup we have seen every now and then is the "cross connected" setup: The Publish instances do not have dedicated Dispatchers but all Dispatchers are connected to all Publish systems.
 
  ![Cross-connected topology: Increased redundancy and more complexity](assets/chapter-2/cross-connected-setup.png)
- 
+
+<br>&nbsp;
 *Cross-connected topology: Increased redundancy and more complexity.*
 
 At first glance, this provides some more redundancy for a relatively small budget. When one of the Apache servers is down, you can still have two Publish systems doing the rendering work. Also, if one of the Publish systems crashes, you still have two Dispatchers serving the cached load.
