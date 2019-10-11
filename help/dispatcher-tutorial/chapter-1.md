@@ -67,7 +67,7 @@ We will see different ways of setting up Dispatchers and Publish systems later i
 
  ![Basic functionality of a Dispatcher Cache](assets/chapter-1/basic-functionality-dispatcher.png)
 
-*Basic functionality of a Dispatcher Cache
+*Basic functionality of a Dispatcher Cache*
 
 <br>&nbsp;
 
@@ -96,9 +96,7 @@ In principle, if all files are cached and thus stored statically in the Dispatch
 
 To understand the Dispatcher in more detail, let us revisit the structure of a simple sample URL.  Let's look at the below example,
 
-```
-http://domain.com/path/to/resource/pagename.selectors.html/path/suffix.ext?parameter=value&amp;otherparameter=value#fragment
-```
+`http://domain.com/path/to/resource/pagename.selectors.html/path/suffix.ext?parameter=value&amp;otherparameter=value#fragment`
 
 * `http` denotes the protocol
 
@@ -677,10 +675,8 @@ This way your custom Dispatcher Flushing agent could easily send and invalidatio
 
 Actually, it doesn't matter which path you tell the Dispatcher to invalidate – as long as it is in the same site, in the same "subtree". You don't even have to use a real resource path. It can be "virtual" as well:
 
-```
-GET /dispatcher-invalidate
-Invalidate-path /content/mysite/dummy
-```
+`GET /dispatcher-invalidate
+Invalidate-path /content/mysite/dummy`
 
 ![](assets/chapter-1/resource-path.png)
 
@@ -901,16 +897,14 @@ This again is bypassing the cache and creating load on the publish system. So, i
 
 Reducing the number of selectors was a good start. As a rule of thumb, you should always limit the number of valid parameters to an absolute minimum. If you do that cleverly you can even leverage a Web Application Firewall outside AEM using a static set of filters without deep knowledge of the underlying AEM system to protect your systems:
 
-```
-Allow: /content/dam/(-\_/a-z0-9)+/(-\_a-z0-9)+
-       \.respi\.q-(20|40|60|80|100)\.jpg
-```
+`Allow: /content/dam/(-\_/a-z0-9)+/(-\_a-z0-9)+
+       \.respi\.q-(20|40|60|80|100)\.jpg`
 
 If you don't have a Web Application Firewall you have to filter in the Dispatcher or in AEM itself. If you do it in AEM, please make sure that
 
 1. The filter is implemented super efficiently, without accessing the CRX too much and wasting memory and time.
 
-1. The filter responds a "404 – Not found"  error message
+2. The filter responds a "404 – Not found"  error message
 
 Let's stress the last point again. The HTTP conversation would look like this:
 
@@ -1041,10 +1035,7 @@ But it must not expose any parameters. All properties should be encapsulated in 
 
 That leads to a URL in the form:
 
-```
-/content/dam/flower.respi3
-.content-mysite-home-jcrcontent-par-respi.jpg
-```
+`/content/dam/flower.respi3.content-mysite-home-jcrcontent-par-respi.jpg`
 
 `/content/dam/flower` is the path to the image's resource
 
@@ -1437,9 +1428,7 @@ Note, we did that only for "visible" URLs, URLs that are displayed in the browse
 
 Having one common docroot also had another nice feature. When anything went wrong in the Dispatcher, we could clean up the whole cache by executing,
 
-```
-rm -rf /cache/dispatcher/*
-```
+`rm -rf /cache/dispatcher/*`
 
 (something you might not want to do at high load peaks).
 
@@ -1715,31 +1704,23 @@ If you know that difference, it's trivial – but if not, you can easily mix up 
 
 That directive represents the whole request string, including the method and path. It could stand for
 
-```
-"GET /content/foo/bar.html HTTP/1.1"
-```
+`"GET /content/foo/bar.html HTTP/1.1"`
 
 this is the string your pattern would be compared against. Beginners tend to forget the first part, the `method` (GET, POST, ...). So, a pattern
 
-```
-/0002  { /glob "/content/\*" /type "allow" }
-```
+`/0002  { /glob "/content/\*" /type "allow" }`
 
 Would always fail as "/content" does not match the "GET .." of the request.
 
 So when you want to use Globs,
 
-```
-/0002  { /glob "GET /content/\*" /type "allow" }
-```
+`/0002  { /glob "GET /content/\*" /type "allow" }`
 
 would be correct.
 
 For an initial deny rule, like
 
-```
-/0001  { /glob "\*" /type "deny" }
-```
+`/0001  { /glob "\*" /type "deny" }`
 
 this is fine. But for the subsequent allows, it is better and clearer more expressive and way more secure to use the individual parts of a request:
 
