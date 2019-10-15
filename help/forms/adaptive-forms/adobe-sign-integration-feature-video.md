@@ -3,26 +3,28 @@ title: Using Adobe Sign with AEM Forms
 seo-title: Using Adobe Sign with AEM Forms
 description: Using Adobe Sign with AEM Forms
 seo-description: Using Adobe Sign with AEM Forms
-sub-product: forms
-feature: adaptive-forms
-topics: integrations
-audience: administrator
-doc-type: article
-activity: setup
-version: 6.5.1
-
+uuid: cbccea0f-969c-445d-9390-a236bb1fd2c4
+products: SG_EXPERIENCEMANAGER/6.3/FORMS
+topic-tags: forms
+topic-tags: adaptive_forms
+products: SG_ESIGNSERVICES
+discoiquuid: aec562a4-4405-4e6f-9ad5-7477fa1d078f
+targetaudience: target-audience advanced
+index: y
+internal: n
+snippet: y
 ---
 
-# Capturing Error Messages in Invoke Form Data Model Service Step
-The following new features have been added to enhance Invoke Form Data Model Service Step in AEM Workflow
+# Using Adobe Sign with AEM Forms{#using-adobe-sign-with-aem-forms}
 
-1. Providing an option for 3 tier validation  ("OFF" , "BASIC" and "FULL") to handle Exceptions as opposed to the present default configuration of "BASIC". The 3 options successively denote a stricter version of checking Database-specific requirements.
+Using Adobe Sign with AEM Forms
 
-1. Providing a checkbox for customizing the execution of Workflow. You now have the option to continue with the workflow execution even if invoke FDM service step encounters an error.
+>[!VIDEO](https://video.tv.adobe.com/v/18696?quality=9)
 
-2. Storing important information of Error messages. Three Autocomplete-type variable selectors have been incorporated to select relevant variables to store the ErrorCode(String),ErrorMessage(String) and ErrorDetails(Json). The ErrorMessage however would be set to NULL incase the exception is not a DermisValidationException
+*This video walks through the process of setting up the Adobe Sign cloud service and adding multiple signature fields to an AEM Adaptive Form.*
 
-![fdm-error-messages](assets/fdm-error-details.PNG)
+>[!NOTE]
+>
+>This feature is available only with AEM 6.3 onwards.
 
-The error code  returned by the data source is wrapped by the form data model layer that in turns produces an error code of type string. For example if your data source returns error code 405, the value stored in the errorCode variable will not be 405, instead it will be internal FDM error code.
- 
+Please visit the [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) page for a link to a live demo of this capability.
