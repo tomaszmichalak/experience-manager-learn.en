@@ -13,11 +13,11 @@ activity: setup
 version: 6.5.1,6.5.2
 ---
 
-# Capturing Error Messages in {#using-form-data-model-service-as-step-in-workflow}
+# Capturing Error Messages in Invoke Form Data Model Service Step
 
 Starting with AEM Forms 6.5.1,we now have the option to capture error messages and specify validation options. Invoke Form Data Model Service step has been enhanced to provide the following capabilities.
 
-* Providing an option for 3 tier validation  ("OFF" , "BASIC" and "FULL") to handle Exceptions encountered on invoking Form Data Model Service. The 3 options successively denote a stricter version of checking Database-specific requirements.
+* Providing an option for 3 tier validation  ("OFF", "BASIC" and "FULL") to handle Exceptions encountered on invoking Form Data Model Service. The 3 options successively denote a stricter version of checking Database-specific requirements.
 ![validation-levels](assets/validation-level.PNG)
  
 * Providing a checkbox for customizing the execution of Workflow. Hence, user will now have the flexibility to go ahead with the Workflow Execution, even if Invoke Form Data Model step throws Exceptions.
