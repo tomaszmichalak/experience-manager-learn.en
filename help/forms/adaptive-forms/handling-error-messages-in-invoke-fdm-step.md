@@ -13,7 +13,7 @@ activity: setup
 version: 6.5.1,6.5.2
 ---
 
-## Capturing Error Messages in {#using-form-data-model-service-as-step-in-workflow}
+# Capturing Error Messages in {#using-form-data-model-service-as-step-in-workflow}
 
 Starting with AEM Forms 6.5.1,we now have the option to capture error messages and specify validation options. Invoke Form Data Model Service step has been enhanced to provide the following capabilities.
 
