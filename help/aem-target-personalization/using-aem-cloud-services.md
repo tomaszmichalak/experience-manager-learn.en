@@ -9,7 +9,7 @@ seo-description: An end-to-end tutorial showing how to create and deliver person
 
 In this section, we will discuss how to set up Adobe Experience Manager with Adobe Target using legacy Cloud Services.
 
-For using AEM Experience Fragment offers to power you personalization activities, lets proceed to the next chapter, and integrate AEM with Adobe Target using the legacy cloud services. This integration is required to push Experience Fragments from AEM to Target as HTML/JSON offers and to keep the target offers in sync with AEM. This integration is required for implementing [Use Case 1 discussed in the overview section](./overview.md#personalization-using-aem-experience-fragment).
+For using AEM Experience Fragment offers to power you personalization activities, lets proceed to the next chapter, and integrate AEM with Adobe Target using the legacy cloud services. This integration is required to push Experience Fragments from AEM to Target as HTML/JSON offers and to keep the target offers in sync with AEM. This integration is required for implementing [Scenario 1 discussed in the overview section](./overview.md#personalization-using-aem-experience-fragment).
 
 ## Prerequisites
 

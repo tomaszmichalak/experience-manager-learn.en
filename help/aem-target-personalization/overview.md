@@ -7,21 +7,21 @@ seo-description: An end-to-end tutorial showing how to create and deliver person
 
 # Getting Started with AEM and Adobe Target {#getting-started-with-aem-target}
 
-AEM and Target are both powerful solutions with seemingly overlapping capabilities. Customers sometimes struggle with questions like: 1. When should I use Target to personalize content vs AEM? 2. How do internal teams working with these different solutions collaborate in order to personalize effectively ?, etc.
+AEM and Target are both powerful solutions with seemingly overlapping capabilities. Customers sometimes struggle with understanding how and when to use these products in conjunction to deliver personalized experience. To deliver optimized experience for every end user, different teams within your organization should work closely and define who does what.
 
-In this tutorial, we cover three different use cases for AEM and Target, which helps you understand what works best for your organization and how different teams collaborate.
+In this tutorial, we cover three different scenarios for AEM and Target, which helps you understand what works best for your organization and how different teams collaborate.
 
-* Use Case 1 : Personalization using AEM Experience Fragments
-* Use Case 2 : Personalization using Visual Experience Composer
-* Use Case 3 : Home Page Redesign and Redirects
+* Scenario 1 : Personalization using AEM Experience Fragments(Geo Segmentation)
+* Scenario 2 : Personalization using Visual Experience Composer
+* Scenario 3 : Home Page Redesign and Redirects
 
 ## Personalization using AEM Experience Fragments {#personalization-using-aem-experience-fragment}
 
-For this scenario, we are going to use AEM and Target. Clearly, both the products has its own advantages and when it comes to delivering personalized experience to your site users, you need 2 things: 1) personalized content for your site 2) an intelligent way to serve these content based on a specific user.
+For this scenario, we are going to use AEM and Target. Clearly, both the products has its own advantages and when it comes to delivering personalized experience to your site users, you need personalized content (*content from AEM*) and an intelligent way (*Target*) to serve these content based on a specific user.
 
-AEM can help you with creating your personalized content. AEM brings together all of your content and assets in a central location to fuel your personalization strategy. AEM lets you easily create content for desktops, tablets, and mobile devices in one place without writing code. There’s no need to create pages for every device—AEM automatically adjusts each experience using your content. You can also export the content from AEM to Adobe Target with push of a button.
+AEM can help you with creating your personalized content. AEM brings together all of your content and assets in a central location to fuel your personalization strategy. AEM lets you easily create content for desktops, tablets, and mobile devices in one place without writing code. There’s no need to create pages for every device—AEM automatically adjusts each experience using your content. You can also export the content from AEM to Adobe Target as offers with push of a button.
 
-We now have personalized content from AEM in Target, and how to deliver this personalized content to your site users? Target lets you deliver personalized experiences at scale based on a combination of rules-based and AI-driven machine learning approaches that incorporate behavioral, contextual, and offline variables.  With Target, you can easily set up and run A/B and Multivariate (MVT) activities to determine the best offers, content, and experiences.
+We now have personalized content in the form of offers from AEM in Target. Target lets you deliver these offers at scale based on a combination of rules-based and AI-driven machine learning approaches that incorporate behavioral, contextual, and offline variables.  With Target, you can easily set up and run A/B and Multivariate (MVT) activities to determine the best offers, content, and experiences.
 
 **Experience fragments** represent a huge step forward to link the content/experience creators to the personalization professionals who are driving business outcomes using Target.
 
@@ -32,11 +32,12 @@ We now have personalized content from AEM in Target, and how to deliver this per
 
     ![diagram](assets/personalization-use-case-1/use-case-1-diagram.png)
 
-For implementing this scenario, you need the following integrations:
+***For implementing this scenario, you need the following integrations:***
+
 * [Integrating AEM and Adobe Target using Launch and Adobe I/O](./implementation.md#integrating-aem-target-options)
 * [AEM and Adobe Target using Legacy Cloud Services](./implementation.md#integrating-aem-target-options)
 
-After implementing the above integrations, lets explore the [scenario in detail](./personalization-use-case-1.md).
+***After implementing the above integrations, lets explore the [scenario in detail](./personalization-use-case-1.md).***
 
 ## Personalization using Visual Experience Composer
 
@@ -50,11 +51,12 @@ VEC is one of the main features of Adobe Target. The VEC lets marketers and desi
 * Net new content is created using Adobe Targets VEC
 * Applies to both AEM hosted sites and non-AEM hosted sites
 
-    ![diagram](assets/personalization-use-case-2/use-case-2-diagram.png)
+    ![diagram](assets/personalization-use-case-3/use-case-diagram-3.png)
 
-For implementing this scenario, you need to [integrate AEM and Adobe Target using Launch and Adobe I/O](./implementation.md#integrating-aem-target-options)
+***For implementing this scenario, you need to:***
+* [integrate AEM and Adobe Target using Launch and Adobe I/O](./implementation.md#integrating-aem-target-options)
 
-After implementing the above integration, lets explore the [scenario in detail](./personalization-use-case-3.md).
+***After implementing the above integration, lets explore the [scenario in detail](./personalization-use-case-3.md)***
 
 ## Home Page Redesign and Redirects {#homepage-redesign-redirects}
 
@@ -68,6 +70,7 @@ Integrating Adobe Experience Manager with Adobe Target helps you deliver a perso
 
     ![diagram](assets/personalization-use-case-2/use-case-2-diagram.png)
 
-For implementing this scenario, you need to [integrate AEM and Adobe Target using Launch and Adobe I/O](./implementation.md#integrating-aem-target-options)
+***For implementing this scenario, you need to***
+* [integrate AEM and Adobe Target using Launch and Adobe I/O](./implementation.md#integrating-aem-target-options)
 
-After implementing the above integration, lets explore the [scenario in detail](./personalization-use-case-2.md).
+***After implementing the above integration, lets explore the [scenario in detail](./personalization-use-case-2.md)***

@@ -21,7 +21,7 @@ In this chapter, we are going to explore how to create an activity to redirect y
   * Experience Cloud provisioned with the following solutions
     * [Adobe Target](https://marketing.adobe.com)
 
-## WKND Site - Use Case
+## WKND Site - Scenario
 
 WKND site redesigned their homepage and would like to redirect their current homepage visitors to the new home page. At the same time, also understand how the redesigned home page helps to improve user engagement and revenue. As a marketer, you have been assigned the task to create an activity to redirect the visitors to the new home page. Let us explore the WKND site home page and learn how to create an activity using Adobe Target.
 
@@ -34,7 +34,7 @@ For this exercise, the following users need to be involved and to perform some t
 
 ## WKND Site Home Page
 
- ![AEM Target Use Case 1](assets/personalization-use-case-2/aem-target-use-case-2.png)
+ ![AEM Target Scenario 1](assets/personalization-use-case-2/aem-target-use-case-2.png)
 
 ## Content Editor
 

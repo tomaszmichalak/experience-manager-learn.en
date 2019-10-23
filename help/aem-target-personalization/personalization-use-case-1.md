@@ -24,7 +24,7 @@ Experience fragments represent a huge step forward to link content creators with
   * Experience Cloud provisioned with the following solutions
     * [Adobe Target](https://marketing.adobe.com)
 
-## WKND Site - Use Case
+## WKND Site - Scenario
 
 WKND site is planning to announce a **SkateFest Challenge** across America through their website and would like to have their site users sign up for the audition conducted in each state. As a marketer, you have been assigned the task to run a campaign on the WKND site home page, with banners messages relevant to the users' location and a link to the event details page. Let us explore the WKND site home page and learn how to create and deliver a personalized experience for a user based on his/her current location.
 
@@ -37,7 +37,7 @@ For this exercise, the following users need to be involved and to perform some t
 
 ## WKND Site Home Page
 
- ![AEM Target Use Case 1](assets/personalization-use-case-1/aem-target-use-case-1-4.png)
+ ![AEM Target Scenario 1](assets/personalization-use-case-1/aem-target-use-case-1-4.png)
 
 1. Marketer initiates the WKND SkateFest campaign discussion with AEM Content Editor and details the requirements.
    * ***Requirement*** :Promote WKND SkateFest campaign on WKND site home page with personalized content for visitors from each state in the United States. Add a new content block beneath the Home Page Carousel containing a background image, text, and a button.
@@ -137,7 +137,7 @@ At this point, we have successfully created audiences for all WKND Site visitors
 11. Repeat steps 7-10 to add Experience Targeting for the other states and choose the corresponding HTML Offer.
 12. Click **Next** to continue, and you can see a mapping for Audiences to Experiences
 13. Click **Next** to move to Goals and Settings.
-14. Choose your reporting source and identify a primary goal for your activity. For our use case, let's select the Reporting Source as **Adobe Target**, measuring activity as **Conversion**, action as viewed a page, and URL pointing to the WKND SkateFest Details page.
+14. Choose your reporting source and identify a primary goal for your activity. For our Scenario, let's select the Reporting Source as **Adobe Target**, measuring activity as **Conversion**, action as viewed a page, and URL pointing to the WKND SkateFest Details page.
     ![Goal & Targeting - Target](assets/personalization-use-case-1/goal-metric-target.png)
 
     > [!NOTE]

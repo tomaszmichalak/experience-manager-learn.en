@@ -20,7 +20,7 @@ In this chapter, we are going to explore how to create an experience using Visua
   * Access to your organizations Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
   * Experience Cloud provisioned with [Adobe Target](https://marketing.adobe.com)
 
-## WKND Site - Use Case
+## WKND Site - Scenario
 
 WKND site home page displays local activities or best thing to do around a city in the form of card layouts. As a marketer, you have been assigned the task to modify the home page, by re-arranging the card layouts to see how it affects user engagement and drives conversion.
 
@@ -33,7 +33,7 @@ For this exercise, the following users need to be involved and to perform some t
 
 ## WKND Site Home Page
 
- ![AEM Target Use Case 1](assets/personalization-use-case-3/aem-target-use-case-3.png)
+ ![AEM Target Scenario 1](assets/personalization-use-case-3/aem-target-use-case-3.png)
 
 ## Marketer
 
