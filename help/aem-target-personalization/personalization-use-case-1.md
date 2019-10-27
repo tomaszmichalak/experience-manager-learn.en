@@ -15,7 +15,18 @@ Target lets you deliver personalized experiences at scale based on a combination
 
 Experience fragments represent a huge step forward to link content creators with marketers who are driving business outcomes using Target.
 
-## Prerequisites
+## WKND Site - Scenario
+
+WKND site is planning to announce a **SkateFest Challenge** across America through their website and would like to have their site users sign up for the audition conducted in each state. As a marketer, you have been assigned the task to run a campaign on the WKND site home page, with banners messages relevant to the users' location and a link to the event details page. Let us explore the WKND site home page and learn how to create and deliver a personalized experience for a user based on his/her current location.
+
+### Users Involved
+
+For this exercise, the following users need to be involved and to perform some tasks you might need administrative access.
+
+* Content Producer / Content Editor (Adobe Experience Manager)
+* Marketer (Adobe Target / Optimization Team)
+
+### Prerequisites
 
 * **AEM**
   * [AEM author and publish instance](./implementation.md#getting-aem) running on localhost 4502 and 4503 respectively.
@@ -24,18 +35,7 @@ Experience fragments represent a huge step forward to link content creators with
   * Experience Cloud provisioned with the following solutions
     * [Adobe Target](https://marketing.adobe.com)
 
-## WKND Site - Scenario
-
-WKND site is planning to announce a **SkateFest Challenge** across America through their website and would like to have their site users sign up for the audition conducted in each state. As a marketer, you have been assigned the task to run a campaign on the WKND site home page, with banners messages relevant to the users' location and a link to the event details page. Let us explore the WKND site home page and learn how to create and deliver a personalized experience for a user based on his/her current location.
-
-## Users Involved
-
-For this exercise, the following users need to be involved and to perform some tasks you might need administrative access.
-
-* Content Producer / Content Editor (Adobe Experience Manager)
-* Marketer (Adobe Target / Optimization Team)
-
-## WKND Site Home Page
+### WKND Site Home Page
 
  ![AEM Target Scenario 1](assets/personalization-use-case-1/aem-target-use-case-1-4.png)
 
@@ -59,6 +59,7 @@ For this exercise, the following users need to be involved and to perform some t
 ## Content Editor
 
 >[!VIDEO](https://video.tv.adobe.com/v/28596?quality=9)
+
 > [!NOTE]
 > Publish the Experience Fragment before exporting it to Adobe Target.
 

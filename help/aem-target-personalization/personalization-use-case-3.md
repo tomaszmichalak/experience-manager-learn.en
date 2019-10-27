@@ -7,11 +7,24 @@ seo-description: An end-to-end tutorial showing how to create and deliver person
 
 # Personalization using Visual Experience Composer
 
-In the previous chapter, we learned how to create an activity to redirect your site pages that's hosted on AEM to a new page using Adobe Target.
+In this chapter, we are going to explore how to create an experience using **Visual Experience Composer** by dragging and dropping, swapping, and modifying the layout and content of a web page.
 
-In this chapter, we are going to explore how to create an experience using Visual Experience Composer by dragging and dropping, swapping, and modifying the layout and content of a web page.
+## WKND Site - Scenario
 
-## Prerequisites
+WKND site home page displays local activities or best thing to do around a city in the form of card layouts. As a marketer, you have been assigned the task to modify the home page, by re-arranging the card layouts to see how it affects user engagement and drives conversion.
+
+### Users Involved
+
+For this exercise, the following users need to be involved and to perform some tasks you might need administrative access.
+
+* **Content Producer/Content Editor** (Adobe Experience Manager)
+* **Marketer** (Adobe Target / Optimization Team)
+
+### WKND Site Home Page
+
+ ![AEM Target Scenario 1](assets/personalization-use-case-3/aem-target-use-case-3.png)
+
+### Prerequisites
 
 * **AEM**
   * [AEM publish instance](./implementation.md#getting-aem) running on 4503.
@@ -19,21 +32,6 @@ In this chapter, we are going to explore how to create an experience using Visua
 * **Experience Cloud**
   * Access to your organizations Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
   * Experience Cloud provisioned with [Adobe Target](https://marketing.adobe.com)
-
-## WKND Site - Scenario
-
-WKND site home page displays local activities or best thing to do around a city in the form of card layouts. As a marketer, you have been assigned the task to modify the home page, by re-arranging the card layouts to see how it affects user engagement and drives conversion.
-
-## Users Involved
-
-For this exercise, the following users need to be involved and to perform some tasks you might need administrative access.
-
-* **Content Producer/Content Editor** (Adobe Experience Manager)
-* **Marketer** (Adobe Target / Optimization Team)
-
-## WKND Site Home Page
-
- ![AEM Target Scenario 1](assets/personalization-use-case-3/aem-target-use-case-3.png)
 
 ## Marketer
 
@@ -80,3 +78,7 @@ For this exercise, the following users need to be involved and to perform some t
      ![WKND Home Page Refreshed](assets/personalization-use-case-3/activity-result.png)
    20. Open your browser console, and inspect the network tab to look for target response for the WKND Home Page Refresh A/B Test activity.
      ![Network Activity](assets/personalization-use-case-3/activity-result.png)
+
+## Summary
+
+In this chapter, a marketer was able to create an experience using Visual Experience Composer by dragging and dropping, swapping, and modifying the layout and content of a web page without changing any code to run a test.

@@ -17,7 +17,7 @@ In this tutorial, we cover three different scenarios for AEM and Target, which h
 
 ## Personalization using AEM Experience Fragments {#personalization-using-aem-experience-fragment}
 
-For this scenario, we are going to use AEM and Target. Clearly, both the products has its own advantages and when it comes to delivering personalized experience to your site users, you need personalized content (*content from AEM*) and an intelligent way (*Target*) to serve these content based on a specific user.
+For this scenario, we are going to use AEM and Target. Clearly, both the products has its own advantages and when it comes to delivering personalized experience to your site users, you need ***personalized content (content from AEM)*** and an **intelligent way (Target)** to serve these content based on a specific user.
 
 AEM can help you with creating your personalized content. AEM brings together all of your content and assets in a central location to fuel your personalization strategy. AEM lets you easily create content for desktops, tablets, and mobile devices in one place without writing code. There’s no need to create pages for every device—AEM automatically adjusts each experience using your content. You can also export the content from AEM to Adobe Target as offers with push of a button.
 
@@ -46,7 +46,7 @@ Marketers can make quick changes on their website without changing any code to r
 VEC is one of the main features of Adobe Target. The VEC lets marketers and designers create and change content using a visual interface. Many design choices can be made without requiring direct editing of the code. Editing HTML and JavaScript is also possible using the editing options available in the composer.
 
 * Content resides in AEM, and content editors create and manage the site pages
-* Target​ uses AEM hosted site pages to run tests and personalization
+* Target uses AEM hosted site pages to run tests and personalization
 * Target delivers personalized content
 * Net new content is created using Adobe Targets VEC
 * Applies to both AEM hosted sites and non-AEM hosted sites

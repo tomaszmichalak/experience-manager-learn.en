@@ -11,7 +11,22 @@ In the previous chapter, we learned how to create a geolocation based activity w
 
 In this chapter, we are going to explore how to create an activity to redirect your site pages that are hosted on AEM to a new page using Adobe Target.
 
-## Prerequisites
+## WKND Site - Scenario
+
+WKND site redesigned their homepage and would like to redirect their current homepage visitors to the new home page. At the same time, also understand how the redesigned home page helps to improve user engagement and revenue. As a marketer, you have been assigned the task to create an activity to redirect the visitors to the new home page. Let us explore the WKND site home page and learn how to create an activity using Adobe Target.
+
+### Users Involved
+
+For this exercise, the following users need to be involved and to perform some tasks you might need administrative access.
+
+* **Content Producer/Content Editor** (Adobe Experience Manager)
+* **Marketer** (Adobe Target / Optimization Team)
+
+### WKND Site Home Page
+
+ ![AEM Target Scenario 1](assets/personalization-use-case-2/aem-target-use-case-2.png)
+
+### Prerequisites
 
 * **AEM**
   * [AEM author and publish instance](./implementation.md#getting-aem) running on localhost 4502 and 4503 respectively.
@@ -20,21 +35,6 @@ In this chapter, we are going to explore how to create an activity to redirect y
   * Access to your organizations Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
   * Experience Cloud provisioned with the following solutions
     * [Adobe Target](https://marketing.adobe.com)
-
-## WKND Site - Scenario
-
-WKND site redesigned their homepage and would like to redirect their current homepage visitors to the new home page. At the same time, also understand how the redesigned home page helps to improve user engagement and revenue. As a marketer, you have been assigned the task to create an activity to redirect the visitors to the new home page. Let us explore the WKND site home page and learn how to create an activity using Adobe Target.
-
-## Users Involved
-
-For this exercise, the following users need to be involved and to perform some tasks you might need administrative access.
-
-* **Content Producer/Content Editor** (Adobe Experience Manager)
-* **Marketer** (Adobe Target / Optimization Team)
-
-## WKND Site Home Page
-
- ![AEM Target Scenario 1](assets/personalization-use-case-2/aem-target-use-case-2.png)
 
 ## Content Editor
 
@@ -70,3 +70,7 @@ For this exercise, the following users need to be involved and to perform some t
     ![Activate Activity](assets/personalization-use-case-2/ab-activate.png)
    15. Navigate to WKND Home Page (http://localhost:4503/content/wknd/en.html) and you will be redirected to the redesigned WKND Site Home Page (http://localhost:4503/content/wknd/en1.html).
      ![WKND Home Page Redesigned](assets/personalization-use-case-2/WKND-home-page-redesign.png)
+
+## Summary
+
+In this chapter, a marketer was able to create an activity to redirect your site pages that are hosted on AEM to a new page using Adobe Target
