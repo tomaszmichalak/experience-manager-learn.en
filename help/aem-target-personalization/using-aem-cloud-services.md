@@ -1,8 +1,8 @@
 ---
-title: Integrating AEM with Adobe Target using legacy cloud services
-seo-title: Integrating AEM with Adobe Target using legacy cloud services
-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Experience Manager and Adobe Target. In this tutorial, you will also learn about different personas involved in the end to end process and how they collaborate with each other
-seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Experience Manager and Adobe Target. In this tutorial, you will also learn about different personas involved in the end to end process and how they collaborate with each other
+title: Integrating Adobe Experience Manager with Adobe Target using Cloud Services
+seo-title: Integrating Adobe Experience Manager (AEM) with Adobe Target using Legacy Cloud Services
+description: Step by step walkthrough on how to integrate Adobe Experience Manager (AEM) with Adobe Target using AEM Cloud Service
+seo-description: Step by step walkthrough on how to integrate Adobe Experience Manager (AEM) with Adobe Target using AEM Cloud Service
 ---
 
 # Using AEM legacy Cloud Services

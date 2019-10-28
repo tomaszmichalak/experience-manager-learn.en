@@ -1,15 +1,15 @@
 ---
 user-guide-title: Getting Started with AEM and Adobe Target 
-product: AEM
+product: AEM, experience-manager, target
 version: 6.5
-sub-product: 
-audience: 
-doc-type: 
-feature: 
-topics:
-audience: 
-activity: 
+sub-product: sites
+audience: author, marketer, administrator, architect, developer
+doc-type: tutorial
+feature: experience-fragments
+topics: personalization
+activity: develop, understand
 index: y
+kt: 2214
 ---
  
 # Getting Started with AEM and Target {#aem-target-tutorial}
