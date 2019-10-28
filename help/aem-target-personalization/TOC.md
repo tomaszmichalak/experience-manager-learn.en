@@ -22,4 +22,3 @@ index: y
 + [Personalization using AEM Experience Fragments](./personalization-use-case-1.md)
 + [Personalization using Visual Experience Composer](./personalization-use-case-3.md)
 + [Home Page Redesign and Redirects](./personalization-use-case-2.md)
-+ [Frequently Asked Questions](./personalization-faqs.md)

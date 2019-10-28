@@ -24,15 +24,15 @@ For using AEM Experience Fragment offers to power you personalization activities
   
     >[!NOTE]
     >
-    > Customer needs to be provisioned with Adobe Launch and Adobe I/O from [Adobe support](https://helpx.adobe.com/contact/enterprise-support.ec.html) or reach out to your system administrator
+    > Customer needs to be provisioned with Experience Platform Launch and Adobe I/O from [Adobe support](https://helpx.adobe.com/contact/enterprise-support.ec.html) or reach out to your system administrator
 
 ### Integrating AEM with Adobe Target
 
 #### General Steps
 
->[!VIDEO](https://video.tv.adobe.com/v/28428?quality=9)
+>[!VIDEO](https://video.tv.adobe.com/v/28428?quality=12)
 
-1. Create Adobe Target Cloud Service using Adobe IMS Authentication (*Uses Adobe Target Standard API*) (00:34)
+1. Create Adobe Target Cloud Service using Adobe IMS Authentication (*Uses Adobe Target API*) (00:34)
 2. Obtain Adobe Target Client Code (01:50)
 3. Create Adobe IMS Configuration for Adobe Target (02:08)
 4. Create a Technical Account for accessing Target API within Adobe I/O Console (02:08)

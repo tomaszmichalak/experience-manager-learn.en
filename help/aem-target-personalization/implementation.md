@@ -38,7 +38,7 @@ In this section, we will discuss how to set up Adobe Experience Manager with Ado
 
 >[!NOTE]
 >
-> Customer needs to be provisioned with Adobe Launch and Adobe I/O from [Adobe support](https://helpx.adobe.com/contact/enterprise-support.ec.html) or reach out to your system administrator
+> Customer needs to be provisioned with Experience Platform Launch and Adobe I/O from [Adobe support](https://helpx.adobe.com/contact/enterprise-support.ec.html) or reach out to your system administrator
 
 ### Getting your AEM Instance ready
 
@@ -66,7 +66,7 @@ AEM author and publish instance is necessary to complete this tutorial. We have 
     * [core.wcm.components.all-2.5.0.zip](https://github.com/adobe/aem-core-wcm-components/releases/download/core.wcm.components.reactor-2.5.0/core.wcm.components.all-2.5.0.zip)
     * [digital-data-layer.zip](assets/implementation/digital-data-layer.zip)
 
-    >[!VIDEO](https://video.tv.adobe.com/v/28377t1)
+    >[!VIDEO](https://video.tv.adobe.com/v/28377?quality=12)
 10. At this point, you have successfully installed your WKND reference site and all additional packages required for this tutorial.
 
 [NEXT CHAPTER](./using-launch-adobe-io.md): In the next chapter, you will be integrating Launch with AEM.
