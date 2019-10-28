@@ -1,8 +1,8 @@
 ---
-title: Using Brand Portal with AEM Assets
+title: Using Brand Portal
 seo-title: Using Brand Portal with AEM Assets
-description: Walk throughs of the AEM Author and AEM Assets Brand Portal integration.
-seo-description: Walk throughs of the AEM Author and AEM Assets Brand Portal integration.
+description: Walk-throughs of the AEM Author and AEM Assets Brand Portal integration.
+seo-description: Walk-throughs of the AEM Author and AEM Assets Brand Portal integration.
 uuid: d34a1073-8972-49bc-ae12-d3d77d5b6e02
 discoiquuid: 956ae2ae-b8af-4714-9300-8799bfc24a5f
 feature: asset-share, brand-portal
@@ -15,7 +15,7 @@ version: 6.3, 6.4, 6.5
 
 # Using Brand Portal with AEM Assets{#using-brand-portal-with-aem-assets}
 
-Walk throughs of the AEM Author and AEM Assets Brand Portal integration.
+Walk-throughs of the AEM Author and AEM Assets Brand Portal integration.
 
 ## Brand Portal 6.4.4 features and enhancements {#brand-portal-features-and-enhancements-644}
 
@@ -60,7 +60,7 @@ Administrators can now configure how the folders are shown to non-admin users (E
 
 [Enable Folder Hierarchy](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) functionality (when enabled) helps you differentiate the folders with the same names shared from different hierarchies. On logging in, non-admin users now see the virtual parent (and ancestor) folders of the shared folders.
 
-The shared folders are organized within the respective directories in virtual folders. You can recognize these virtual folders with a lock icon. 
+The shared folders are organized within the respective directories in virtual folders. You can recognize these virtual folders with a lock icon.
 
 Note that the default thumbnail of the virtual folders is the thumbnail image of the first shared folder.
 
@@ -186,13 +186,24 @@ Brand Portal 6.3.1 includes new and enhanced functionality oriented toward align
 * Update and preview custom wallpaper for your brand
 * Usage report to know about the number of users, storage space used and total assets.
 
+## Brand Portal Asset Sourcing{#asset-sourcing}
+
+Use Asset Sourcing to collect assets from third-party agencies and teams, seamlessly syncing them back to Experience Manager Author for review and use.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29365/?quality=12)
+
+*Experience Manager Author 6.5 SP2 (6.5.2) or greater is required to use Asset Sourcing*
+
+* [Brand Portal Asset Sourcing Documentation](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html)
+* [Enable Experience Manager Author for Asset Sourcing](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/configure-asset-sourcing-in-aem/brand-portal-enable-asset-sourcing.html)
+
 ## Additional Resources{#additional-resources}
 
 * [What has changed in Brand Portal 6.3.1](https://helpx.adobe.com/experience-manager/brand-portal/using/whats-new.html#Whatchangedin631)
 * [Setup Brand Portal with AEM Assets](brand-portal-technical-video-develop.md)
 * [AEM Author replication agents](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
-* [Download Aspera Connect](https://downloads.asperasoft.com/connect2/)
 * [Guide to Accelerated Download](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
 * [AEM Assets Brand Portal Adobe Docs](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal.html)
 * [AEM Assets Dynamic Media Adobe Docs](https://docs.adobe.com/docs/en/aem/6-3/author/assets/dynamic-media.html)
+* [Download Aspera Connect](https://downloads.asperasoft.com/connect2/)
 * [Aspera Connect Test Server](https://test-connect.asperasoft.com/)
