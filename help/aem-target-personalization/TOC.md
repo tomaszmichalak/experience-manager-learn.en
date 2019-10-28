@@ -6,7 +6,7 @@ sub-product: sites
 audience: author, marketer, administrator, architect, developer
 doc-type: tutorial
 feature: experience-fragments
-topics: personalization
+topics: personalization, activities, experiences, integrations, offers
 activity: develop, understand
 index: y
 kt: 2214
