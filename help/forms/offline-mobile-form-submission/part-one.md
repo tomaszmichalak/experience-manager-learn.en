@@ -54,6 +54,7 @@ var suc = function(obj)
 }
 
 ```
+
 ## Generate Interactive PDF
 
 The following is the servlet code that is responsible for rendering interactive pdf and returning the pdf to the calling application. The servlet invokes mobileFormToInteractivePdf method of the custom DocumentServices service.
@@ -143,6 +144,7 @@ return interactivePDF;
 }
 
 ```
+
 To view the ability to download interactive pdf from partially completed mobile form, [please click here](https://forms.enablementadobe.com/content/dam/formsanddocuments/schengen.xdp/jcr:content).
 Once the pdf is downloaded, the next step is to submit the PDF to trigger an AEM workflow. This workflow will merge the data from the submitted PDF and generate non-interactive pdf for review.
 

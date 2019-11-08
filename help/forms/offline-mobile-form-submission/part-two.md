@@ -73,7 +73,7 @@ try {
         httpClient.execute(postReq);
         logger.debug("Sent request to author instance");
         ServletOutputStream sout = response.getOutputStream();
-		sout.print("Your form was successfully submitted");
+        sout.print("Your form was successfully submitted");
     } catch (UnsupportedEncodingException e) {
         e.printStackTrace();
     } catch (ClientProtocolException e) {
