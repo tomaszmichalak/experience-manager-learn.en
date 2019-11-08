@@ -1,6 +1,6 @@
 ---
 title: Trigger AEM workflow on HTM5 Form Submission
-seo-title:Trigger AEM Workflow on HTML5 Form Submission
+seo-title: Trigger AEM Workflow on HTML5 Form Submission
 description: Continue filling mobile form in offline mode and submit mobile form to trigger AEM workflow
 seo-description: Continue filling mobile form in offline mode and submit mobile form to trigger AEM workflow
 feature: mobile-forms
