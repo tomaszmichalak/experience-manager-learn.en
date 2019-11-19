@@ -10,9 +10,11 @@ doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 ---
+
 # Create OSGI Service to fetch data
 
 The following code was written to fetch the stored Adaptive Form data. A simple query is used to fetch the Adaptive Form data associated with a given GUID. The fetched data is then returned to the calling application. The same data source created in the first step is referenced in this code.
+
 
 ``` java{.line-numbers}
 package com.techmarketing.core.impl;
@@ -69,4 +71,15 @@ public Connection getConnection() {
 
 }
 
+```
+
+## Interface
+
+The following is the interface declaration that was used
+
+```java{.line-numbers}
+package com.techmarketing.core;
+public interface AemFormsAndDB {
+public String getData(String guid);
+}
 ```
