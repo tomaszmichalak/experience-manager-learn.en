@@ -17,10 +17,10 @@ This package contains the sample workflow and the html page which allows you cre
 ## Configure Workflow
 
 1. [Open the workflow in edit mode](http://localhost:4502/editor.html/conf/global/settings/workflow/models/MergeAcroformData.html)
- 1. Open the configuration properties of MergeAcroformData step.
-2. Click on the Process tab.
-3. Make sure the arguments you are passing is a valid folder on your server.
-4. Save the changes.
+ 2. Open the configuration properties of MergeAcroformData step.
+3. Click on the Process tab.
+4. Make sure the arguments you are passing is a valid folder on your server.
+5. Save the changes.
 
 ## Create Adaptive Form
 
