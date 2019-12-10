@@ -9,7 +9,7 @@ activity: implement
 version: 6.4,6.5
 ---
 
-#  Generate a set of PDF Document given a set of template and data to merge
+# Generate a set of PDF Document given a set of template and data to merge
 
 OutputService provides a number of methods to create documents using a form design and data to merge with the form design. The following article explains the use case to generate multiple pdf's from one large xml containing multiple individual records.
 The following is the screen-shot of xml file containing multiple records.
