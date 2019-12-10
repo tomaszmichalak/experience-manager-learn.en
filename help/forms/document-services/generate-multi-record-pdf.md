@@ -84,8 +84,7 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
         FileInputStream fis = null;
 
         for (int i = 0; i < batchResult.getGeneratedDocs().size(); i++) {
-            log.debug("inside the loop");
-            com.adobe.aemfd.docmanager.Document dataMergedDoc = batchResult.getGeneratedDocs().get(i);
+              com.adobe.aemfd.docmanager.Document dataMergedDoc = batchResult.getGeneratedDocs().get(i);
             log.debug("Got document " + i);
             dataMergedDoc.copyToFile(new File(saveLocation + File.separator + i + ".pdf"));
             log.debug("saved file " + i);
@@ -127,7 +126,7 @@ To test this capability on your server, please follow the below instructions:
 * [Download and save the xml data file to your file system](assets/multirecords.xml)
 * [Point your browser to Felix web console](http://localhost:4502/system/console/bundles)
 * [Deploy DevelopingWithServiceUser Bundle](https://forms.enablementadobe.com/content/DemoServerBundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). 
-* [Deploy Custom AEMFormsDocumentServices Bundle](https://forms.enablementadobe.com/content/DemoServerBundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).This is custom bundle which generates the pdf's using the OutputService API
+* [Deploy Custom AEMFormsDocumentServices Bundle](https://forms.enablementadobe.com/content/DemoServerBundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).Custom bundle which generates the pdf's using the OutputService API
 * [Point your browser to package manager](http://localhost:4502/crx/packmgr/index.jsp)
 * [Import and install the package](assets/generate-multiple-pdf-from-xml.zip). This package contains html page which allows you to drop the template and data files.
 * [Point your browser to MultiRecords.html](http://localhost:4502/content/DocumentServices/Multirecord.html?)
