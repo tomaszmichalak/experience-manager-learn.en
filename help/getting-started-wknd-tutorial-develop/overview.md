@@ -15,7 +15,7 @@ index: y
 
 # Getting Started with AEM Sites - WKND Tutorial {#introduction}
 
-A multi-part tutorial designed for developers new to Adobe Experience Manager. Walks through the implementation of an AEM site for a fictitious lifestyle brand the WKND. Covers fundamental topics like project setup, Core Components, Editable Templates, client libraries, and component development with Adobe Experience Manager Sites.
+Welcome to a multi-part tutorial designed for developers new to Adobe Experience Manager (AEM). This tutorial walks through the through the implementation of an AEM site for a fictitious lifestyle brand the WKND. The tutorial covers fundamental topics like project setup, Core Components, Editable Templates, client libraries, and component development with Adobe Experience Manager Sites.
 
 ## WKND Tutorial Overview {#wknd-tutorial-overview}
 
@@ -25,32 +25,26 @@ The goal for this multi-part tutorial is to teach a developer how to implement a
 
 The implementation works as-is on **AEM 6.5** and **AEM 6.4.2+**. Many of the topics apply to all versions of AEM. The site is implemented using:
 
-* HTL
+* [Maven AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)
+* [Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
+* [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/getting-started/getting-started.html)
 * Sling Models
-* Touch UI
-* Core Components v**2.4.0**
-* Editable Templates
-* Style System
-* Maven AEM Project Archetype v**18**
+* [Editable Templates](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)
+* [Style System](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
 
 *Estimate 1-2 hours to get through each part of the tutorial.*
 
->[!NOTE]
->
->A previous version of this tutorial existed that leveraged a different Maven archetype for the project. The finished code for the previous tutorial can be found **[here](https://github.com/Adobe-Marketing-Cloud/aem-guides-wknd)**
+## About the tutorial {#about-tutorial}
 
-## WKND Site Design {#wknd-site}
+The WKND is a fictional online magazine and blog that focuses on nightlife, activities, and events in several international cities. To make this tutorial closer to a real-world scenario one of Adobe's talented UX designers created the mockups for the site. Over the course of the tutorial various pieces of the mockup are implemented into a fully author-able AEM site. Special thanks to **Lorenzo Buosi** and **Kilian Amendola** who created the beautiful design for the WKND site.
 
-The WKND is a fictional online magazine and blog that focuses on nightlife, activities, and events in several international cities. To make this tutorial closer to a real-world scenario one of Adobe's talented UX designers created the mockups for the site. Over the course of the tutorial various pieces of the mockup are implemented into a fully author-able AEM site. Special thanks to **Lorenzo Buosi** who created the beautiful design for the WKND site.
+The name WKND is fitting because we expect a developer to take the better part of a ***weekend*** to complete the tutorial.
 
-The name WKND is fitting because we expect a developer to take the better part of a *weekend* to complete the tutorial.
+### Reference Site {#reference-site}
 
-### Latest {#latest}
+A finished version of the WKND Site is also available as a reference. The tutorial covers the major development skills needed for an AEM developer but will not build the entire site end-to-end. The finished reference site is another great resource to explore and see more of AEM's out of the box capabilities.
 
-To test the latest code before jumping into the tutorial, download and install the latest release:
-
-* **[aem-guides-wknd.ui.apps-0.0.1-SNAPSHOT.zip](https://github.com/adobe/aem-guides-wknd/releases/download/archetype-18.1/aem-guides-wknd.ui.apps-0.0.1-SNAPSHOT.zip)**
-* **[aem-guides-wknd.ui.content-0.0.1-SNAPSHOT.zip](https://github.com/adobe/aem-guides-wknd/releases/download/archetype-18.1/aem-guides-wknd.ui.content-0.0.1-SNAPSHOT.zip)**
+To test the latest code before jumping into the tutorial, download and install the [latest release from GitHub](https://github.com/adobe/aem-guides-wknd/releases/latest).
 
 ### Github {#github}
 
@@ -60,15 +54,38 @@ All of the code for the project can be found on Github in the AEM Guide repo:
 
 In addition, each part of the tutorial has its own branch in GitHub. A user can begin the tutorial at any point by simply checking out the branch that corresponds to the previous part.
 
+## Local Development Environment {#local-dev-environment}
+
+A local development environment is necessary to complete this tutorial. Screenshots and video are captured from a Mac OS environment but the commands and code used should be independent of the local operating system, unless otherwise noted.
+
+**New to AEM?** Check out the [following guide to setting up a local development environment](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
+
+### Required software
+
+The following should be installed:
+
+* [AEM 6.5](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/technical-requirements.html) or [AEM 6.4 + SP2](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)
+* [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/index.html) or [Java 11](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html) (AEM 6.5+ only)
+* [Apache Maven](https://maven.apache.org/) (3.3.9 or newer)
+* [Node.js v10+](https://nodejs.org/en/)
+* [npm 6+](https://www.npmjs.com/)
+* [Git](https://git-scm.com/)
+
+### Integrated Development Environment (IDE)
+
+This tutorial uses [Eclipse](https://www.eclipse.org/) with the [AEM Developer Tool Plugin](https://eclipse.adobe.com/aem/dev-tools/) as the IDE, however any IDE that has support for Java and Maven projects can be used. The reliance on specific IDE features in this tutorial is minimal.
+
+For detailed steps for using Eclipse or any other IDE for [local development with AEM check out the following guide](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
+
 ## Table of Contents {#table-of-contents}
 
-In general each Part of the tutorial takes about **1-2 hours**.
+*Estimate 1-2 hours to get through each part of the tutorial.*
 
 ### Chapter 1 {#chapter-1}
 
 **[Project Setup](project-setup.md)** - Covers the creation of a Maven Multi Module Project to manage the code and configurations for an AEM Site.
 
-#### Maven, Lazybones Template, Eclipse IDE, Core Components, SCM, and Github
+#### Maven, Eclipse IDE, Core Components, SCM, and Github
 
 ### Chapter 2 {#chapter-2}
 
