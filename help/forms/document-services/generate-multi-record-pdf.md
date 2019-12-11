@@ -65,7 +65,7 @@ Document zippedDocument = documentServices.generateMultiplePdfs(templateMap, dat
 ....
 ```
 
-### Interface Implementation Code{#Interface Implementation Code}
+### Interface Implementation Code{#Interface-Implementation-Code}
 
 The following code generates multiple pdf's using the OutputService's generatePDFOutputBatch and returns a zip file containing the pdf files to the calling servlet
 
@@ -116,7 +116,7 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 }
 ```
 
-### Deploy on your server{#Deploy on your server}
+### Deploy on your server{#Deploy-on-your-server}
 
 To test this capability on your server, please follow the below instructions:
 
