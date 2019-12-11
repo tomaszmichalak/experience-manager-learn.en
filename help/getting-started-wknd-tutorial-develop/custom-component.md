@@ -12,7 +12,7 @@ kt: 4072
 mini-toc-levels: 1
 ---
  
- # Creating a custom AEM Component {#creating-a-custom-aem-component}
+# Creating a custom AEM Component {#creating-a-custom-aem-component}
 
 This tutorial covers the end-to-end creation of a custom AEM Byline Component that displays content authored in a Dialog, and explores developing a Sling Model to encapsulate business logic that populates the component's HTL.
 
@@ -391,7 +391,7 @@ Create a public Java Interface for the Byline. `Byline.java` defines the public 
 
    ![create byline implementation](assets/custom-component/create-byline-impl.png)
 
-3. Open **BylineImpl.java**. It is auto-populated with all of the methods defined in the interface **Byline.java**. Add the Sling Model annotations by updating `BylineImpl.java` with the following class-level annotations. This `@Model(..)`annotation is what turns the class into a Sling Model.
+1. Open **BylineImpl.java**. It is auto-populated with all of the methods defined in the interface **Byline.java**. Add the Sling Model annotations by updating `BylineImpl.java` with the following class-level annotations. This `@Model(..)`annotation is what turns the class into a Sling Model.
 
    ```java
    import org.apache.sling.api.SlingHttpServletRequest;
@@ -954,11 +954,12 @@ Add default styles for the Byline component. In the **ui.frontend** project unde
 6. Start by populating **byline.scss** to include the default style:
 
    ```css
-    /* WKND Byline styles */
+     /* WKND Byline styles */
     @import 'styles/default';
-   ```
+   ```   
 
 7. Add the Byline implementations CSS (written as SCSS) into the `default.scss`:
+
     ```css
     .cmp-byline {
         $imageSize: 60px;
@@ -993,12 +994,14 @@ Add default styles for the Byline component. In the **ui.frontend** project unde
     }
     ```
 
-9. Build and deploy the `ui.apps` project, which will transitively build and include the `ui.frontend` project, to a local AEM instance using Maven:
+8. Build and deploy the `ui.apps` project, which will transitively build and include the `ui.frontend` project, to a local AEM instance using Maven:
 
-    ```
+
+    ```shell
     $ cd ~/code/aem-guides-wknd/ui.apps
     $ mvn clean install -PautoInstallPackage
     ```
+
 
     >[!TIP]
     >
