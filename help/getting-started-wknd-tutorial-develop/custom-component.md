@@ -953,10 +953,12 @@ Add default styles for the Byline component. In the **ui.frontend** project unde
 
 6. Start by populating **byline.scss** to include the default style:
 
-   ```css
+    ```css
+ 
      /* WKND Byline styles */
     @import 'styles/default';
-   ```   
+    
+    ```   
 
 7. Add the Byline implementations CSS (written as SCSS) into the `default.scss`:
 
