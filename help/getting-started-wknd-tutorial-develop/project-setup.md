@@ -3,20 +3,20 @@ title: Getting Started with AEM Sites Chapter 1 - Project Setup
 seo-title: Getting Started with AEM Sites Chapter 1 - Project Setup
 description: Covers the creation of a Maven Multi Module Project to manage the code and configurations for an AEM Site.
 seo-description: Covers the creation of a Maven Multi Module Project to manage the code and configurations for an AEM Site.
-uuid: 91ef65b9-9b21-49ce-827c-28390e39066d
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-products: SG_EXPERIENCEMANAGER/6.4/SITES
-discoiquuid: 6d467cc5-5cc4-43d4-907e-37f6c4f618da
-targetaudience: target-audience new
+sub-product: sites
+feature: maven-archetype
+topics: development
+version: cloud-service
+doc-type: tutorial
+activity: develop
+audience: developer
 mini-toc-levels: 1
-topic: development
-index: y
 kt: 3418
 ---
 
 # Project Setup {#project-setup}
 
-Covers the creation of a Maven Multi Module Project to manage the code and configurations for an AEM Site.
+This tutorial covers the creation of a Maven Multi Module Project to manage the code and configurations for an Adobe Experience Manager Site.
 
 ## Prerequisites {#prerequisites}
 
@@ -207,7 +207,7 @@ Now that we have generated a new project, we can deploy the project code to a lo
 
 6. Open the **US** `>` **English** page by selecting the page and clicking the **Edit** button in the menu bar:
 
-    ![site console](assets/chapter-1/aem-sites-console.png)
+    ![site console](assets/project-setup/aem-sites-console.png)
 
 7. Some content is already created and several components are available to be added to a page. Experiment with these components to get an idea of the functionality. How this page and components are configured will be explored in detail later in the tutorial.
 
@@ -223,7 +223,7 @@ The AEM archetype is made up of individual Maven modules:
 * [ui.frontend](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html) - (optional) contains the artifacts required to use the Webpack-based front-end build module.
 * all - this is an empty Maven module that combines the above modules into a single package that can be deployed to an AEM environment.
 
-![Maven Project Diagram](assets/chapter-1/project-pom-structure.png)
+![Maven Project Diagram](assets/project-setup/project-pom-structure.png)
 
 See the [AEM Project Archetype documentation](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html) to learn more details of the Maven modules.
 
@@ -266,11 +266,11 @@ The **[core](https://docs.adobe.com/content/help/en/experience-manager-core-comp
 
 4. Toggle the **Id** sort column and you should see the WKND bundle installed and active.
 
-    ![Core bundle](assets/chapter-1/wknd-osgi-console.png)
+    ![Core bundle](assets/project-setup/wknd-osgi-console.png)
 
 5. You can see the 'physical' location of the jar in [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/apps/wknd/install/wknd-sites-guide.core-0.0.1-SNAPSHOT.jar):
 
-    ![CRXDE Location of Jar](assets/chapter-1/jcr-bundle-location.png)
+    ![CRXDE Location of Jar](assets/project-setup/jcr-bundle-location.png)
 
 ### Ui.apps and Ui.content modules {#apps-content-module}
 
@@ -300,7 +300,7 @@ To build the just this module:
 
 3. Navigate to [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp). You should see the `ui.apps` package as the first installed package and it should have a more recent timestamp then any of the other packages.
 
-    ![Ui.apps package installed](assets/chapter-1/ui-apps-package.png)
+    ![Ui.apps package installed](assets/project-setup/ui-apps-package.png)
 
 4. Return to the command line and run the following command (within the `ui.apps` folder):
 
@@ -457,4 +457,4 @@ Congratulations, you have just created your first AEM Project!
 
 ### Next Steps {#next-steps}
 
-Understand the underlying technology of an Adobe Experience Manager (AEM) Sites Component through a simple HelloWorld example with [Component Basics](component-basics.md).
+Understand the underlying technology of an Adobe Experience Manager (AEM) Sites Component through a simple `HelloWorld` example with the [Component Basics](component-basics.md) tutorial.

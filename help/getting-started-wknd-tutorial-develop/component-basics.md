@@ -1,12 +1,15 @@
 ---
 title: Getting Started with AEM Sites - Component Basics
 description: Understand the underlying technology of an Adobe Experience Manager (AEM) Sites Component through a simple `HelloWorld` example. Topics of HTL, Sling Models, Client-side libraries and author dialogs are explored.
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-products: SG_EXPERIENCEMANAGER/6.4/SITES
-targetaudience: target-audience new
+sub-product: sites
+feature: components, sling-models, htl
+topics: development
+version: cloud-service
+doc-type: tutorial
+activity: develop
+audience: developer
 mini-toc-levels: 1
-topic: development
-kt: KT-4081
+kt: 4081
 ---
 
 # Component Basics {#component-basics}
@@ -321,3 +324,8 @@ Congratulations, you have just learned the basics of component development in Ad
 ### Next Steps {#next-steps}
 
 Get familiar with Adobe Experience Manager pages and templates in the next chapter [Pages and Templates](pages-templates.md). Understand how Core Components are proxied into the project and learn advanced policy configurations of editable templates to build out a well-structured Article Page template.
+
+View the finished code on [GitHub](https://github.com/adobe/aem-guides-wknd) or review and deploy the code locally at on the Git brach `component-basics/solution`.
+
+1. Clone the [github.com/adobe/aem-wknd-guides](http://github.com/adobe/aem-wknd-guides) repository.
+2. Check out the `component-basics/solution` branch

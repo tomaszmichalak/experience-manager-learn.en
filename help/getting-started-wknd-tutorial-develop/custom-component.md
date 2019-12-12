@@ -1019,7 +1019,11 @@ Watch the video below for a quick walk-through of what was built in this tutoria
 
 >[!VIDEO](https://video.tv.adobe.com/v/30174/?quality=12)
 
-## Next steps {#next-steps}
+## Congratulations! {#congratulations}
+
+Congratulations, you have just created a custom component from scratch using Adobe Experience Manager!
+
+### Next steps {#next-steps}
 
 Continue to learn about AEM Component development by exploring how to write JUnit tests for the Byline Java code to ensure everything is developed properly, and implemented business logic is correct and complete.
 
@@ -1040,4 +1044,6 @@ If you do not see `src/main/java` source folder in Eclipse you can add the folde
 
 ![troubleshoot unresolved packages](assets/custom-component/troubleshoot-unresolved-packages.png)
 
-Note if you have unresolved package imports for some of the new dependencies added to the core project, try updating the aem-guides-wknd maven project, which will in turn update all sub-projects. You can do this by right-clicking **aem-guides-wknd &gt; Maven &gt; Update Project**.
+>[!NOTE]
+>
+> If you have unresolved package imports for some of the new dependencies added to the core project, try updating the aem-guides-wknd maven project, which will in turn update all sub-projects. You can do this by right-clicking **aem-guides-wknd &gt; Maven &gt; Update Project**.
