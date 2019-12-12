@@ -221,7 +221,7 @@ Next, we will make some updates to the `HelloWorldModel` Sling Model in order to
      * @return All caps variation of the text value
      */
     public String getTextUpperCase() {
-    	return StringUtils.isNotBlank(this.text) ? this.text.toUpperCase() : null;
+        return StringUtils.isNotBlank(this.text) ? this.text.toUpperCase() : null;
     }
     ```
 
