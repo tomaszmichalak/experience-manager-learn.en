@@ -1,6 +1,14 @@
 ---
-title: Getting Started with AEM Sites Chapter 6 - Unit Testing
-description: Covers the implementation of a Unit Test that validates the behavior of the Byline component's Sling Model, created previously in the tutorial.
+title: Unit Testing
+description: This tutorial covers the implementation of a Unit Test that validates the behavior of the Byline component's Sling Model, created in the Custom Component tutorial.
+product: experience-manager
+sub-product: sites
+topics: development
+version: cloud-service
+doc-type: tutorial
+activity: develop
+audience: developer
+kt: 4089
 mini-toc-levels: 1
 ---
 
