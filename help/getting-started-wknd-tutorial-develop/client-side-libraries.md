@@ -12,7 +12,7 @@ mini-toc-levels: 1
 index: y
 ---
 
-# Chapter 3 - Client-Side Libraries and Responsive Grid {#client-side-libraries-and-responsive-grid}
+# Chapter 3 - Client-Side Libraries and Front-end Workflow {#client-side-libraries-and-responsive-grid}
 
 Covers creation of AEM Client-Side Libraries or clientlibs to deploy and manage CSS and Javascript for an AEM Sites implementation. Integration with AEM's responsive grid and mobile emulator. aemfed module is used to accelerate front-end development.
 
@@ -47,7 +47,7 @@ Client-Side Libraries provides a mechanism to organize and manage CSS and JavaSc
 3. Minimize the number of client-side requests by concatenating CSS/JS into one or two requests
 4. Minify CSS/JS that is delivered to optimize speed/performance of a site
 
-More information about using [Client-Side Libraries can be found here.](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/clientlibs.html)
+More information about using [Client-Side Libraries can be found here.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
 
 Client-Side Libraries provide many ways for organization, below is a convention used by the WKND site and WE.Retail sites and can be applied to most Sites implementations.
 
