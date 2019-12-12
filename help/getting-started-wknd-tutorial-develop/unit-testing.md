@@ -15,11 +15,12 @@ Check out the base-line code the tutorial builds on:
 1. Clone the [github.com/adobe/aem-wknd-guides](http://github.com/adobe/aem-wknd-guides) repository.
 2. Check out the `unit-testing/start` branch
 
-```
+```shell
 $ git clone git@github.com:adobe/aem-guides-wknd.git ~/code/aem-guides-wknd
 $ cd ~/code/aem-guides-wknd
 $ git checkout unit-testing/start
 ```
+
 You can always view the finished code on [GitHub]https://github.com/adobe/aem-guides-wknd/tree/unit-testing/solution) or check the code out locally by switching to the branch `unit-testing/solution`.
 
 ## Objective
@@ -385,9 +386,9 @@ Now that we have a basic mock context setup, let's write our first test for **By
             ctx.registerService(ModelFactory.class, modelFactory, org.osgi.framework.Constants.SERVICE_RANKING,
                     Integer.MAX_VALUE);
         }
-        
+
         @Test
-	    void testGetName() { ...
+        void testGetName() { ...
     }
     ```
 
@@ -757,4 +758,5 @@ Likewise, if we change a test method to fail, the build fails and reports which 
 ![mvn package fail](assets/unit-testing/mvn-package-fail.png)
 
 ## Review the code {#review-the-code}
+
 View the finished code on [GitHub](https://github.com/adobe/aem-guides-wknd) or review and deploy the code locally at on the Git brach `unit-testing/solution`.
