@@ -1,5 +1,5 @@
 ---
-title: Getting Started with AEM Sites Chapter 5 - Creating a custom AEM Component
+title: Custom Component
 description: Covers the end to end creation of a custom byline component that displays authored content. Includes developing a Sling Model to encapsulate business logic to populate the byline component and corresponding HTL to render the component. 
 sub-product: sites
 feature: sling-models
@@ -12,7 +12,7 @@ kt: 4072
 mini-toc-levels: 1
 ---
  
-# Creating a custom AEM Component {#creating-a-custom-aem-component}
+# Custom Component {#custom-component}
 
 This tutorial covers the end-to-end creation of a custom AEM Byline Component that displays content authored in a Dialog, and explores developing a Sling Model to encapsulate business logic that populates the component's HTL.
 
@@ -1031,7 +1031,7 @@ Continue to learn about AEM Component development by exploring how to write JUni
 
 View the finished code on [GitHub](https://github.com/adobe/aem-guides-wknd) or review and deploy the code locally at on the Git brach `custom-component/solution`.
 
-1. Clone the [github.com/adobe/aem-wknd-guides](http://github.com/adobe/aem-wknd-guides) repository.
+1. Clone the [github.com/adobe/aem-guides-wknd](https://github.com/adobe/aem-guides-wknd) repository.
 2. Check out the `custom-component/solution` branch
 
 ## Troubleshooting {#troubleshooting}
