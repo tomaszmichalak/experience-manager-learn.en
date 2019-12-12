@@ -20,16 +20,16 @@ This tutorial covers the end-to-end creation of a custom AEM Byline Component th
 
 Check out the base-line code the tutorial builds on:
 
-1. Clone the [github.com/adobe/aem-wknd-guides](http://github.com/adobe/aem-wknd-guides) repository.
+1. Clone the [github.com/adobe/aem-guides-wknd](https://github.com/adobe/aem-guides-wknd) repository.
 2. Check out the `custom-component/start` branch
 
 ```
-$ git clone git@github.com:Adobe-Marketing-Cloud/aem-guides-wknd.git ~/code/aem-guides-wknd
+$ git clone git@github.com:adobe/aem-guides-wknd.git ~/code/aem-guides-wknd
 $ cd ~/code/aem-guides-wknd
 $ git checkout custom-component/start
 ```
 
-You can always view the finished code on [GitHub]https://github.com/Adobe-Marketing-Cloud/aem-guides-wknd/tree/custom-component/solution) or check the code out locally by switching to the branch `custom-component/solution`.
+You can always view the finished code on [GitHub](https://github.com/adobe/aem-guides-wknd/tree/custom-component/solution) or check the code out locally by switching to the branch `custom-component/solution`.
 
 ## Objective
 

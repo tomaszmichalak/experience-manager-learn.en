@@ -329,3 +329,4 @@ View the finished code on [GitHub](https://github.com/adobe/aem-guides-wknd) or 
 
 1. Clone the [github.com/adobe/aem-wknd-guides](http://github.com/adobe/aem-wknd-guides) repository.
 2. Check out the `component-basics/solution` branch
+
