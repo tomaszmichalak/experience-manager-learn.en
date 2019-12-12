@@ -20,7 +20,7 @@ This tutorial covers the implementation of a Unit Test that validates the behavi
 
 Check out the base-line code the tutorial builds on:
 
-1. Clone the [github.com/adobe/aem-wknd-guides](http://github.com/adobe/aem-wknd-guides) repository.
+1. Clone the [github.com/adobe/aem-guides-wknd](http://github.com/adobe/aem-guides-wknd) repository.
 2. Check out the `unit-testing/start` branch
 
 ```shell
