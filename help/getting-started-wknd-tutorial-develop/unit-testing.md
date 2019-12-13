@@ -14,7 +14,7 @@ mini-toc-levels: 1
 
 # Unit Testing {#unit-testing}
 
-This tutorial covers the implementation of a Unit Test that validates the behavior of the Byline component's Sling Model, created in the [Creating a custom AEM Component](./custom-component.md) tutorial.
+This tutorial covers the implementation of a Unit Test that validates the behavior of the Byline component's Sling Model, created in the [Custom Component](./custom-component.md) tutorial.
 
 ## Prerequisites {#prerequisites}
 
@@ -29,7 +29,7 @@ $ cd ~/code/aem-guides-wknd
 $ git checkout unit-testing/start
 ```
 
-You can always view the finished code on [GitHub]https://github.com/adobe/aem-guides-wknd/tree/unit-testing/solution) or check the code out locally by switching to the branch `unit-testing/solution`.
+You can always view the finished code on [GitHub](https://github.com/adobe/aem-guides-wknd/tree/unit-testing/solution) or check the code out locally by switching to the branch `unit-testing/solution`.
 
 ## Objective
 
