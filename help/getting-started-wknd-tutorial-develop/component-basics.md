@@ -14,11 +14,11 @@ kt: 4081
 
 # Component Basics {#component-basics}
 
-Understand the underlying technology of an Adobe Experience Manager (AEM) Sites Component through a simple `HelloWorld` example.
+In this chapter we will explore the underlying technology of an Adobe Experience Manager (AEM) Sites Component through a simple `HelloWorld` example. Small modifications will be made to an existing component, covering topics of authoring, HTL, Sling Models, Client-side libraries.
 
 ## Prerequisites {#prerequisites}
 
-Review the required tooling and instructions for setting up a [local development environment](overview.md#local-dev-environment). Ensure that you have a fresh instance of Adobe Experience Manager available locally and that no additional sample/demo packages have been installed (other than required Service Packs).
+Review the required tooling and instructions for setting up a [local development environment](overview.md#local-dev-environment).
 
 ## Objective {#objective}
 

@@ -1,6 +1,6 @@
 ---
-title: Getting Started with AEM Sites Chapter 1 - Project Setup
-seo-title: Getting Started with AEM Sites Chapter 1 - Project Setup
+title: Getting Started with AEM Sites - Project Setup
+seo-title: Getting Started with AEM Sites - Project Setup
 description: Covers the creation of a Maven Multi Module Project to manage the code and configurations for an AEM Site.
 seo-description: Covers the creation of a Maven Multi Module Project to manage the code and configurations for an AEM Site.
 sub-product: sites
