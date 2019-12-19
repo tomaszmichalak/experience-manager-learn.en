@@ -222,9 +222,9 @@ Now we will to add some base styles for the WKND brand by adding some Sass files
     $font-size-base:          18px;
     $font-size-large:         24px;
     $font-size-xlarge:        48px;
-    $font-size-medium:		  18px;
+    $font-size-medium:        18px;
     $font-size-small:         14px;
-    $font-size-xsmall:		  12px;
+    $font-size-xsmall:        12px;
 
     $font-size-h1:            40px;
     $font-size-h2:            36px; 
