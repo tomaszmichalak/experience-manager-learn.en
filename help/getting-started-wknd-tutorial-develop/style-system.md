@@ -1,6 +1,6 @@
 ---
-title: Getting Started with AEM Sites Chapter 4 - Developing with the Style System
-seo-title: Getting Started with AEM Sites Chapter 4 - Developing with the Style System
+title: Developing with the Style System
+seo-title: Developing with the Style System
 description: Covers using the Style System to extend Core Components with brand-specific CSS and advanced policy configurations of the Template Editor. Content Fragments are also integrated to create long form article text.
 seo-description: Covers using the Style System to extend Core Components with brand-specific CSS and advanced policy configurations of the Template Editor. Content Fragments are also integrated to create long form article text.
 uuid: c4becc91-34e5-446e-b355-a196ccb54627

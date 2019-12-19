@@ -280,6 +280,10 @@ The next few steps will take place using the Eclipse IDE, but could be doing usi
 
    Compare `ui.content/src/main/content/META-INF/vault/filter.xml` and `ui.apps/src/main/content/META-INF/vault/filter.xml` to understand the different nodes managed by each module.
 
+   >[!WARNING]
+   >
+   > In order to ensure consistent deployments for the WKND Reference site, other tutorial branches of the project are setup such that `ui.content` will overwrite any changes in the JCR. This is by design, since code/styles will be written for specific policies.
+
 ## Congratulations! {#congratulations}
 
 Congratulations, you have just created a new template and page with Adobe Experience Manager Sites.
