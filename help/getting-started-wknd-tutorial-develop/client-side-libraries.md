@@ -40,7 +40,7 @@ Check out the base-line code the tutorial builds on:
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-You can always view the finished code on [GitHub](https://github.com/adobe/aem-guides-wknd/tree/pages-templates/solution) or check the code out locally by switching to the branch `pages-templates/solution`.
+You can always view the finished code on [GitHub](https://github.com/adobe/aem-guides-wknd/tree/client-side-libraries/solution) or check the code out locally by switching to the branch `client-side-libraries/solution`.
 
 ## Objective
 
@@ -50,7 +50,7 @@ You can always view the finished code on [GitHub](https://github.com/adobe/aem-g
 
 ## What you will build {#what-you-will-build}
 
-In this chapter you will add some baseline styles for the WKND site and the Article Page Template. You will use an advanced front-end workflow to integrate a webpack project into an AEM client library.
+In this chapter you will add some baseline styles for the WKND site and the Article Page Template in an effort to bring the implementation closer to the [UI design mockups](assets/pages-templates/wknd-article-design.xd). You will use an advanced front-end workflow to integrate a webpack project into an AEM client library.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30359/?quality=12)
 
@@ -64,7 +64,9 @@ Client-Side Libraries provides a mechanism to organize and manage CSS and JavaSc
 
 More information about using [Client-Side Libraries can be found here.](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html)
 
-Client-side libraries do have some limitations. Most notably is a limited support for popular front-end preprocessors like SaSS, LESS, and TypeScript. In the tutorial we will look at how the **ui.frontend** module can help solve this.
+Client-side libraries do have some limitations. Most notably is a limited support for popular front-end languages like Sass, LESS, and TypeScript. In the tutorial we will look at how the **ui.frontend** module can help solve this.
+
+Deploy the starter code base to a local AEM instance and navigate to [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html). This page is currently un-styled. We will next implement Client-side libraries for the WKND brand to add CSS and Javascript to the page.
 
 ## Client-Side Libraries Organization {#organization}
 
@@ -485,6 +487,10 @@ Below are the high level steps shown in the video:
 
 6. Edit the `.scss` files and see the changes automatically reflected in the browser.
 7. Review the `/aem-guides-wknd.ui.frontend/webpack.dev.js` file. This contains the webpack configuration used to start the webpack-dev-server. Note that it proxies the paths `/content` and `/etc.clientlibs` from a locally running instance of AEM. This is how the images, and other clientlibs (not managed by the **ui.frontend** code) are made available.
+
+    >[!CAUTION]
+    >
+    > The image src of the static markup points to a live image component on a local AEM instance. Images will appear broken if the path to the image changes, if AEM is not started, or if the browser uses has not logged into the local AEM instance.
 
 ## Putting It Together {#putting-it-together}
 

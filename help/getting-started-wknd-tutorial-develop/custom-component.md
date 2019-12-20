@@ -18,12 +18,20 @@ This tutorial covers the end-to-end creation of a custom AEM Byline Component th
 
 ## Prerequisites {#prerequisites}
 
+Review the required tooling and instructions for setting up a [local development environment](overview.md#local-dev-environment).
+
+### Starter Project
+
+>[!NOTE]
+>
+> If you have been following along in previous parts of the tutorial, you will notice that the Starter Project for this chapter accelerates the implementation. It includes a few more templates and much more content. As a bonus, feel free to explore the new content and other areas of the implementation, outside of the custom component development.
+
 Check out the base-line code the tutorial builds on:
 
 1. Clone the [github.com/adobe/aem-guides-wknd](https://github.com/adobe/aem-guides-wknd) repository.
 2. Check out the `custom-component/start` branch
 
-```
+```shell
 $ git clone git@github.com:adobe/aem-guides-wknd.git ~/code/aem-guides-wknd
 $ cd ~/code/aem-guides-wknd
 $ git checkout custom-component/start

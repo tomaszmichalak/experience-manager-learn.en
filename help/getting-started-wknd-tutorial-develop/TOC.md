@@ -13,6 +13,5 @@ index: y
 + [Pages and Templates](pages-templates.md)
 + [Client-Side Libraries](client-side-libraries.md)
 + [Style System](style-system.md)
-+ [Fluid Experiences](fluid-experiences.md)
 + [Custom Component](custom-component.md)
 + [Unit Testing](unit-testing.md)
