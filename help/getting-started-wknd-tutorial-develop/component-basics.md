@@ -89,7 +89,7 @@ Open a new command line terminal and perform the following actions.
 
 ## Component Authoring {#component-authoring}
 
-Components can be though of as small modular building blocks of a web page. In order to re-use components, the components must be configurable. This is accomplished via the author dialog. Next we will author a simple component and inspect how values from the dialog are persisted in AEM.
+Components can be thought of as small modular building blocks of a web page. In order to re-use components, the components must be configurable. This is accomplished via the author dialog. Next we will author a simple component and inspect how values from the dialog are persisted in AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30176/?quality=12)
 

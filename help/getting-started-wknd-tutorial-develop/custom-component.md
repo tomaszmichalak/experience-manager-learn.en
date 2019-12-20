@@ -31,11 +31,18 @@ Check out the base-line code the tutorial builds on:
 1. Clone the [github.com/adobe/aem-guides-wknd](https://github.com/adobe/aem-guides-wknd) repository.
 2. Check out the `custom-component/start` branch
 
-```shell
-$ git clone git@github.com:adobe/aem-guides-wknd.git ~/code/aem-guides-wknd
-$ cd ~/code/aem-guides-wknd
-$ git checkout custom-component/start
-```
+    ```shell
+    $ git clone git@github.com:adobe/aem-guides-wknd.git ~/code/aem-guides-wknd
+    $ cd ~/code/aem-guides-wknd
+    $ git checkout custom-component/start
+    ```
+
+3. Deploy code base to a local AEM instance using your Maven skills:
+
+   ```shell
+   $ cd ~/code/aem-guides-wknd
+   $ mvn clean install -PautoInstallSinglePackage
+   ```
 
 You can always view the finished code on [GitHub](https://github.com/adobe/aem-guides-wknd/tree/custom-component/solution) or check the code out locally by switching to the branch `custom-component/solution`.
 
@@ -1004,14 +1011,19 @@ Add default styles for the Byline component. In the **ui.frontend** project unde
     }
     ```
 
-8. Build and deploy the `ui.apps` project, which will transitively build and include the `ui.frontend` project, to a local AEM instance using Maven:
+8. Build and compile the `ui.frontend` module using NPM:
 
+     ```shell
+    $ cd ~/code/aem-guides-wknd/ui.frontend
+    $ npm run dev
+    ```
+
+9. Build and deploy the `ui.apps` project, which will transitively include the `ui.frontend` project, to a local AEM instance using Maven:
 
     ```shell
     $ cd ~/code/aem-guides-wknd/ui.apps
     $ mvn clean install -PautoInstallPackage
     ```
-
 
     >[!TIP]
     >

@@ -55,9 +55,9 @@ In this part of the tutorial, you will build a new Article Page Template that ca
 
    ![Article Page Design and un-styled version](assets/pages-templates/what-you-will-build.png)
 
-## UI Planning with AdobeXD {#adobexd}
+## UI Planning with Adobe XD {#adobexd}
 
-In most cases, planning for a new website starts with mockups and static designs. [AdobeXD]((https://www.adobe.com/products/xd.html) is a design tool building user experiences. Next we will inspect a UI Kit and mockups to help plan the structure of the Article Page Template.
+In most cases, planning for a new website starts with mockups and static designs. [Adobe XD](https://www.adobe.com/products/xd.html) is a design tool building user experiences. Next we will inspect a UI Kit and mockups to help plan the structure of the Article Page Template.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30214/?quality=12)
 
@@ -70,6 +70,10 @@ A common practice when creating global content, such as a header or footer, is t
 Next  we will update the Experience Fragment intended to be used as the Header and Footer to add the WKND logo.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30215/?quality=12)
+
+>[!NOTE]
+>
+> Does your Experience Fragments look different then in the video? Try deleting them and re-installing the starter project code base.
 
 Below are the high level steps performed in the above video.
 
@@ -153,6 +157,8 @@ Now that we have a template, let's create a new page using that template.
 1. Download the following zip package, [WKND-PagesTemplates-DAM-Assets.zip](assets/pages-templates/WKND-PagesTemplates-DAM-Assets.zip) and install it via [CRX Package Manager](http://localhost:4502/crx/packmgr/index.jsp).
 
    The above package will install several images and assets beneath `/content/dam/wknd/en/magazine/la-skateparks` to be used to populate an article page in later steps.
+
+   *Images and assets in the above package are license free courtesy of [Unsplash.com](https://unsplash.com/).*
 
    ![Sample DAM Assets](assets/pages-templates/sample-assets-la-skatepark.png)
 
@@ -282,7 +288,7 @@ The next few steps will take place using the Eclipse IDE, but could be doing usi
 
    >[!WARNING]
    >
-   > In order to ensure consistent deployments for the WKND Reference site, other tutorial branches of the project are setup such that `ui.content` will overwrite any changes in the JCR. This is by design, since code/styles will be written for specific policies.
+   > In order to ensure consistent deployments for the WKND Reference site some branches of the project are setup such that `ui.content` will overwrite any changes in the JCR. This is by design, i.e for Solution Branches, since code/styles will be written for specific policies.
 
 ## Congratulations! {#congratulations}
 
