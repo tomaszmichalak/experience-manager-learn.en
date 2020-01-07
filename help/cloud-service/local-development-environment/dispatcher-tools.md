@@ -150,5 +150,4 @@ _Note that Dispatcher Tools version itself will not match the Experience Manager
 + [Download AEM SDK](http://downloads.experiencecloud.adobe.com/)
 + [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)
 + [Download Docker](https://www.docker.com/)
-+ [Experience Manager as a Cloud Service Dispatcher Documentation](dispatcher-cloud.md)
 + [Experience Manager Dispatcher Documentation](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)

@@ -21,7 +21,7 @@ Experience Manager is a Java application, and thus requires the Java SDK to supp
 1. [Download and install the latest release Java 11 SDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)
 1. Verify Java 11 SDK is installed by running the command: `java --version`
 
-![Java](./assets/aem-project/java.png)
+![Java](./assets/aem-runtime/java.png)
 
 ## Download the AEM as a Cloud Service SDK
 
@@ -134,5 +134,4 @@ The version of AEM as a Cloud Service can be found via Cloud Manager.
 + [Download AEM SDK](http://downloads.experiencecloud.adobe.com/)
 + [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)
 + [Download Docker](https://www.docker.com/)
-+ [Experience Manager as a Cloud Service Dispatcher Documentation](dispatcher-cloud.md)
 + [Experience Manager Dispatcher Documentation](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
