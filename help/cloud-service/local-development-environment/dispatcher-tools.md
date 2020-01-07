@@ -11,7 +11,7 @@ audience: developer
 kt: 4043
 ---
 
-# Local Dispatcher Tools
+# Set up Local Dispatcher Tools
 
 Adobe Experience Manager (AEM)'s Dispatcher is a Apache HTTP Web server module that provides a security and performance layer between the CDN and AEM Publish tier. Dispatcher is an integral part of the overall Experience Manager architecture and should be part of local development set up.
 
@@ -137,7 +137,7 @@ $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run.sh out host.dock
 
 Dispatcher Tools versions increment less frequently than the Experience Manager, and thus Dispatcher Tools require fewer updates in the local development environment.
 
-The recommended Dispatcher Tools version is that which is bundled with the AEM as a Cloud Service SDK that matches the Experience Manager as a Cloud Service version, which can be found at:
+The recommended Dispatcher Tools version is that which is bundled with the AEM as a Cloud Service SDK that matches the Experience Manager as a Cloud Service version. The version of AEM as a Cloud Service can be found via [Cloud Manager](https://my.cloudmanager.adobe.com/).
 
 + __Cloud Manager > Environments__, per environment specified by the __AEM Release__ label
 

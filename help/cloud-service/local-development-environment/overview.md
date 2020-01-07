@@ -36,6 +36,6 @@ The AEM as a Cloud Service SDK provides a QuickStart Jar that runs a local versi
 
 ## Local Dispatcher Runtime
 
-The Dispatcher Tools provides everything required to set up the local Dispatcher runtime. Dispatcher Tools are Docker-based and provides command line tools to transpile Apache HTTP Web Server and Dispatcher configuration files into a compatible formats and deploy them to Dispatcher running in the Docker container.
+AEM as a Cloud Service SDK's Dispatcher Tools provides everything required to set up the local Dispatcher runtime. Dispatcher Tools are Docker-based and provides command line tools to transpile Apache HTTP Web Server and Dispatcher configuration files into a compatible formats and deploy them to Dispatcher running in the Docker container.
 
 + [Set up the Local Dispatcher Runtime](./dispatcher-tools.md)

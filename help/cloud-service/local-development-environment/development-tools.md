@@ -10,7 +10,7 @@ audience: developer
 kt: 3290
 ---
  
-# Development Tools for AEM Projects
+# Set up Development Tools for AEM Projects
 
 Adobe Experience Manager (AEM) development requires a minimal set of development tooling to be installed and set up on the developer machine. These tools support the development and building of AEM Projects.
 
@@ -145,9 +145,3 @@ __[Eclipse IDE](https://www.eclipse.org/ide/)__ is a popular IDEs for Java devel
 
 + [Download Eclipse](https://www.eclipse.org/ide/)
 + [Download Eclipse Dev Tools](https://eclipse.adobe.com/aem/dev-tools/)
-
-## MOVE THIS TO SOMEPLACE ELSE -- Use the Java API Jar
-
-AEM as a Cloud Service SDK includes a Java API Jar that provides the public Java APIs available for use in a custom AEM application. This Java API Jar should be included in the AEM Project's reactor pom.xml, using the AEM as a Cloud Service's SDK version (not this version matches the QuickStart Jar version, which should match the Production Experience Manager version).
-
-Whenever the QuickStart Jar is updated, the AEM Project's Java API Jar version should be updated in tandem.
