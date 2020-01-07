@@ -10,7 +10,9 @@ audience: developer
 kt: 3290
 ---
  
-# Set up Development Tooling
+# Development Tools for AEM Projects
+
+Adobe Experience Manager (AEM) development requires a minimal set of development tooling to be installed and set up on the developer machine. These tools support the development and building of AEM Projects.
 
 ## Install Java
 
@@ -19,7 +21,7 @@ Experience Manager is a Java application, and thus requires the Java SDK to supp
 1. [Download and install the latest release Java 11 SDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)
 1. Verify Java 11 SDK is installed by running the command: `java --version`
 
-![Java](./assets/aem-project/java.png)
+![Java](./assets/development-tools/java.png)
 
 ## Install Homebrew
 
@@ -37,7 +39,7 @@ Homebrew is a open-source package manager for macOS, Windows and Linux. All the 
     + [Install Homebrew on Windows 10](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
 1. Verify Homebrew is installed by running the command: `brew --version`
 
-![Homebrew](./assets/aem-project/homebrew.png)
+![Homebrew](./assets/development-tools/homebrew.png)
 
 If you are using Homebrew, follow the __Install using Homebrew__ instructions in the sections below. If you are __not__ using Homebrew, install the tools using the OS-specific links.
 
@@ -54,7 +56,7 @@ If you are using Homebrew, follow the __Install using Homebrew__ instructions in
     1. Open your Terminal
     1. Verify Git is installed, using the command: `git --version`
 
-![Git](./assets/aem-project/git.png)
+![Git](./assets/development-tools/git.png)
 
 ## Install Node.js (and npm)
 
@@ -71,7 +73,7 @@ If you are using Homebrew, follow the __Install using Homebrew__ instructions in
     1. Verify Node.js is installed, using the command: `node -v`
     1. Verify npm is installed, using the command: `npm -v`
 
-![Node.js and npm](./assets/aem-project/nodejs-and-npm.png)
+![Node.js and npm](./assets/development-tools/nodejs-and-npm.png)
 
 >[!TIP]
 > [AEM Project Archetype](https://github.com/adobe/aem-project-archetype)-based AEM Projects install an isolated version of Node.js at build time. It is good to keep the local development system's version in sync (or close to) the Node.js and npm versions specified in your AEM Maven project's Reactor pom.xml.
@@ -91,7 +93,7 @@ Apache Maven is the open-source Java command-line tool used to build AEM Project
     1. Open your Terminal
     1. Verify Maven is installed, using the command: `mvn -v`
 
-![Maven](./assets/aem-project/maven.png)
+![Maven](./assets/development-tools/maven.png)
 
 ## Register the Adobe Public Repository with Maven
 

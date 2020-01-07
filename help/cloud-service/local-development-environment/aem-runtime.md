@@ -10,7 +10,7 @@ audience: developer
 kt: 3290
 ---
 
-# Set up the Local AEM Runtime
+# Local AEM Runtime
 
 Adobe Experience Manager (AEM) can be run locally using the AEM as a Cloud Service SDK's QuickStart Jar. This allows developers to deploy to, and test custom code, configuration and content prior to committing it to source control, and deploying it to a AEM as a Cloud Service environment.
 
