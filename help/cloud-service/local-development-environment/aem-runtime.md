@@ -65,7 +65,7 @@ $ java -jar aem-author-p4502.jar -Dadmin.password=admin
 
 ## Set up local AEM Publish Service
 
-The local AEM Publish Service provides developers with the local experience end-users of the AEM will have, such as browsing the Web site hosed on AEM. A local AEM Publish Service is important as it integrates with AEM SDK's [Dispatcher tools](./dispatcher-tools.html) and allows developers to smoke-test and fine-tune the final end-user facing experience.
+The local AEM Publish Service provides developers with the local experience end-users of the AEM will have, such as browsing the Web site hosed on AEM. A local AEM Publish Service is important as it integrates with AEM SDK's [Dispatcher tools](./dispatcher-tools.md) and allows developers to smoke-test and fine-tune the final end-user facing experience.
 
 1. Create the folder `~/aem-sdk/publish`
 1. Copy the __QuickStart JAR__ file to  `~/aem-sdk/publish` and rename it to `aem-publish-p4503.jar`
