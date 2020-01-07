@@ -17,16 +17,16 @@ Adobe Experience Manager (AEM)'s Dispatcher is a Apache HTTP Web server module t
 
 The AEM as a Cloud Service SDK includes the recommended Dispatcher Tools version, that facilitates configuring, validating and simulating Dispatcher locally. Dispatcher Tools is comprised of:
 
-+ a baseline set of Apache HTTP Web server and Dispatcher configuration files, located in `.../DispatcherSDKvx.x.x/src`
-+ a configuration validator CLI tool, located at `.../DispatcherSDKvx.x.x/bin/validator`
-+ a configuration deployment CLI tool, located at `.../DispatcherSDKvx.x.x/bin/docker_run`
++ a baseline set of Apache HTTP Web server and Dispatcher configuration files, located in `.../dispatcher-sdk-x.x.x/src`
++ a configuration validator CLI tool, located at `.../dispatcher-sdk-x.x.x/bin/validator`
++ a configuration deployment CLI tool, located at `.../dispatcher-sdk-x.x.x/bin/docker_run`
 + a Docker image that runs Apache HTTP Web server with the Dispatcher module
 
 ## Prerequisites
 
 1. Install Experience Manager Publish QuickStart on the local develop machine.
    + Optionally, install the AEM reference web site on AEM Publish. This web site is used in this tutorial to visualize a working Dispatcher.
-1. Install and start [Docker](https://www.docker.com/) v18.03+ on the local development machine.
+1. Install and start the latest version of [Docker](https://www.docker.com/) (v18.03+) on the local development machine.
 
 ## Download the Dispatcher Tools (as part of the AEM SDK)
 
@@ -49,9 +49,9 @@ Note that the version of Dispatcher Tools is different from that of the AEM SDK.
 
 1. Unzip the downloaded `aem-sdk-XXX.zip` file
 1. Unpack the Dispatcher Tools into `~/aem-sdk/dispatcher`
-   + Windows: Unzip `DispatcherSDKvx.x.x.zip`
-   + macOS / Linux: Execute the accompanying shell script `DispatcherSDKvx.x.x.sh` to unpack the Dispatcher Tools
-     + `$ chmod a+x DispatcherSDKvx.x.x.sh && ./DispatcherSDKvx.x.x.sh`
+   + Windows: Unzip `aem-sdk-dispatcher-tools-x.x.x-windows.zip`
+   + macOS / Linux: Execute the accompanying shell script `aem-sdk-dispatcher-tools-x.x.x-unix.sh` to unpack the Dispatcher Tools
+     + `$ chmod a+x aem-sdk-dispatcher-tools-x.x.x-unix.sh && ./aem-sdk-dispatcher-tools-x.x.x-unix.sh`
 
 >[!VIDEO](https://video.tv.adobe.com/v/29937/?quality=12)
 
@@ -66,7 +66,7 @@ These files are intended to be copied into an Experience Manager Maven project t
 
 >[!VIDEO](https://video.tv.adobe.com/v/29959/?quality=12)
 
-A complete description of the configuration files is available in the unpacked Dispatcher Tools as `DispatcherSDKvx.x.x/docs/Config.html`.
+A complete description of the configuration files is available in the unpacked Dispatcher Tools as `dispatcher-sdk-x.x.x/docs/Config.html`.
 
 ## Run Dispatcher locally
 
