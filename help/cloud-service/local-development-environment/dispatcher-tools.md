@@ -53,7 +53,7 @@ Note that the version of Dispatcher Tools is different from that of the AEM SDK.
    + macOS / Linux: Execute the accompanying shell script `aem-sdk-dispatcher-tools-x.x.x-unix.sh` to unpack the Dispatcher Tools
      + `$ chmod a+x aem-sdk-dispatcher-tools-x.x.x-unix.sh && ./aem-sdk-dispatcher-tools-x.x.x-unix.sh`
 
->[!VIDEO](https://video.tv.adobe.com/v/29937/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/30601/?quality=12)
 
 ## Understand the Dispatcher configuration files
 
@@ -64,7 +64,7 @@ These files are intended to be copied into an Experience Manager Maven project t
 >[!TIP]
 > Experience Manager projects created from the [AEM Project Maven Archetype](https://github.com/adobe/aem-project-archetype) are pre-populated this set of Dispatcher configuration files, thus there is no need to copy over from the Dispatcher Tools src folder.
 
->[!VIDEO](https://video.tv.adobe.com/v/29959/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/30602/?quality=12)
 
 A complete description of the configuration files is available in the unpacked Dispatcher Tools as `dispatcher-sdk-x.x.x/docs/Config.html`.
 
@@ -105,7 +105,7 @@ $ rm -rf ./out && ./bin/validator full -d ./out ~/code/my-project/dispatcher/src
 $ ./bin/docker_run.sh ./out host.docker.internal:4503 8080
 ```
 
->[!VIDEO](https://video.tv.adobe.com/v/29960/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/30603/?quality=12)
 
 ## Dispatcher Tools logs
 
@@ -131,7 +131,7 @@ $ ./bin/validator full -d out ~/code/my-project/dispatcher/src
 $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run.sh out host.docker.internal:4503 8080
 ```
 
->[!VIDEO](https://video.tv.adobe.com/v/29961/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/30604/?quality=12)
 
 ## When to update Dispatcher Tools{#dispatcher-tools-version}
 
