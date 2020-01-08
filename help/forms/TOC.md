@@ -80,6 +80,11 @@ index: y
    + [Client Library](storing-retrieving-form-data/part4.md)
    + [Adaptive Form Template](storing-retrieving-form-data/part5.md)
    + [Deploy sample assets](storing-retrieving-form-data/part6.md)
++ Acroforms and Adaptive Forms{#acroform-aem-forms-sign}
+   + [Introduction](acroform-aem-forms-sign/introduction.md)
+   + [Creating Acroform](acroform-aem-forms-sign/part1.md)
+   + [Create XSD from Acroform](acroform-aem-forms-sign/part2.md)
+   + [Test on your system](acroform-aem-forms-sign/part3.md)
 + Triggering AEM Workflow from Mobile Form submission{#offline-mobile-form-submission}
   + [Introduction](offline-mobile-form-submission/introduction.md)
   + [Custom Profile](offline-mobile-form-submission/part-one.md)
@@ -114,6 +119,7 @@ index: y
   + [Using Barcode Service in AEM Forms](document-services/barcode-service-adaptive-forms-article.md)
   + [Using PDFG Service in AEM Forms](document-services/using-pdfg-in-aem-forms.md)
   + [Using Output and Forms Service in AEM Forms](document-services/output-and-forms-services-article-develop.md)
+  + [Generating multiple pdf's from one data file](document-services/generate-multi-record-pdf.md)
   + [Generate PDF on Mobile Form Submission](document-services/generate-pdf-from-mobile-form-submission-article.md)
   + [Generate Interactive PDF from Mobile Form](document-services/render-interactive-form-using-api.md)
   + [Apply Usage Rights to PDF on XDP Rendition](document-services/rendering-and-reader-extending-xdp-templates-article.md)
