@@ -53,6 +53,7 @@ The local AEM Author Service provides developers with a local experience digital
 1. Start the local AEM Author Service by either
    + Double-clicking the __aem-author-p4502.jar__ file
    + Or executing the `java -jar aem-author-p4502.jar` command (requires entering admin credentials, which by default are: admin/admin)
+     + Provide the admin password as `admin`. Any admin password is acceptable, however its recommend to use the default for local development to reduce the need to re-configure.
 1. Access the local AEM Author Service at [http://localhost:4502](http://localhost:4502) in a Web browser
 
 ```
@@ -60,7 +61,7 @@ $ mkdir -p ~/aem-sdk/author
 $ cp aem-sdk-quickstart-XXX.jar ~/aem-sdk/author/aem-author-p4502.jar
 $ cp ../license.properties ~/aem-sdk/author
 $ cd ~/aem-sdk/author
-$ java -jar aem-author-p4502.jar -Dadmin.password=admin
+$ java -jar aem-author-p4502.jar
 ```
 
 ## Set up local AEM Publish Service
@@ -73,6 +74,7 @@ The local AEM Publish Service provides developers with the local experience end-
 1. Start the local AEM Publish Service by either
    + Double-clicking the __aem-publish-p4503.jar__ file
    + Or executing the `java -jar aem-publish-p4503.jar` command
+      + Provide the admin password as `admin`. Any admin password is acceptable, however its recommend to use the default for local development to reduce the need to re-configure.
 1. Access the local AEM Publish Service at [http://localhost:4503](http://localhost:4503) in a Web browser
 
 ```
@@ -80,7 +82,7 @@ $ mkdir -p ~/aem-sdk/publish
 $ cp aem-sdk-quickstart-XXX.jar ~/aem-sdk/author/aem-publish-p4503.jar
 $ cp ../license.properties ~/aem-sdk/publish
 $ cd ~/aem-sdk/publish
-$ java -jar aem-publish-p4503.jar -Dadmin.password
+$ java -jar aem-publish-p4503.jar
 ```
 
 ## QuickStart Jar start-up modes
