@@ -34,14 +34,12 @@ The AEM as a Cloud Service SDK, or AEM SDK, contains the Dispatcher Tools used t
 
 If the AEM as a Cloud Service SDK has already been downloaded to [setup the local AEM runtime](./aem-runtime.md), it does not need to be re-downloaded.
 
-1. Log in to [downloads.experiencecloud.adobe.com](http://downloads.experiencecloud.adobe.com/) with your Adobe ID.
-1. Select the __General__ tab at the top
-1. Select __Tooling__ from the __Type__ filter
+1. Log in to [downloads.experiencecloud.adobe.com](http://downloads.experiencecloud.adobe.com/) with your Adobe ID
+      + Note that your Adobe Organization __must__ be provisioned for AEM as a Cloud Service to download the AEM as a Cloud Service SDK.
+1. Search for `aem-sdk`
 1. Sort by __Published Date__ in __Descending__ order
-1. Click on the latest __AEM SDK__ download row
+1. Click on the latest __AEM SDK__ result row
 1. Review and accept the EULA, and tap the __Download__ button
-
-![AEM as a Cloud Service SDK Download](./assets/dispatcher-tools/aem-sdk-download.png)
 
 ## Extract the Dispatcher Tools from the AEM SDK zip
 

@@ -27,14 +27,12 @@ Experience Manager is a Java application, and thus requires the Java SDK to supp
 
 The AEM as a Cloud Service SDK, or AEM SDK, contains the Quickstart Jar used to run AEM Author and Publish locally for development, as well as the compatible version of the Dispatcher Tools.
 
-1. Log in to [downloads.experiencecloud.adobe.com](http://downloads.experiencecloud.adobe.com/) with your Adobe ID.
-1. Select the __General__ tab at the top
-1. Select __Tooling__ from the __Type__ filter
+1. Log in to [downloads.experiencecloud.adobe.com](http://downloads.experiencecloud.adobe.com/) with your Adobe ID
+      + Note that your Adobe Organization __must__ be provisioned for AEM as a Cloud Service to download the AEM as a Cloud Service SDK.
+1. Search for `aem-sdk`
 1. Sort by __Published Date__ in __Descending__ order
-1. Click on the latest __AEM SDK__ download row
+1. Click on the latest __AEM SDK__ result row
 1. Review and accept the EULA, and tap the __Download__ button
-
-![AEM as a Cloud Service SDK Download](./assets/aem-runtime/aem-sdk-download.png)
 
 ## Extract the QuickStart Jar from the AEM SDK zip
 
