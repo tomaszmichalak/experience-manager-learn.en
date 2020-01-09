@@ -13,7 +13,7 @@ version: 6.3,6.4,6.5
 ---
 Adobe Experience Manager (AEM) forms can help you transform complex transactions into simple, delightful digital experiences. The following document describes some additional best practices that need to be followed when developing Adaptive Forms. This document is meant to be used in conjunction with [this document](https://helpx.adobe.com/experience-manager/6-3/forms/using/adaptive-forms-best-practices.html#Overview)
 
-## Naming Conventions
+# Naming Conventions
 
 **Panels**:
 
