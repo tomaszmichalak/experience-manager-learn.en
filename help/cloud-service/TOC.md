@@ -5,11 +5,11 @@ sub-product: cloud-service
 team: TM
 ---
 
-# AEM as a Cloud Service Tutorials {#aem-as-a-cloud-service}
+# AEM as a Cloud Service Tutorials {#cloud-service}
 
-+ [AEM as a Cloud Service Tutorials](overview.md)
-+ Local Development Environment Set up {#local-development-set-up}
-  + [Introduction](./local-development-environment/introduction.md)
-  + [AEM Project](./local-development-environment/aem-project.md)
++ [Overview](./overview.md)
++ Local Development Environment Set up {#local-development-environment-set-up}
+  + [Overview](./local-development-environment/overview.md)
+  + [Development Tools for AEM Projects](./local-development-environment/development-tools.md)
   + [Local AEM Runtime](./local-development-environment/aem-runtime.md)
-  + [Local Dispatcher SDK](./local-development-environment/dispatcher-sdk.md)
+  + [Local Dispatcher Tools](./local-development-environment/dispatcher-tools.md)
