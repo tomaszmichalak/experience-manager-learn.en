@@ -26,16 +26,36 @@ The local development environment for AEM can be broken up into three logical gr
 
 The AEM project is the custom code base containing the code, configuration and content that is deployed via Cloud Manager to AEM as a Cloud Service. The baseline project structure is generated via the [AEM Project Maven Archetype](https://github.com/adobe/aem-project-archetype).
 
-+ [Set up Development Tools for AEM Projects](./development-tools.md)
+This section of the tutorial shows how to:
+
++ Install Java
++ Install Node.js (and npm)
++ Install Maven
++ Install Git
+
+[Set up Development Tools for AEM Projects](./development-tools.md)
 
 ## Local AEM Runtime
 
 The AEM as a Cloud Service SDK provides a QuickStart Jar that runs a local version of AEM. The Quickstart Jar can be used to run either the AEM Author Service or AEM Publish Service locally. Note that while the Quickstart Jar provides a local development experience, not all features available in AEM as a Cloud Service are included in the Quickstart Jar.
 
-+ [Set up the Local AEM runtime](./aem-runtime.md)
+This section of the tutorial shows how to:
+
++ Install Java
++ Download the AEM SDK
++ Run the AEM Author Service
++ Run the AEM Publish Service
+
+[Set up the Local AEM runtime](./aem-runtime.md)
 
 ## Local Dispatcher Runtime
 
 AEM as a Cloud Service SDK's Dispatcher Tools provides everything required to set up the local Dispatcher runtime. Dispatcher Tools are Docker-based and provides command line tools to transpile Apache HTTP Web Server and Dispatcher configuration files into a compatible formats and deploy them to Dispatcher running in the Docker container.
 
-+ [Set up the Local Dispatcher Runtime](./dispatcher-tools.md)
+This section of the tutorial shows how to:
+
++ Download the AEM SDK
++ Install Dispatcher Tools
++ Run the local Dispatcher runtime
+
+[Set up the Local Dispatcher Runtime](./dispatcher-tools.md)
