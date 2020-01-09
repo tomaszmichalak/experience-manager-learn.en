@@ -22,6 +22,18 @@ The local development environment for AEM can be broken up into three logical gr
 + The __Local AEM Runtime__ which runs a local version of AEM Author and Publish services locally.
 + The __Local Dispatcher Runtime__ which runs a local version of Apache HTTP Web Server and Dispatcher.
 
+This tutorial walks through how to install and set up the highlighted items in the above diagram, providing a stable local development environment for AEM development.
+
+## File System Organization
+
+This tutorial established the location of the AEM as a Cloud Service SDK artifacts and AEM Project code as follows:
+
++ `~/aem-sdk` is a organizational folder containing the various tools provided by the AEM as a Cloud Service SDK
++ `~/aem-sdk/author` contains the AEM Author Service
++ `~/aem-sdk/publish` contains the AEM Publish Service
++ `~/aem-sdk/dispatcher` contains the Dispatcher Tools
++ `~/code/<project name>` contains the custom AEM Project source code
+
 ## Development Tools for AEM Projects
 
 The AEM project is the custom code base containing the code, configuration and content that is deployed via Cloud Manager to AEM as a Cloud Service. The baseline project structure is generated via the [AEM Project Maven Archetype](https://github.com/adobe/aem-project-archetype).
