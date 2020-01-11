@@ -18,10 +18,6 @@ Adobe Experience Manager (AEM) is now available as a Cloud Service. AEM as a Clo
     <br>
     *An end-to-end tutorial on how to develop a Web site in AEM as a Cloud Service*
 
-* **[Get started developing for AEM Sites (Tutorial)](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
-    <br>
-    *An end-to-end tutorial on how to develop a Web site in AEM as a Cloud Service*
-
 * **[Integrating with Git (Video)](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html)**
     <br>
     *Learn how to work with Git to easily deploy your project to AEM as a Cloud Service using Adobe Cloud Manager*
