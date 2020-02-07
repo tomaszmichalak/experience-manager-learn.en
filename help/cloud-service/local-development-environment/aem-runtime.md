@@ -1,5 +1,5 @@
 ---
-title: Set up Local AEM Runtime
+title: Set up Local AEM Runtime for AEM as a Cloud Service Development
 description: Set up the Local AEM Runtime using the AEM as a Cloud Service SDK's QuickStart Jar.
 feature:
 topics: development
@@ -13,6 +13,8 @@ kt: 3290
 # Set up Local AEM Runtime
 
 Adobe Experience Manager (AEM) can be run locally using the AEM as a Cloud Service SDK's QuickStart Jar. This allows developers to deploy to, and test custom code, configuration and content prior to committing it to source control, and deploying it to a AEM as a Cloud Service environment.
+
+ Note that `~` is used as shorthand for the User's Directory. In Windows, this is the equivalent of `%HOMEPATH%`.
 
 ## Install Java
 
@@ -29,7 +31,7 @@ The AEM as a Cloud Service SDK, or AEM SDK, contains the Quickstart Jar used to 
 
 1. Log in to [downloads.experiencecloud.adobe.com](http://downloads.experiencecloud.adobe.com/) with your Adobe ID
       + Note that your Adobe Organization __must__ be provisioned for AEM as a Cloud Service to download the AEM as a Cloud Service SDK.
-1. Search for `aem-sdk`
+1. Navigate to the __AEM as a Cloud Service__ tab
 1. Sort by __Published Date__ in __Descending__ order
 1. Click on the latest __AEM SDK__ result row
 1. Review and accept the EULA, and tap the __Download__ button

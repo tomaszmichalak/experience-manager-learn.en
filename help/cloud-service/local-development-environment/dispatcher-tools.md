@@ -1,5 +1,5 @@
 ---
-title: Set up Dispatcher Tools
+title: Set up Dispatcher Tools for AEM as a Cloud Service Development
 description:  AEM SDK's Dispatcher Tools facilitates the local development of Adobe Experience Manager (AEM) projects by making it easy to install, run and troubleshoot Dispatcher locally.
 sub-product: foundation
 feature: dispatcher
@@ -22,10 +22,16 @@ The AEM as a Cloud Service SDK includes the recommended Dispatcher Tools version
 + a configuration deployment CLI tool, located at `.../dispatcher-sdk-x.x.x/bin/docker_run`
 + a Docker image that runs Apache HTTP Web server with the Dispatcher module
 
+Note that `~` is used as shorthand for the User's Directory. In Windows, this is the equivalent of `%HOMEPATH%`.
+
+>[!NOTE]
+>
+> The videos in this page were recorded on macOS. Windows users can follow along, but use the Windows commands, provided above each video.
+
 ## Prerequisites
 
-1. Install Experience Manager Publish QuickStart on the local develop machine.
-   + Optionally, install the AEM reference web site on AEM Publish. This web site is used in this tutorial to visualize a working Dispatcher.
+1. Install [Experience Manager Publish QuickStart](./aem-runtime.md) on the local develop machine.
+   + Optionally, install the  latest [AEM reference web site](https://github.com/adobe/aem-guides-wknd/releases) on the local AEM Publish service. This web site is used in this tutorial to visualize a working Dispatcher.
 1. Install and start the latest version of [Docker](https://www.docker.com/) (v18.03+) on the local development machine.
 
 ## Download the Dispatcher Tools (as part of the AEM SDK)
@@ -36,7 +42,7 @@ If the AEM as a Cloud Service SDK has already been downloaded to [setup the loca
 
 1. Log in to [downloads.experiencecloud.adobe.com](http://downloads.experiencecloud.adobe.com/) with your Adobe ID
       + Note that your Adobe Organization __must__ be provisioned for AEM as a Cloud Service to download the AEM as a Cloud Service SDK.
-1. Search for `aem-sdk`
+1. Navigate to the __AEM as a Cloud Service__ tab
 1. Sort by __Published Date__ in __Descending__ order
 1. Click on the latest __AEM SDK__ result row
 1. Review and accept the EULA, and tap the __Download__ button
@@ -47,9 +53,11 @@ Note that the version of Dispatcher Tools is different from that of the AEM SDK.
 
 1. Unzip the downloaded `aem-sdk-XXX.zip` file
 1. Unpack the Dispatcher Tools into `~/aem-sdk/dispatcher`
-   + Windows: Unzip `aem-sdk-dispatcher-tools-x.x.x-windows.zip`
+   + Windows: Unzip `aem-sdk-dispatcher-tools-x.x.x-windows.zip` into `C:\Users\<My User>\aem-sdk\dispatcher` (creating missing folders as needed)
    + macOS / Linux: Execute the accompanying shell script `aem-sdk-dispatcher-tools-x.x.x-unix.sh` to unpack the Dispatcher Tools
-     + `$ chmod a+x aem-sdk-dispatcher-tools-x.x.x-unix.sh && ./aem-sdk-dispatcher-tools-x.x.x-unix.sh`
+     + `chmod a+x aem-sdk-dispatcher-tools-x.x.x-unix.sh && ./aem-sdk-dispatcher-tools-x.x.x-unix.sh`
+
+Note that all commands issued below assume the current working directory is `~/aem-sdk/dispatcher`.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30601/?quality=12)
 
@@ -70,7 +78,9 @@ A complete description of the configuration files is available in the unpacked D
 
 To run the Dispatcher locally, the Dispatcher configuration files to be used to configure it, must be validated using the Dispatcher Tools's `validator` CLI tool.
 
-+ Usage: `$ ./bin/validator full -d ./out ./src`
++ Usage:
+  + Windows: `bin\validator full -d out src`
+  + macOS / Linux: `./bin/validator full -d ./out ./src`
 
 The validation is dual purpose:
 
@@ -79,7 +89,9 @@ The validation is dual purpose:
 
 Once validated, the transpiled configurations are used run Dispatcher locally in the Docker container. It is important to ensure the latest configurations have been validated __and__ output using the validator's `-d` option.
 
-+ Usage: `./bin/docker_run.sh deployment-folder aem-publish-host:aem-publish-port dispatcher-port`
++ Usage:
+  + Windows: `bin\docker_run deployment-folder aem-publish-host:aem-publish-port dispatcher-port`
+  + macOS / Linux: `./bin/docker_run.sh deployment-folder aem-publish-host:aem-publish-port dispatcher-port`
 
 The `aem-publish-host` can be set to `host.docker.internal`, a special DNS name Docker 18.03+ provides in the container that resolves to the host machine's IP.
 
@@ -87,29 +99,36 @@ For example to start the Dispatcher Docker container using the default configura
 
 1. Generate the `deployment-folder`, named `out` by convention, from scratch every time a configuration changes:
 
-   + `$ rm -rf ./out && ./bin/validator full -d ./out ./src`
+   + Windows: `rm -rf out && bin\validator full -d out src`
+   + macOS / Linux: `rm -rf ./out && ./bin/validator full -d ./out ./src`
 
 2. (Re-)start Dispatcher Docker container providing the path to the deployment folder:
 
-   + `$ ./bin/docker_run.sh ./out host.docker.internal:4503 8080`
+   + Windows: `bin\docker_run out host.docker.internal:4503 8080`
+   + macOS / Linux: `./bin/docker_run.sh ./out host.docker.internal:4503 8080`
 
 The AEM as a Cloud Service SDK's Publish Service, running locally on port 4503 will be available through Dispatcher at `http://localhost:8080`.
 
 To run Dispatcher Tools against an Experience Manager project's Dispatcher configuration, simply generate the `deployment-folder` using the project's `dispatcher/src` folder.
 
-```
-$ rm -rf ./out && ./bin/validator full -d ./out ~/code/my-project/dispatcher/src
-
-$ ./bin/docker_run.sh ./out host.docker.internal:4503 8080
-```
++ Windows:
+    ```
+    rm -rf out && bin\validator full -d out <User Directory>/code/my-project/dispatcher/src
+    bin\docker_run out host.docker.internal:4503 8080
+    ```
++ macOS / Linux:
+    ```
+    rm -rf ./out && ./bin/validator full -d ./out ~/code/my-project/dispatcher/src
+    ./bin/docker_run.sh ./out host.docker.internal:4503 8080
+    ```
 
 >[!VIDEO](https://video.tv.adobe.com/v/30603/?quality=12)
 
 ## Dispatcher Tools logs
 
-Dispatcher logs are helpful during local development to understand if and why HTTP Requests are blocked. Log level can be set by prefixing the execution of `./bin/docker_run.sh` with environment parameters.
+Dispatcher logs are helpful during local development to understand if and why HTTP Requests are blocked. Log level can be set by prefixing the execution of `docker_run` with environment parameters.
 
-Dispatcher Tools logs are emitted to the standard out when `./bin/docker_run.sh` is run.
+Dispatcher Tools logs are emitted to the standard out when `docker_run` is run.
 
 Useful parameters for debugging Dispatcher include:
 
@@ -121,13 +140,18 @@ Useful parameters for debugging Dispatcher include:
   + Defaults to `dev`
 + Valid values: `dev`, `stage`, or `prod`
 
-One or many parameters, can be passed to `docker_run.sh`
+One or many parameters, can be passed to `docker_run`
 
-```{shell}
-$ ./bin/validator full -d out ~/code/my-project/dispatcher/src
-
-$ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run.sh out host.docker.internal:4503 8080
-```
++ Windows:
+  ```
+  bin\validator full -d out <User Directory>/code/my-project/dispatcher/src
+  DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug bin\docker_run out host.docker.internal:4503 8080
+  ```
++ macOS / Linux:
+  ```
+  ./bin/validator full -d out ~/code/my-project/dispatcher/src
+  DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run.sh out host.docker.internal:4503 8080
+  ```
 
 >[!VIDEO](https://video.tv.adobe.com/v/30604/?quality=12)
 
@@ -148,4 +172,5 @@ _Note that Dispatcher Tools version itself will not match the Experience Manager
 + [Download AEM SDK](http://downloads.experiencecloud.adobe.com/)
 + [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)
 + [Download Docker](https://www.docker.com/)
++ [Download the AEM Reference Website (WKND)](https://github.com/adobe/aem-guides-wknd/releases)
 + [Experience Manager Dispatcher Documentation](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)

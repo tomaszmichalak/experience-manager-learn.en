@@ -1,5 +1,5 @@
 ---
-title: Local Development Environment
+title: Local Development Environment for AEM as a Cloud Service
 description: Adobe Experience Manager (AEM) local development environment overview.
 feature: 
 topics: development
@@ -33,6 +33,8 @@ This tutorial established the location of the AEM as a Cloud Service SDK artifac
 + `~/aem-sdk/publish` contains the AEM Publish Service
 + `~/aem-sdk/dispatcher` contains the Dispatcher Tools
 + `~/code/<project name>` contains the custom AEM Project source code
+
+Note that `~` is shorthand for the User's Directory. In Windows, this is the equivalent of `%HOMEPATH%`;
 
 ## Development Tools for AEM Projects
 

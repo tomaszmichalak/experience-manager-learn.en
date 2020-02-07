@@ -1,5 +1,5 @@
 ---
-title: Set up the Development Tooling
+title: Set up the Development Tooling for AEM as a Cloud Service Development
 description: Set up a local development machine with all the baseline tooling required to develop against AEM locally.
 feature: 
 topics: development
@@ -13,6 +13,8 @@ kt: 3290
 # Set up Development Tools for AEM Projects
 
 Adobe Experience Manager (AEM) development requires a minimal set of development tooling to be installed and set up on the developer machine. These tools support the development and building of AEM Projects.
+
+Note that `~` is used as shorthand for the User's Directory. In Windows, this is the equivalent of `%HOMEPATH%`.
 
 ## Install Java
 
