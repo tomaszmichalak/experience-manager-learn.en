@@ -112,11 +112,14 @@ The AEM as a Cloud Service SDK's Publish Service, running locally on port 4503 w
 To run Dispatcher Tools against an Experience Manager project's Dispatcher configuration, simply generate the `deployment-folder` using the project's `dispatcher/src` folder.
 
 + Windows:
+
     ```
     rm -rf out && bin\validator full -d out <User Directory>/code/my-project/dispatcher/src
     bin\docker_run out host.docker.internal:4503 8080
     ```
+
 + macOS / Linux:
+
     ```
     rm -rf ./out && ./bin/validator full -d ./out ~/code/my-project/dispatcher/src
     ./bin/docker_run.sh ./out host.docker.internal:4503 8080
@@ -143,11 +146,14 @@ Useful parameters for debugging Dispatcher include:
 One or many parameters, can be passed to `docker_run`
 
 + Windows:
+
   ```
   bin\validator full -d out <User Directory>/code/my-project/dispatcher/src
   DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug bin\docker_run out host.docker.internal:4503 8080
   ```
+
 + macOS / Linux:
+
   ```
   ./bin/validator full -d out ~/code/my-project/dispatcher/src
   DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run.sh out host.docker.internal:4503 8080
