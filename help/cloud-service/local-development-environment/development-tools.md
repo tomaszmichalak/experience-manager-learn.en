@@ -110,7 +110,7 @@ Windows:
 macOS / Linux:  
     + The maven settings.xml file is located at `~/.m2/settings.xml`
 
-If the __settings.xml__ is missing, download the provided [settings.xml](./assets/development-tools/settings.xml) and place it in your user's `.m2` folder.
+If the __settings.xml__ is missing, download the provided [settings.xml](./assets/development-tools/settings.xml.zip) and place it in your user's `.m2` folder (unzip the zip to obtain the .xml).
 
 It is recommended that the profile be active by default, otherwise, this profile must be explicitly activated using the `-P` flag, `mvn -Padobe-public ...`.
 
