@@ -13,10 +13,6 @@ kt: 4043
 
 # Set up Local Dispatcher Tools
 
->[!WARNING]
->
-> Local Dispatcher Tools (v2.0.20) is incompatible with Windows. Please contact [Adobe Support](https://daycare.day.com/home.html) to receive updates on Windows compatibility.
-
 Adobe Experience Manager (AEM)'s Dispatcher is a Apache HTTP Web server module that provides a security and performance layer between the CDN and AEM Publish tier. Dispatcher is an integral part of the overall Experience Manager architecture and should be part of local development set up.
 
 The AEM as a Cloud Service SDK includes the recommended Dispatcher Tools version, that facilitates configuring, validating and simulating Dispatcher locally. Dispatcher Tools is comprised of:
@@ -34,6 +30,11 @@ Note that `~` is used as shorthand for the User's Directory. In Windows, this is
 
 ## Prerequisites
 
+>[!WARNING]
+>
+> Windows users: Local Dispatcher Tools (v2.0.20) is incompatible with Windows. Please contact [Adobe Support](https://daycare.day.com/home.html) to receive updates on Windows compatibility.
+
+1. Windows users must use Windows 10 Professional
 1. Install [Experience Manager Publish QuickStart](./aem-runtime.md) on the local develop machine.
    + Optionally, install the  latest [AEM reference web site](https://github.com/adobe/aem-guides-wknd/releases) on the local AEM Publish service. This web site is used in this tutorial to visualize a working Dispatcher.
 1. Install and start the latest version of [Docker](https://www.docker.com/) (v18.03+) on the local development machine.
