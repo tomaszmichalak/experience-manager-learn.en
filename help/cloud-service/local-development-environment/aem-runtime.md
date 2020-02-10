@@ -61,21 +61,21 @@ The local AEM Author Service provides developers with a local experience digital
 Windows:
 
   ```{shell}
-  mkdir -p c:\Users\<My User>\aem-sdk\author
-  copy aem-sdk-quickstart-XXX.jar c:\Users\<My User>\aem-sdk\author\aem-author-p4502.jar
-  copy ../license.properties c:\Users\<My User>\aem-sdk\author
-  cd c:\Users\<My User>\aem-sdk\author
-  java -jar aem-author-p4502.jar
+  $ mkdir -p c:\Users\<My User>\aem-sdk\author
+  $ copy aem-sdk-quickstart-XXX.jar c:\Users\<My User>\aem-sdk\author\aem-author-p4502.jar
+  $ copy ../license.properties c:\Users\<My User>\aem-sdk\author
+  $ cd c:\Users\<My User>\aem-sdk\author
+  $ java -jar aem-author-p4502.jar
   ```
 
 macOS / Linux:
 
   ```{shell}
-  mkdir -p ~/aem-sdk/author
-  cp aem-sdk-quickstart-XXX.jar ~/aem-sdk/author/aem-author-p4502.jar
-  cp ../license.properties ~/aem-sdk/author
-  cd ~/aem-sdk/author
-  java -jar aem-author-p4502.jar
+  $ mkdir -p ~/aem-sdk/author
+  $ cp aem-sdk-quickstart-XXX.jar ~/aem-sdk/author/aem-author-p4502.jar
+  $ cp ../license.properties ~/aem-sdk/author
+  $ cd ~/aem-sdk/author
+  $ java -jar aem-author-p4502.jar
   ```
 
 ## Set up local AEM Publish Service
@@ -94,21 +94,21 @@ The local AEM Publish Service provides developers with the local experience end-
 Windows:
 
   ```{shell}
-  mkdir -p c:\Users\<My User>\aem-sdk\publish
-  copy aem-sdk-quickstart-XXX.jar c:\Users\<My User>\aem-sdk\publish\aem-publish-p4503.jar
-  copy ../license.properties c:\Users\<My User>\aem-sdk\publish
-  cd c:\Users\<My User>\aem-sdk\publish
-  java -jar aem-publish-p4503.jar
+  $ mkdir -p c:\Users\<My User>\aem-sdk\publish
+  $ copy aem-sdk-quickstart-XXX.jar c:\Users\<My User>\aem-sdk\publish\aem-publish-p4503.jar
+  $ copy ../license.properties c:\Users\<My User>\aem-sdk\publish
+  $ cd c:\Users\<My User>\aem-sdk\publish
+  $ java -jar aem-publish-p4503.jar
   ```
 
 macOS / Linux:
 
   ```{shell}
-  mkdir -p ~/aem-sdk/publish
-  cp aem-sdk-quickstart-XXX.jar ~/aem-sdk/publish/aem-publish-p4503.jar
-  cp ../license.properties ~/aem-sdk/publish
-  cd ~/aem-sdk/publish
-  java -jar aem-publish-p4503.jar
+  $ mkdir -p ~/aem-sdk/publish
+  $ cp aem-sdk-quickstart-XXX.jar ~/aem-sdk/publish/aem-publish-p4503.jar
+  $ cp ../license.properties ~/aem-sdk/publish
+  $ cd ~/aem-sdk/publish
+  $ java -jar aem-publish-p4503.jar
   ```
 
 ## QuickStart Jar start-up modes
