@@ -125,15 +125,15 @@ To run Dispatcher Tools against an Experience Manager project's Dispatcher confi
 + Windows:
 
     ```{shell}
-    del -/Q out && bin\validator full -d out <User Directory>/code/my-project/dispatcher/src
-    bin\docker_run out host.docker.internal:4503 8080
+    $ del -/Q out && bin\validator full -d out <User Directory>/code/my-project/dispatcher/src
+    $ bin\docker_run out host.docker.internal:4503 8080
     ```
 
 + macOS / Linux:
 
     ```{shell}
-    rm -rf ./out && ./bin/validator full -d ./out ~/code/my-project/dispatcher/src
-    ./bin/docker_run.sh ./out host.docker.internal:4503 8080
+    $ rm -rf ./out && ./bin/validator full -d ./out ~/code/my-project/dispatcher/src
+    $ ./bin/docker_run.sh ./out host.docker.internal:4503 8080
     ```
 
 >[!VIDEO](https://video.tv.adobe.com/v/30603/?quality=12)
@@ -160,15 +160,15 @@ One or many parameters, can be passed to `docker_run`
 + Windows:
 
   ```{shell}
-  bin\validator full -d out <User Directory>/code/my-project/dispatcher/src
-  DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug bin\docker_run out host.docker.internal:4503 8080
+  $ bin\validator full -d out <User Directory>/code/my-project/dispatcher/src
+  $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug bin\docker_run out host.docker.internal:4503 8080
   ```
 
 + macOS / Linux:
 
   ```{shell}
-  ./bin/validator full -d out ~/code/my-project/dispatcher/src
-  DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run.sh out host.docker.internal:4503 8080
+  $ ./bin/validator full -d out ~/code/my-project/dispatcher/src
+  $ DISP_LOG_LEVEL=Debug REWRITE_LOG_LEVEL=Debug ./bin/docker_run.sh out host.docker.internal:4503 8080
   ```
 
 >[!VIDEO](https://video.tv.adobe.com/v/30604/?quality=12)
@@ -210,7 +210,7 @@ If, when `bin/docker_run out host.docker.internal:4503 8080` results in the mess
 #### Example error
 
 ```{shell}
-docker_run out host.docker.internal:4503 8080
+$ docker_run out host.docker.internal:4503 8080
 
 Running script /docker_entrypoint.d/10-check-environment.sh
 Running script /docker_entrypoint.d/20-create-docroots.sh
@@ -227,7 +227,7 @@ For example, Windows user folders often are `<First name> <Last name>`, with a s
 #### Example error
 
 ```{shell}
-c:\Users\My User\aem-sdk\dispatcher>bin\docker_run.cmd out host.internal.docker:4503 8080
+$ \Users\My User\aem-sdk\dispatcher>bin\docker_run.cmd out host.internal.docker:4503 8080
 
 'User\aem-sdk\dispatcher\out\*' is not recognized as an internal or external command,
 operable program or batch file.
@@ -241,7 +241,7 @@ Running `docker_run` on Windows can result in the following error, preventing Di
 #### Example error
 
 ```{shell}
-c:\Users\MyUser\aem-sdk\dispatcher>bin\docker_run out host.docker.internal:4503 8080
+$ \Users\MyUser\aem-sdk\dispatcher>bin\docker_run out host.docker.internal:4503 8080
 
 Running script /docker_entrypoint.d/10-check-environment.sh
 Running script /docker_entrypoint.d/20-create-docroots.sh
