@@ -188,7 +188,7 @@ _Note that Dispatcher Tools version itself will not match the Experience Manager
 
 `host.docker.internal` is an hostname provided to the Docker contain that resolves to the host. Per docs.docker.com ([macOS](https://docs.docker.com/docker-for-mac/networking/#i-want-to-connect-from-a-container-to-a-service-on-the-host), [Windows](https://docs.docker.com/docker-for-windows/networking/)):
 
-> From [Docker] 18.03 onwards our recommendation is to connect to the special DNS name host.docker.internal, which resolves to the internal IP address used by the host
+> From Docker 18.03 onwards our recommendation is to connect to the special DNS name host.docker.internal, which resolves to the internal IP address used by the host
 
 If, when `bin/docker_run out host.docker.internal:4503 8080` results in the message __Waiting until host.docker.internal is available__, then:
 
