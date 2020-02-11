@@ -11,7 +11,7 @@ version: 6.5
 
 # Register new application
 
-The first step is to configure your app on OKTA portal. Once your app is approved by your OKTA administrator you will have access to IdP certificate and single sign on URL.
+The first step is to configure your app on OKTA portal. Once your app is approved by your OKTA administrator you will have access to IdP certificate and single sign on URL. The following are the settings typically used in registering new application.
 
 * **Application Name:** This is your application name. Make sure you give a unique name to your application.
 * **SAML Recipient:** After authentication from OKTA, this is the URL which would be hit on your AEM instance with the SAML response. SAML authentication handler normally intercepts all the URL'S with / saml_login but it would be preferable to append it after your application root.
