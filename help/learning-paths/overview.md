@@ -30,7 +30,7 @@ sub-product: sites, cloud-manager, foundation, assets
       <img alt="Using AEM Assets" src="./assets/overview/staff-pick__using-aem-assets.png"/>
       </a>
       <div>
-         <a href="./local-development-environment/overview.md">
+         <a href="./using-aem-assets/overview.md">
          <strong>Using AEM Assets</strong>
          </a>
       </div>
