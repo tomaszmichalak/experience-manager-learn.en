@@ -4,4 +4,4 @@ description: Learn the fundamental skills for Adobe Experience Manager (AEM) Sit
 sub-product: sites
 ---
 
-... Overview page for the Sites Learning Path ...
+# Overview page for the Sites Learning Path
