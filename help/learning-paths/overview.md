@@ -18,7 +18,7 @@ sub-product: sites, cloud-manager, foundation, assets
     <br>
     *Learn the basics of using AEM Sites to manage your Web experiences*
 
-* **[Developing for AEM Sites](###)**
+* **[Developing for AEM Sites](./developing-aem-sites/overview.md)**
     <br>
     *...*
 
@@ -52,11 +52,11 @@ sub-product: sites, cloud-manager, foundation, assets
       <p>
    </td>
    <td>
-      <a href="./developing-for-aem-sites/overview.md">
+      <a href="./developing-aem-sites/overview.md">
       <img alt="Developing for AEM Sites" src="./assets/overview/staff-pick__developing-for-aem-sites.png"/>
       </a>
       <div>
-         <a href="./developing-for-aem-sites/overview.md">
+         <a href="./developing-aem-sites/overview.md">
          <strong>Developing for AEM Sites</strong>
          </a>
       </div>

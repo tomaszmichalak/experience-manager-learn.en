@@ -7,6 +7,8 @@ team: TM
 # Adobe Experience Manager Learning Paths {#learning-paths}
 
 + [Overview](./overview.md)
++ Using AEM Sites{#using-aem-sites}
+  + [Overview](using-aem-sites/overview.md)
 + Using AEM Assets{#using-aem-assets}
   + [Overview](using-aem-assets/overview.md)
   + The Basics{#basics-course}
