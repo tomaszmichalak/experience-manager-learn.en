@@ -26,3 +26,10 @@ team: TM
   + Using Assets{#use-course}
     + [Download](using-aem-assets/using-assets/download.md)
     + [Link Share](using-aem-assets/using-assets/link-share.md)
++ Developing AEM Sites{#developing-aem-sites}
+  + [Overview](./developing-aem-sites/overview.md)
+  + Authoring Basics{#authoring-basics}
+    + [Create, Edit, and Delete Pages](./developing-aem-sites/authoring-basics/create-edit-delete-pages.md)
+  + Underlying Technology{#underlying-technology}
+    + [Architecture Stack](./developing-aem-sites/underlying-technology/architecture-stack.md)
+    + [OSGi](./developing-aem-sites/underlying-technology/introduction-osgi.md)
