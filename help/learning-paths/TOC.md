@@ -26,8 +26,8 @@ team: TM
     + [Search](using-aem-assets/search-and-discovery/search.md)
     + [Collections](using-aem-assets/search-and-discovery/collections.md)
   + Using Assets{#use-course}
-    + [Download](using-aem-assets/using-assets/download.md)
-    + [Link Share](using-aem-assets/using-assets/link-share.md)
+    + [Download](using-aem-assets/usage/download.md)
+    + [Link Share](using-aem-assets/usage/link-share.md)
 + Developing AEM Sites{#developing-aem-sites}
   + [Overview](./developing-aem-sites/overview.md)
   + Authoring Basics{#authoring-basics}
