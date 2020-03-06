@@ -4,4 +4,4 @@ description:
 sub-product: assets
 ---
 
-... Overview page for the Learning Path ...
+# Overview page for Using AEM Assets
