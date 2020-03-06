@@ -30,6 +30,11 @@ team: TM
     + [Link Share](using-aem-assets/usage/link-share.md)
 + Developing AEM Sites{#developing-aem-sites}
   + [Overview](./developing-aem-sites/overview.md)
+  + The Basics{#basics}
+    + [Introduction to Development](./developing-aem-sites/basics/introduction-development.md)
+    + [Quick Start](./developing-aem-sites/basics/quick-start.md)
+    + [Core Components](./developing-aem-sites/basics/core-components.md)
+    + [Project Archetype](./developing-aem-sites/basics/project-archetype.md)
   + Underlying Technology{#underlying-technology}
     + [Architecture Stack](./developing-aem-sites/underlying-technology/architecture-stack.md)
     + [OSGi](./developing-aem-sites/underlying-technology/introduction-osgi.md)
@@ -37,3 +42,17 @@ team: TM
     + [Sling](./developing-aem-sites/underlying-technology/introduction-sling.md)
     + [Author and Publish Tier](./developing-aem-sites/underlying-technology/author-publish-tier.md)
     + [Dispatcher](./developing-aem-sites/underlying-technology/introduction-dispatcher.md)
+  + Local Development Environment{#local-development-environment}
+    + [Overview](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
+    + [Development Tools for AEM Projects](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html)
+    + [Local AEM Runtime](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html)
+    + [Local Dispatcher Tools](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html)
+  + WKND Tutorial{#wknd-tutorial}
+    + [Overview](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+    + [Project Setup](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/project-setup.html)
+    + [Component Basics](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/component-basics.html)
+    + [Pages and Templates](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/pages-templates.html)
+    + [Client-Side Libraries](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/client-side-libraries.html)
+    + [Style System](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/style-system.html)
+    + [Custom Component](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/custom-component.html)
+    + [Unit Testing](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/unit-testing.html)
