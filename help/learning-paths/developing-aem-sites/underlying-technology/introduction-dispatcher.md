@@ -11,7 +11,7 @@ version: cloud-service
 kt: 4644
 ---
 
-#  Introduction to the Dispatcher
+# Introduction to the Dispatcher
 
 >[!VIDEO](https://video.tv.adobe.com/v/32029/?quality=12)
 
