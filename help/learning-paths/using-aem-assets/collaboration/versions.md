@@ -1,16 +1,15 @@
 ---
 title: Versions
 description: 
-sub-product: assets
 feature: 
 topics: authoring, collaboration
 audience: author
 doc-type: feature-video
 activity: use
 version: cloud-service
-kt:
+kt: 4301
 ---
 
 # Versions
 
->[!VIDEO](https://video.tv.adobe.com/v/xxx/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32052/?quality=12&learn=on&hidetitle=true)

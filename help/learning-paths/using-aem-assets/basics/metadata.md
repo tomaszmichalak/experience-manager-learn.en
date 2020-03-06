@@ -1,7 +1,6 @@
 ---
 title: Metadata
 description: 
-sub-product: assets
 feature: 
 topics: authoring
 audience: author
@@ -13,4 +12,4 @@ kt: 4303
 
 # Metadata
 
->[!VIDEO](https://video.tv.adobe.com/v/xxx/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32045/?quality=12&learn=on&hidetitle=true)

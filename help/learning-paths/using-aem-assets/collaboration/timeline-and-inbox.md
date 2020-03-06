@@ -1,7 +1,6 @@
 ---
 title: Timeline and Inbox
 description: 
-sub-product: assets
 feature: inbox
 topics: authoring, collaboration
 audience: author
@@ -13,4 +12,4 @@ kt: 4540
 
 # Timeline and Inbox
 
->[!VIDEO](https://video.tv.adobe.com/v/xxx/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32051/?quality=12&learn=on&hidetitle=true)

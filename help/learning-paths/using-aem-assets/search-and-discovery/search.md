@@ -1,7 +1,6 @@
 ---
 title: Search
 description: 
-sub-product: assets
 feature: omnisearch
 topics: authoring, search
 audience: author
@@ -13,4 +12,4 @@ kt: 4312
 
 # Search
 
->[!VIDEO](https://video.tv.adobe.com/v/xxx/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32054/?quality=12&learn=on&hidetitle=true)

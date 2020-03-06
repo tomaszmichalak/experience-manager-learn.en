@@ -1,7 +1,6 @@
 ---
 title: Basic Operations
 description: 
-sub-product: assets
 feature: 
 topics: authoring, collaboration
 audience: author
@@ -13,4 +12,4 @@ kt: 4299
 
 # Basic Operations
 
->[!VIDEO](https://video.tv.adobe.com/v/xxx/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32044/?quality=12&learn=on&hidetitle=true)

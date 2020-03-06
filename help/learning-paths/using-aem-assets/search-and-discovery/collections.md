@@ -1,7 +1,6 @@
 ---
 title: Collections
 description: 
-sub-product: assets
 feature: collections
 topics: authoring
 audience: author
@@ -13,4 +12,4 @@ kt: 4301
 
 # Collections
 
->[!VIDEO](https://video.tv.adobe.com/v/xxx/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32053/?quality=12&learn=on&hidetitle=true)

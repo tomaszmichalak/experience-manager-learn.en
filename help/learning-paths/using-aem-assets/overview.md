@@ -1,7 +1,7 @@
 ---
 title: Using AEM Assets
 description: 
-sub-product: sites, cloud-manager, foundation, assets
+sub-product: assets
 ---
 
 ... Overview page for the Learning Path ...

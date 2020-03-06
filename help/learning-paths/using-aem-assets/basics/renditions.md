@@ -1,7 +1,6 @@
 ---
 title: Renditions
 description: 
-sub-product: assets
 feature: 
 topics: authoring, renditions
 audience: author
@@ -13,4 +12,4 @@ kt: 4496
 
 # Renditions
 
->[!VIDEO](https://video.tv.adobe.com/v/xxx/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32047/?quality=12&learn=on&hidetitle=true)

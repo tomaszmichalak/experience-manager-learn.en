@@ -25,4 +25,3 @@ team: TM
     + [Collections](using-aem-assets/search-and-discovery/collections.md)
   + Using Assets{#use-course}
     + [Download](using-aem-assets/using-assets/download.md)
-    + [Link Share](using-aem-assets/using-assets/link-share.md)

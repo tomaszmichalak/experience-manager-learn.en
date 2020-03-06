@@ -1,16 +1,16 @@
 ---
 title: Download
 description: 
-sub-product: assets
 feature: 
 topics: authoring
 audience: author
 doc-type: feature-video
 activity: use
 version: cloud-service
-kt: 
+kt: 4300
 ---
 
 # Download
 
->[!VIDEO](https://video.tv.adobe.com/v/xxx/?quality=12&learn=on&hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/32055/?quality=12&learn=on&hidetitle=true)
+
