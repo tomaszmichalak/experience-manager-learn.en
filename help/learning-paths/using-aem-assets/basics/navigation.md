@@ -1,6 +1,7 @@
 ---
 title: Navigation
-description: 
+description: Explore the basics for navigation AEM Assets.
+sub-product: assets
 feature: 
 topics: authoring
 audience: author

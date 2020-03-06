@@ -1,6 +1,7 @@
 ---
 title: Timeline and Inbox
-description: 
+description: Familiarize yourself with the key web consoles in AEM Assets that are used for collaboration.
+sub-product: assets
 feature: inbox
 topics: authoring, collaboration
 audience: author

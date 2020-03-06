@@ -1,6 +1,7 @@
 ---
 title: Versions
-description: 
+description: Explore how AEM creates and maintains asset versions.
+sub-product: assets
 feature: 
 topics: authoring, collaboration
 audience: author

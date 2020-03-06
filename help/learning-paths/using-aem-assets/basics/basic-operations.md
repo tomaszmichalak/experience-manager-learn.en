@@ -1,7 +1,8 @@
 ---
 title: Basic Operations
-description: 
-feature: 
+description: Learn about the basic operations of AEM Assets including how to create folders, as well as upload, copy, move and delete assets.
+sub-product: assets
+feature:
 topics: authoring, collaboration
 audience: author
 doc-type: feature-video

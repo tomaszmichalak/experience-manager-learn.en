@@ -1,6 +1,7 @@
 ---
 title: Review Task
-description: 
+description: Explore how AEM Assets' Review Task facilitates the most common review and approval workflows.
+sub-product: assets
 feature: review-task
 topics: authoring, collaboration
 audience: author

@@ -1,6 +1,7 @@
 ---
 title: Collections
-description: 
+description: Learn how collections provides and alternative view into AEM Assets.
+sub-product: assets
 feature: collections
 topics: authoring
 audience: author

@@ -1,6 +1,7 @@
 ---
 title: Comments and Annotations
-description: 
+description: Learn how to use comments and annotations in AEM to communicate and collaborate on assets.
+sub-product: assets
 feature: 
 topics: authoring, collaboration
 audience: author

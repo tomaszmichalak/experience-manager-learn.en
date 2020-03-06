@@ -1,6 +1,6 @@
 ---
 title: Search
-description: 
+description: Learn how to use AEM's Omnisearch to quickly discover assets.
 feature: omnisearch
 topics: authoring, search
 audience: author

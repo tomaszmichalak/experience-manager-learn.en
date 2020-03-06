@@ -1,6 +1,7 @@
 ---
 title: Renditions
-description: 
+description: Learn about renditions in AEM Assets, and how they can be viewed.
+sub-product: assets
 feature: 
 topics: authoring, renditions
 audience: author
