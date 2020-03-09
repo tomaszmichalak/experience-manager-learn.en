@@ -10,6 +10,6 @@ version: cloud-service
 kt: 4312
 ---
 
-# Search
+# Search{#aem-assets-search}
 
 >[!VIDEO](https://video.tv.adobe.com/v/32054/?quality=12&learn=on&hidetitle=true)
