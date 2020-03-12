@@ -22,7 +22,7 @@ The Component Console provides the following functionality:
 * [!UICONTROL Live Usage]: displays a list of pages in which the component is included
 
 The Component Console can be found under **[!UICONTROL Tools]** &gt; **[!UICONTROL General]** &gt; **[!UICONTROL Components]**.
-Component Console URL (local AEM Auhthor): [http://localhost:4502/libs/wcm/core/content/sites/components.html](http://localhost:4502/libs/wcm/core/content/sites/components.html)
+Component Console URL (local AEM Author): [http://localhost:4502/libs/wcm/core/content/sites/components.html](http://localhost:4502/libs/wcm/core/content/sites/components.html)
 
 ## Additional Resources {#additional-resources}
 

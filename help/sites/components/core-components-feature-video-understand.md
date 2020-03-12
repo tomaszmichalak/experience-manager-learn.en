@@ -9,9 +9,9 @@ doc-type: feature-video
 version: 6.3, 6.4, 6.5
 ---
 
-# Understanding [!DNL Core Components]{#understanding-core-components}
+# Understanding Core Components{#understanding-core-components}
 
-[!DNL Adobe] product management provides an overview of the new [!DNL AEM] [!DNL Core Components] and covers the details of the open source license.
+[!DNL Adobe] product management provides an overview of the new AEM WCM Core Components and covers the details of the open source license.
 
 >[!VIDEO](https://video.tv.adobe.com/v/18926/?quality=9)
 
