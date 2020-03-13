@@ -29,8 +29,8 @@ team: TM
 
 + Advanced Capabilities{#advanced}
   + [Permissions (CUGs)](./advanced/closed-user-groups.md)
-  + [Assets Reports](./advanced/asset-reports-feature-video-use.md)
-  + [Asset Insights](./advanced/asset-insights-launch-tutorial-setup.md)
+  + [Assets Reports](./advanced/asset-reports.md)
+  + [Asset Insights](./advanced/asset-insights-launch-tutorial.md)
   + [Annotations PDF Output](./advanced/customizing-annotations-pdf-output.md)
 
 + Advanced Metadata Management {#metadata}
@@ -74,11 +74,11 @@ team: TM
   + [Smart Translation Search](translation/smart-translation-search-feature-video-use.md)
   + [Set up Smart Translation Search](translation/smart-translation-search-technical-video-setup.md)
 
-+ Asset Templates{#asset-template}
-  + [Understanding Asset Templates](asset-template/asset-templates-tutorial-understand.md)
-  + [Using Asset Templates](asset-template/asset-templates-feature-video-use.md)
-  + [Set up Asset Templates](asset-template/asset-templates-technical-video-setup.md)
-  + [Using Asset Catalogs](asset-template/asset-catalog-template-feature-video-use.md)
++ Asset Templates{#asset-templates}
+  + [Understanding Asset Templates](asset-templates/asset-templates-tutorial-understand.md)
+  + [Using Asset Templates](asset-templates/asset-templates-feature-video-use.md)
+  + [Set up Asset Templates](asset-templates/asset-templates-technical-video-setup.md)
+  + [Using Asset Catalogs](asset-templates/asset-catalog-template-feature-video-use.md)
 
 + Deployment{#deployment}
   + [Multi-tenancy and Concurrent Development](deployment/multitenancy-concurrent-article-understand.md)

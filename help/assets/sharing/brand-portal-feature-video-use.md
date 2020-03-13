@@ -201,7 +201,6 @@ New features enhanced functionality oriented toward aligning Brand Portal with A
 ## Additional Resources{#additional-resources}
 
 * [What's new in in Brand Portal](https://helpx.adobe.com/experience-manager/brand-portal/using/whats-new.html)
-* [Setup Brand Portal with AEM Assets](brand-portal-technical-video-develop.md)
 * [AEM Author replication agents](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
 * [Guide to Accelerated Download](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
 * [AEM Assets Brand Portal Adobe Docs](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal.html)

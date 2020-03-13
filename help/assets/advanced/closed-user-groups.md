@@ -26,7 +26,7 @@ Closed User Groups (CUGs) is a feature used to restrict access to content to a s
 
 ## CUG representation in the JCR {#cug-representation-in-the-jcr}
 
-![CUG representation in the JCR](assets/folder-properties-closed-user-groups.png)
+![CUG representation in the JCR](assets/closed-user-groups/folder-properties-closed-user-groups.png)
 
 We.Retail Members Group added as a Closed User Group to folder: /content/dam/we-retail/en/beta-products
 

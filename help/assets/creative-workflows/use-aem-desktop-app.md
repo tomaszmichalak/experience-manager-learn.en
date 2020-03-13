@@ -27,7 +27,7 @@ redirect-from: https://docs.adobe.com/content/help/en/experience-manager-learn/a
 
 >[!NOTE]
 >
-> [Adobe Asset Link](./adobe-asset-link-feature-video-use.md) is Adobe's dedicated solution for working with AEM assets inside Adobe Creative Cloud applications: Photoshop, Illustrator, InDesign. When using AEM Assets in these applications, Adobe Asset Link is preferred over AEM Desktop App.
+> [Adobe Asset Link](./adobe-asset-link.md) is Adobe's dedicated solution for working with AEM assets inside Adobe Creative Cloud applications: Photoshop, Illustrator, InDesign. When using AEM Assets in these applications, Adobe Asset Link is preferred over AEM Desktop App.
 
 ## Additional Resources
 
