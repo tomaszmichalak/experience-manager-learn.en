@@ -9,11 +9,11 @@ version: 6.3, 6.4, 6.5
 redirect-from: https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/search-feature-video-use.html
 ---
 
-## Search Boosting with Asset Metadata {#search-boost-asset}
+# Search Boosting with Asset Metadata {#search-boost-asset}
 
 >[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=12)
 
-# Understanding Search Boosting in AEM Assets{#understanding-search-boosting-in-aem-assets}
+## Understanding Search Boosting in AEM Assets{#understanding-search-boosting-in-aem-assets}
 
 An in-depth look at AEM Assets search boosting and how it works in the broader context of AEM.
 
