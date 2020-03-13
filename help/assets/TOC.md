@@ -22,7 +22,7 @@ team: TM
   + [Versions](./collaboration/versions.md)
   + [Review Task](./collaboration/review-task.md)
 
-+ Search and Discovery#{search-and-discovery}
++ Search and Discovery{#search-and-discovery}
   + [Search](./search-and-discovery/search.md)             
   + [Collections](./search-and-discovery/collections.md) 
   + [Search Boost](./search-and-discovery/search-boost.md)
@@ -33,7 +33,7 @@ team: TM
   + [Asset Insights](./advanced/asset-insights-launch-tutorial.md)
   + [Annotations PDF Output](./advanced/customizing-annotations-pdf-output.md)
 
-+ Advanced Metadata Management {#metadata}
++ Advanced Metadata Management{#metadata}
   + [Cascading Metadata](metadata/cascade-metadata-feature-video-use.md)
   + [Smart Tags Overview](metadata/smart-tags-feature-video-use.md)
   + [Configure Smart Tags](metadata/smart-tags-technical-video-setup.md)
