@@ -20,7 +20,7 @@ Adobe Experience Manager Assets is a digital asset management tool on AEM Platfo
     <br>
      *Use the Review Task workflow to quickly and easily approve (or reject) assets*
 
-* **[Using Brand Portal Asset Sourcing (Video)](./sharing/brand-portal-feature-video-use.md#asset-sourcing)**
+* **[Using Brand Portal Asset Sourcing (Video)](./sharing/brand-portal.md#asset-sourcing)**
     <br>
     *Learn about how 3rd parties can upload assets to Brand Portal and sync them back to Experience Manager Author*
 
