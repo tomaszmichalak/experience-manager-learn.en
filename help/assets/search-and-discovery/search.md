@@ -12,4 +12,6 @@ kt: 4312
 
 # Search{#aem-assets-search}
 
+Learn how to use AEM's Omnisearch to quickly discover assets.
+
 >[!VIDEO](https://video.tv.adobe.com/v/32054/?quality=12&learn=on&hidetitle=true)

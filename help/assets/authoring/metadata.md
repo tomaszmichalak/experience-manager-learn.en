@@ -13,4 +13,6 @@ kt: 4303
 
 # Metadata
 
+ Learn how to access and interact with metadata in AEM Assets.
+
 >[!VIDEO](https://video.tv.adobe.com/v/32045/?quality=12&learn=on&hidetitle=true)

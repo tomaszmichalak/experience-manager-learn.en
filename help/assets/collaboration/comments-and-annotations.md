@@ -13,4 +13,6 @@ kt: 4541
 
 # Comments and Annotations
 
+Learn how to use comments and annotations in AEM to communicate and collaborate on assets.
+
 >[!VIDEO](https://video.tv.adobe.com/v/32049/?quality=12&learn=on&hidetitle=true)

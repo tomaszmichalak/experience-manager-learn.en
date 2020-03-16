@@ -42,7 +42,7 @@ team: TM
   + [Import and Export Metadata](metadata/metadata-import-feature-video-use.md)
 
 + Sharing and Distribution{#sharing}
-  + [Assets Download](./sharing/download.md)
+  + [Download Assets](./sharing/download.md)
   + [Brand Portal](./sharing/brand-portal.md)
   + Asset Share{#assets-share}
     + [Asset Share Commons](./sharing/asset-share-commons-user-experience-feature-video-understand.md)

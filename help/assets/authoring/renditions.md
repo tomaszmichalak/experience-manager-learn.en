@@ -1,6 +1,6 @@
 ---
 title: Renditions
-description: Learn about renditions in AEM Assets, and how they can be viewed.
+description: Learn about renditions in AEM Assets, and how they can be previewed.
 sub-product: assets
 feature: 
 topics: authoring, renditions
@@ -12,5 +12,7 @@ kt: 4496
 ---
 
 # Renditions
+
+Learn about renditions in AEM Assets, and how they can be previewed.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32047/?quality=12&learn=on&hidetitle=true)

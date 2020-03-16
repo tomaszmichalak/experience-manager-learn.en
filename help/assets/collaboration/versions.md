@@ -13,4 +13,6 @@ kt: 4301
 
 # Versions
 
+Explore how AEM creates and maintains asset versions.
+
 >[!VIDEO](https://video.tv.adobe.com/v/32052/?quality=12&learn=on&hidetitle=true)
