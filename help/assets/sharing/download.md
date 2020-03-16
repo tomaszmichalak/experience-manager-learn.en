@@ -13,4 +13,6 @@ kt: 4300
 
 # Download
 
->[!VIDEO](https://video.tv.adobe.com/v/32055/?quality=12&learn=on&hidetitle=true)
+Learn how to download assets and their renditions to your local machine for use and sharing.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32194/?quality=12&learn=on&hidetitle=true)
