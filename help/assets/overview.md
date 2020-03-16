@@ -36,11 +36,11 @@ Adobe Experience Manager Assets is a digital asset management tool on AEM Platfo
 
 <table>
 <td>
-   <a href="./creative-workflows/use-aem-desktop-app.md">
+   <a href="./creative-workflows/aem-desktop-app.md">
    <img alt="Enhanced Smart Tags" src="./assets/overview/desktop-app.png" />
    </a>
    <div>
-      <a href="./creative-workflows/use-aem-desktop-app.md">
+      <a href="./creative-workflows/aem-desktop-app.md">
       <strong>Using AEM Desktop App</strong>
       </a>
    </div>
