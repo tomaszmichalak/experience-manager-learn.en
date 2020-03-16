@@ -9,7 +9,6 @@ doc-type: feature-video
 activity: use
 version: cloud-service
 kt: 4542
-redirect-from: https://docs.adobe.com/content/help/en/experience-manager-learn/assets/collaboration/checkin-checkout-feature-video-use.html
 ---
 
 # Check in and Check out

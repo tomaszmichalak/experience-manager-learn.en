@@ -6,7 +6,6 @@ audience: all
 doc-type: feature-video
 activity: understand
 version: 6.3, 6.4, 6.5
-redirect-from: https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/search-feature-video-use.html
 ---
 
 # Search Boosting with Asset Metadata {#search-boost-asset}

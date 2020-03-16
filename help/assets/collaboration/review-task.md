@@ -9,7 +9,6 @@ doc-type: feature-video
 activity: use
 version: cloud-service
 kt: 4670
-redirect-from: https://docs.adobe.com/content/help/en/experience-manager-learn/assets/collaboration/review-task-compare-feature-video-use.html
 ---
 
 # Review Task

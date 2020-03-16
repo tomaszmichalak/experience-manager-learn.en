@@ -7,7 +7,6 @@ audience: all
 doc-type: tutorial
 activity: understand
 version: 6.3, 6.4, 6.5
-redirect-from: https://docs.adobe.com/content/help/en/experience-manager-learn/assets/asset-template/asset-templates-feature-video-use.html
 ---
 
 # Understanding InDesign files and Asset Templates in AEM Assets {#understanding-indesign-files-and-asset-templates-in-aem-assets}

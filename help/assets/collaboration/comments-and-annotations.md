@@ -9,7 +9,6 @@ doc-type: feature-video
 activity: use
 version: cloud-service
 kt: 4541
-redirect-from: https://docs.adobe.com/content/help/en/experience-manager-learn/assets/collaboration/annotations-feature-video-use.html
 ---
 
 # Comments and Annotations

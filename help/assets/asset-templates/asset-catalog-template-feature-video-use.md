@@ -10,7 +10,6 @@ audience: all
 doc-type: feature-video
 activity: use
 version: 6.3, 6.4, 6.5
-redirect-from: https://docs.adobe.com/content/help/en/experience-manager-learn/assets/asset-template/asset-catalog-template-feature-video-use.html
 ---
 
 # Using Asset Catalog with AEM Commerce and InDesign Server{#using-asset-catalog-with-aem-commerce-and-indesign-server}

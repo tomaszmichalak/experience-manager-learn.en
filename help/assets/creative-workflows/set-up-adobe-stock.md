@@ -8,7 +8,6 @@ audience: developer, administrator
 doc-type: technical-video
 activity: setup
 version: 6.4, 6.5
-redirect-from: https://docs.adobe.com/content/help/en/experience-manager-learn/assets/creative-cloud/adobe-stock-aem-assets-technical-video-setup.html
 ---
 
 # Set up Adobe Stock with AEM Assets{#set-up-adobe-stock-with-aem-assets}

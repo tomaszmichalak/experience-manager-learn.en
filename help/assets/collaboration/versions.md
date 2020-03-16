@@ -9,7 +9,6 @@ doc-type: feature-video
 activity: use
 version: cloud-service
 kt: 4301
-redirect-from: https://docs.adobe.com/content/help/en/experience-manager-learn/assets/asset-authoring/asset-version-comparison-feature-video-use.html
 ---
 
 # Versions

@@ -13,4 +13,4 @@ kt: 4299
 
 # Basic Operations
 
->[!VIDEO](https://video.tv.adobe.com/v/32044/?quality=1
+>[!VIDEO](https://video.tv.adobe.com/v/32044/?quality=12&learn=on&hidetitle=true)

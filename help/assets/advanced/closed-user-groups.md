@@ -7,7 +7,6 @@ audience: all
 doc-type: feature-video
 activity: use
 version: 6.3, 6.4, 6.5
-redirect-from: https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/search-boost-technical-video-understand.html
 ---
 
 # Using Closed User Groups with AEM Assets{#using-closed-user-groups-with-aem-assets}

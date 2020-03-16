@@ -7,7 +7,7 @@ audience: all
 doc-type: feature-video
 activity: use
 version: 6.5
-redirect-from: https://docs.adobe.com/content/help/en/experience-manager-learn/assets/deployment/connected-assets-feature-video-use.html
+redirect-from: https://docs.adobe.com
 ---
 
 # Using Connected Assetswith AEM Assets{#using-connected-assets-with-aem-assets}

@@ -11,7 +11,6 @@ doc-type: feature-video
 activity: use
 team: TM
 audience: author, marketer
-redirect-from: https://docs.adobe.com/content/help/en/experience-manager-learn/assets/creative-cloud/aem-desktop-app-sync-status-technical-video-use.html
 ---
  
 # Use AEM Desktop App

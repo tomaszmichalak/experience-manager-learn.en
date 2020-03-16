@@ -41,17 +41,17 @@ team: TM
   + [Configure Enhanced Smart Tags](metadata/enhanced-smart-tags-technical-video-setup.md)
   + [Import and Export Metadata](metadata/metadata-import-feature-video-use.md)
 
-+ Sharing and Distributing Assets{#sharing}
++ Sharing and Distribution{#sharing}
   + [Assets Download](./sharing/download.md)
-  + [Brand Portal](./sharing/brand-portal-feature-video-use.md)
+  + [Brand Portal](./sharing/brand-portal.md)
   + Asset Share{#assets-share}
     + [Asset Share Commons](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
     + [Set up Asset Share Commons on local AEM](./sharing/asset-share-commons-technical-video-setup.md)
     + [Theming Asset Share Commons](./sharing/asset-share-commons-feature-video-theming.md)
-  + [Connected Assets](./sharing/connected-assets-feature-video-use.md)
+  + [Connected Assets](./sharing/connected-assets.md)
 
 + Integrating with Creative Workflows{#creative-workflows}
-  + [AEM Desktop App](./creative-workflows/use-aem-desktop-app.md)
+  + [AEM Desktop App](./creative-workflows/aem-desktop-app.md)
   + [Adobe Asset Link](./creative-workflows/adobe-asset-link.md)
   + [Adobe Stock](./creative-workflows/adobe-stock.md)
 

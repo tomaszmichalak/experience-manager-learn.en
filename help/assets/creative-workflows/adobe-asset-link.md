@@ -7,7 +7,6 @@ audience: all
 doc-type: feature-video
 activity: use
 version: 6.4, 6.5
-redirect-from: https://docs.adobe.com/content/help/en/experience-manager-learn/assets/creative-cloud/adobe-asset-link-feature-video-use.html
 ---
 
 # Using Adobe Asset Link Extension with AEM Assets{#using-adobe-asset-link-extension-with-aem-assets}

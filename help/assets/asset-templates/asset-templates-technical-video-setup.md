@@ -7,7 +7,6 @@ audience: developer, architect, administrator
 doc-type: technical-video
 activity: setup
 version: 6.3, 6.4, 6.5
-redirect-from: https://docs.adobe.com/content/help/en/experience-manager-learn/assets/asset-template/asset-templates-technical-video-setup.html
 ---
 
 # Set up Asset Templates with AEM Assets and InDesign Server{#set-up-asset-templates-with-aem-assets-and-indesign-server}
