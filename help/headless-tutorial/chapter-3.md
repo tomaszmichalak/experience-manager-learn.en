@@ -11,7 +11,7 @@ Chapter 3 of the AEM Headless tutorial covers creating and authoring Events Cont
 
 ## Authoring an Event Content Fragment
 
-With an ![DNL Event] Content Fragment Model created and the AEM Configuration for WKND applied to the `/content/dam/wknd-mobile` Asset folder (via the `cq:conf` property), a [!DNL Event] Content Fragment can be created.
+With an [!DNL Event] Content Fragment Model created and the AEM Configuration for WKND applied to the `/content/dam/wknd-mobile` Asset folder (via the `cq:conf` property), a [!DNL Event] Content Fragment can be created.
 
 Content Fragments, which are a type of Asset, should be organized and managed in AEM Assets just like other assets.
 

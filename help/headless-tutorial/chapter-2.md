@@ -48,7 +48,7 @@ If Content Fragment Models are **not** enabled for a configuration, the **[!UICO
    >    
    >Any existing Content Fragment Models created under this configuration will be deleted as well as their definitions are stored under `/conf/wknd-mobile/settings/dam/cfm/models`.
 
-1. Apply the **[!DNL WKND Mobile]** configuration to the **![DNL WKND Mobile] Assets Folder** to allow Content Fragments from Content Fragment Models to be created within that Assets folder hierarchy:
+1. Apply the **[!DNL WKND Mobile]** configuration to the **[!DNL WKND Mobile] Assets Folder** to allow Content Fragments from Content Fragment Models to be created within that Assets folder hierarchy:
 
     1. Navigate to **[!UICONROL AEM] > [!UICONTROL Assets] > [!UICONTROL Files]**
     1. Select the **[!UICONTROL WKND Mobile] folder**
