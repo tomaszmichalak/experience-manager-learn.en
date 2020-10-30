@@ -207,16 +207,16 @@ We can do this using the CRXDE-Lite tool on a local AEM instance.
 
     Note the `sling:resourceSuperType` property and the value of `core/wcm/components/page/v2/page`. This property allows the WKND's page component to inherit all of the functionality of the Core Component page component. This is the first example of something called the [Proxy Component Pattern](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern). More information can be found [here.](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html).
 
-1. Inspect another component within the WKND components, the `Breadcrumb` component located at: `/apps/wknd/components/content/breadcrumb`. Notice that the same `sling:resourceSuperType` property can be found, but this time it points to `core/wcm/components/breadcrumb/v2/breadcrumb`. This is another example of using the Proxy component pattern to include a Core Component. In fact, all of the components in the WKND code base are proxies of AEM Core Components (except for our famous HelloWorld component). It is a best practice to try and re-use as much of the functionality of Core Components as possible *before* writing custom code.
+1. Inspect another component within the WKND components, the `Breadcrumb` component located at: `/libs/wknd/components/content/breadcrumb`. Notice that the same `sling:resourceSuperType` property can be found, but this time it points to `core/wcm/components/breadcrumb/v2/breadcrumb`. This is another example of using the Proxy component pattern to include a Core Component. In fact, all of the components in the WKND code base are proxies of AEM Core Components (except for our famous HelloWorld component). It is a best practice to try and re-use as much of the functionality of Core Components as possible *before* writing custom code.
 
-1. Next inspect the Core Component Page at `/apps/core/wcm/components/page/v2/page` using CRXDE Lite:
+1. Next inspect the Core Component Page at `/libs/core/wcm/components/page/v2/page` using CRXDE Lite:
 
     ![Core Component Page](assets/pages-templates/core-page-component-properties.png)
 
     Notice that many more scripts are included beneath this page. The Core Component Page contains a lot of functionality. This functionality is broken into multiple scripts for easier maintenance and readability. You can trace the inclusion of the HTL scripts by opening the `page.html` and looking for `data-sly-include`:
 
     ```html
-    <!--/* /apps/core/wcm/components/page/v2/page/page.html */-->
+    <!--/* /libs/core/wcm/components/page/v2/page/page.html */-->
     <!DOCTYPE HTML>
     <html data-sly-use.page="com.adobe.cq.wcm.core.components.models.Page" lang="${page.language}"
             data-sly-use.head="head.html"
@@ -240,7 +240,7 @@ We can do this using the CRXDE-Lite tool on a local AEM instance.
 
     You can learn more about how the Editable Template factors into the rendering of the [content page by reading this article](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/templates/page-templates-editable.html#resultant-content-pages).
 
-1. Inspect the another Core Component, like the Breadcrumb at `/apps/core/wcm/components/breadcrumb/v2/breadcrumb`. View the `breadcrumb.html` script to understand how the markup for the Breadcrumb component is ultimately generated.
+1. Inspect the another Core Component, like the Breadcrumb at `/libs/core/wcm/components/breadcrumb/v2/breadcrumb`. View the `breadcrumb.html` script to understand how the markup for the Breadcrumb component is ultimately generated.
 
 ## Saving Configurations to Source Control {#configuration-persistence}
 
